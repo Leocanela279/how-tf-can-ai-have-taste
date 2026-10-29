@@ -1,0 +1,8 @@
+{
+  "name": "taste",
+  "version": "0.2.0",
+  "description": "Art direction for AI-built web UI: grounds the design in the subject and the user's taste, measures real reference sites into numbers, writes a token plan before code, and checks the result at desktop and phone width.",
+  "author": { "name": "Leandro Canela" },
+  "repository": "https://github.com/Leocanela279/how-tf-can-ai-have-taste",
+  "keywords": ["design", "ui", "frontend", "taste", "mobile"]
+}

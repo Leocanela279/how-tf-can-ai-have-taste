@@ -1,0 +1,513 @@
+{
+  "url": "https://www.serus.ai/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pageHeightScreens": 6.2,
+  "type": {
+    "families": [
+      {
+        "value": "Geist Variable",
+        "share": 0.99
+      },
+      {
+        "value": "Reckless",
+        "share": 0.01
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "share": 0.7
+      },
+      {
+        "value": "500",
+        "share": 0.18
+      },
+      {
+        "value": "450",
+        "share": 0.12
+      }
+    ],
+    "sizesPx": [
+      {
+        "value": 13,
+        "share": 0.6
+      },
+      {
+        "value": 15,
+        "share": 0.19
+      },
+      {
+        "value": 16.2,
+        "share": 0.12
+      },
+      {
+        "value": 12,
+        "share": 0.06
+      },
+      {
+        "value": 28.3,
+        "share": 0.01
+      },
+      {
+        "value": 30.4,
+        "share": 0.01
+      },
+      {
+        "value": 9,
+        "share": 0
+      },
+      {
+        "value": 22.1,
+        "share": 0
+      }
+    ],
+    "distinctSizes": 8,
+    "bodySizePx": 13,
+    "largest": {
+      "size": 30.4,
+      "family": "Reckless",
+      "weight": "400",
+      "text": "H",
+      "lineHeight": 1.15,
+      "tracking": -0.017,
+      "vw": 7.8
+    },
+    "headlineToBody": 2.3,
+    "measureChars": {
+      "median": 46,
+      "max": 46
+    },
+    "monospaceShareOutsideCode": 0
+  },
+  "color": {
+    "inks": [
+      {
+        "value": "rgba(13, 13, 13, 0.7)",
+        "weight": 1006
+      },
+      {
+        "value": "rgb(13, 13, 13)",
+        "weight": 319
+      },
+      {
+        "value": "rgba(13, 13, 13, 0.45)",
+        "weight": 236
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.9)",
+        "weight": 113
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "weight": 70
+      },
+      {
+        "value": "oklab(0.159065 0.00000723451 0.00000317395 / 0.22549)",
+        "weight": 35
+      },
+      {
+        "value": "rgb(23, 23, 23)",
+        "weight": 12
+      },
+      {
+        "value": "rgb(94, 82, 172)",
+        "weight": 4
+      }
+    ],
+    "grounds": [
+      {
+        "value": "rgb(235, 235, 235)",
+        "weight": 27
+      },
+      {
+        "value": "rgb(250, 250, 250)",
+        "weight": 25
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "weight": 15
+      },
+      {
+        "value": "rgb(23, 23, 23)",
+        "weight": 2
+      },
+      {
+        "value": "rgb(242, 242, 242)",
+        "weight": 1
+      },
+      {
+        "value": "rgb(246, 242, 255)",
+        "weight": 0
+      },
+      {
+        "value": "rgb(184, 164, 248)",
+        "weight": 0
+      },
+      {
+        "value": "rgb(225, 216, 253)",
+        "weight": 0
+      }
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "50%",
+        "weight": 32
+      },
+      {
+        "value": "8px",
+        "weight": 8
+      },
+      {
+        "value": "3.35544e+07px",
+        "weight": 6
+      },
+      {
+        "value": "9999px",
+        "weight": 5
+      },
+      {
+        "value": "12px",
+        "weight": 3
+      },
+      {
+        "value": "32px",
+        "weight": 1
+      },
+      {
+        "value": "24px",
+        "weight": 1
+      }
+    ],
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0.05) 0px 10px 15px -3px, oklab(0 0 0 / 0.05) 0px 4px 6px -4px",
+        "weight": 1
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
+        "weight": 1
+      }
+    ],
+    "elementsWithBorders": 2,
+    "gradients": 0,
+    "backdropBlur": 0
+  },
+  "spacingPx": [
+    {
+      "value": 4,
+      "weight": 15
+    },
+    {
+      "value": 6,
+      "weight": 12
+    },
+    {
+      "value": 8,
+      "weight": 46
+    },
+    {
+      "value": 10,
+      "weight": 32
+    },
+    {
+      "value": 12,
+      "weight": 14
+    },
+    {
+      "value": 16,
+      "weight": 23
+    },
+    {
+      "value": 20,
+      "weight": 9
+    },
+    {
+      "value": 24,
+      "weight": 9
+    },
+    {
+      "value": 32,
+      "weight": 5
+    },
+    {
+      "value": 40,
+      "weight": 10
+    },
+    {
+      "value": 48,
+      "weight": 6
+    },
+    {
+      "value": 56,
+      "weight": 1
+    },
+    {
+      "value": 64,
+      "weight": 3
+    },
+    {
+      "value": 96,
+      "weight": 1
+    },
+    {
+      "value": 192,
+      "weight": 1
+    },
+    {
+      "value": 358,
+      "weight": 2
+    }
+  ],
+  "perf": {
+    "lcp": {
+      "ms": 1036,
+      "tag": "p",
+      "lazy": false,
+      "priority": null,
+      "what": "We use cookies to run Serus, and only with your co"
+    },
+    "cls": 0,
+    "longTasks": {
+      "count": 1,
+      "longest": 88
+    },
+    "longFrames": {
+      "count": 4,
+      "longest": 114
+    },
+    "blockingScripts": [],
+    "runtimeCss": false,
+    "kb": {
+      "script": 16,
+      "css": 24,
+      "font": 131,
+      "image": 43
+    },
+    "unknownSizes": 7,
+    "fontsLoaded": [
+      "Geist Variable 100 900",
+      "Reckless 400"
+    ],
+    "animations": {
+      "running": 63,
+      "nonComposited": [],
+      "infinite": 49,
+      "moving": 63
+    },
+    "blurSurfaces": []
+  },
+  "findings": {
+    "overflowX": false,
+    "lowContrast": [
+      {
+        "text": "Private AI. Data never sold or used for ",
+        "ratio": 3.08,
+        "size": 12,
+        "need": 4.5
+      },
+      {
+        "text": "Used by people at leading companies",
+        "ratio": 1.65,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Protection",
+        "ratio": 1.04,
+        "size": 28.27,
+        "need": 3
+      },
+      {
+        "text": "See what the internet has on you and sta",
+        "ratio": 1.04,
+        "size": 16.155,
+        "need": 4.5
+      },
+      {
+        "text": "Intelligence",
+        "ratio": 1.04,
+        "size": 28.27,
+        "need": 3
+      },
+      {
+        "text": "Investigate anything with agentic and AI",
+        "ratio": 1.04,
+        "size": 16.155,
+        "need": 4.5
+      },
+      {
+        "text": "Sep 9, 2026",
+        "ratio": 3.08,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Aug 24, 2026",
+        "ratio": 3.08,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Mar 1, 2026",
+        "ratio": 3.08,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Serus™ by Anon AI Labs Inc. 95 3rd St, S",
+        "ratio": 3.08,
+        "size": 12,
+        "need": 4.5
+      }
+    ],
+    "lowContrastCount": 14,
+    "smallTargets": [
+      {
+        "text": "X / Twitter",
+        "w": 61,
+        "h": 17
+      },
+      {
+        "text": "LinkedIn",
+        "w": 50,
+        "h": 17
+      },
+      {
+        "text": "Instagram",
+        "w": 60,
+        "h": 17
+      },
+      {
+        "text": "Facebook",
+        "w": 59,
+        "h": 17
+      },
+      {
+        "text": "Contact sales",
+        "w": 82,
+        "h": 17
+      },
+      {
+        "text": "Business inquiry",
+        "w": 98,
+        "h": 17
+      },
+      {
+        "text": "Partnerships",
+        "w": 75,
+        "h": 17
+      },
+      {
+        "text": "Support",
+        "w": 48,
+        "h": 17
+      },
+      {
+        "text": "Mission",
+        "w": 45,
+        "h": 17
+      },
+      {
+        "text": "People",
+        "w": 41,
+        "h": 17
+      }
+    ],
+    "smallTargetCount": 39,
+    "tinyText": [
+      {
+        "text": "Soon",
+        "size": 9
+      }
+    ],
+    "tinyTextCount": 1,
+    "smallCapsLabels": [],
+    "smallCapsCount": 0,
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Hello, I'm Serus",
+        "lines": 2
+      },
+      {
+        "tag": "h2",
+        "text": "Protection",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Surveillance",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Data Removal",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Intelligence",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Reputation",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Intelligence",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "OSINT",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Deploy Agents",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Developer API",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Serus MCP",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "News",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Serus announces fundraising",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "300,000 registered users",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Welcome to Serus: The Privacy Platform We Always N",
+        "lines": 2
+      }
+    ],
+    "transitionAll": 2,
+    "imagesWithoutAlt": 0,
+    "placeholderText": false,
+    "emoji": 0
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "url": "https://www.apple.com/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pageHeightScreens": 8.3,
+  "type": {
+    "families": [
+      {
+        "value": "SF Pro Text",
+        "share": 0.9
+      },
+      {
+        "value": "SF Pro Display",
+        "share": 0.1
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "share": 0.92
+      },
+      {
+        "value": "600",
+        "share": 0.07
+      },
+      {
+        "value": "700",
+        "share": 0.01
+      }
+    ],
+    "sizesPx": [
+      {
+        "value": 12,
+        "share": 0.72
+      },
+      {
+        "value": 17,
+        "share": 0.11
+      },
+      {
+        "value": 14,
+        "share": 0.07
+      },
+      {
+        "value": 19,
+        "share": 0.07
+      },
+      {
+        "value": 32,
+        "share": 0.03
+      },
+      {
+        "value": 34,
+        "share": 0
+      }
+    ],
+    "distinctSizes": 6,
+    "bodySizePx": 12,
+    "largest": {
+      "size": 34,
+      "family": "SF Pro Text",
+      "weight": "600",
+      "text": "Apple",
+      "lineHeight": 1.47,
+      "tracking": -0.011,
+      "vw": 8.7
+    },
+    "headlineToBody": 2.8,
+    "measureChars": {
+      "median": 396,
+      "max": 646
+    },
+    "monospaceShareOutsideCode": 0
+  },
+  "color": {
+    "inks": [
+      {
+        "value": "rgba(0, 0, 0, 0.56)",
+        "weight": 2675
+      },
+      {
+        "value": "rgb(245, 245, 247)",
+        "weight": 796
+      },
+      {
+        "value": "rgb(29, 29, 31)",
+        "weight": 241
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "weight": 202
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.88)",
+        "weight": 145
+      },
+      {
+        "value": "rgb(0, 102, 204)",
+        "weight": 131
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.72)",
+        "weight": 118
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "weight": 90
+      }
+    ],
+    "grounds": [
+      {
+        "value": "rgb(0, 0, 0)",
+        "weight": 249
+      },
+      {
+        "value": "rgb(245, 245, 247)",
+        "weight": 210
+      },
+      {
+        "value": "rgb(244, 248, 251)",
+        "weight": 5
+      },
+      {
+        "value": "rgb(36, 86, 142)",
+        "weight": 5
+      },
+      {
+        "value": "rgb(159, 198, 244)",
+        "weight": 5
+      },
+      {
+        "value": "rgb(48, 4, 2)",
+        "weight": 5
+      },
+      {
+        "value": "rgb(36, 16, 4)",
+        "weight": 5
+      },
+      {
+        "value": "rgb(31, 15, 15)",
+        "weight": 5
+      }
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "980px",
+        "weight": 35
+      },
+      {
+        "value": "999px",
+        "weight": 1
+      },
+      {
+        "value": "50%",
+        "weight": 1
+      }
+    ],
+    "shadows": [],
+    "elementsWithBorders": 36,
+    "gradients": 19,
+    "backdropBlur": 1
+  },
+  "spacingPx": [
+    {
+      "value": 3,
+      "weight": 9
+    },
+    {
+      "value": 4,
+      "weight": 22
+    },
+    {
+      "value": 5,
+      "weight": 26
+    },
+    {
+      "value": 8,
+      "weight": 52
+    },
+    {
+      "value": 9,
+      "weight": 5
+    },
+    {
+      "value": 10,
+      "weight": 24
+    },
+    {
+      "value": 11,
+      "weight": 9
+    },
+    {
+      "value": 12,
+      "weight": 7
+    },
+    {
+      "value": 13,
+      "weight": 19
+    },
+    {
+      "value": 14,
+      "weight": 9
+    },
+    {
+      "value": 15,
+      "weight": 35
+    },
+    {
+      "value": 16,
+      "weight": 5
+    },
+    {
+      "value": 17,
+      "weight": 4
+    },
+    {
+      "value": 20,
+      "weight": 8
+    },
+    {
+      "value": 30,
+      "weight": 9
+    },
+    {
+      "value": 39,
+      "weight": 9
+    }
+  ],
+  "perf": {
+    "lcp": {
+      "ms": 1648,
+      "tag": "img",
+      "lazy": false,
+      "priority": null,
+      "what": "https://www.apple.com/v/homepage/images/macbook-pr"
+    },
+    "cls": 0,
+    "longTasks": {
+      "count": 2,
+      "longest": 58
+    },
+    "longFrames": {
+      "count": 5,
+      "longest": 383
+    },
+    "blockingScripts": [
+      "https://www.apple.com/v/homepage/a/scripts/head.built.js"
+    ],
+    "runtimeCss": false,
+    "kb": {
+      "script": 781,
+      "css": 95,
+      "font": 914,
+      "image": 318
+    },
+    "unknownSizes": 29,
+    "fontsLoaded": [
+      "SF Pro Display 400",
+      "SF Pro Display 600",
+      "SF Pro Text 400",
+      "SF Pro Text 600",
+      "SF Pro Text 700"
+    ],
+    "animations": {
+      "running": 18,
+      "nonComposited": [
+        {
+          "name": "dotnav-timed-animation",
+          "props": [
+            "width"
+          ],
+          "infinite": false
+        }
+      ],
+      "infinite": 0,
+      "moving": 17
+    },
+    "blurSurfaces": [
+      {
+        "radius": 20,
+        "areaShare": 0.06,
+        "fillAlpha": 0
+      }
+    ]
+  },
+  "findings": {
+    "overflowX": false,
+    "lowContrast": [],
+    "lowContrastCount": 0,
+    "smallTargets": [
+      {
+        "text": "United States",
+        "w": 75,
+        "h": 16
+      },
+      {
+        "text": "Privacy Policy",
+        "w": 95,
+        "h": 16
+      },
+      {
+        "text": "Terms of Use",
+        "w": 91,
+        "h": 16
+      },
+      {
+        "text": "Sales and Refunds",
+        "w": 121,
+        "h": 16
+      },
+      {
+        "text": "Legal",
+        "w": 48,
+        "h": 16
+      },
+      {
+        "text": "Site Map",
+        "w": 67,
+        "h": 16
+      }
+    ],
+    "smallTargetCount": 6,
+    "tinyText": [],
+    "tinyTextCount": 0,
+    "smallCapsLabels": [],
+    "smallCapsCount": 0,
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Apple",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Quick Links",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "MacBook ProMacBook Pro",
+        "lines": 2
+      },
+      {
+        "tag": "h2",
+        "text": "MacBook Pro",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "iPhone Duo",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "iMac",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "iPhone 18 Pro",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "iPad mini",
+        "lines": 3
+      },
+      {
+        "tag": "h3",
+        "text": "Apple Watch Series 12",
+        "lines": 5
+      },
+      {
+        "tag": "h3",
+        "text": "Apple Upgrade",
+        "lines": 3
+      },
+      {
+        "tag": "h3",
+        "text": "Apple Card",
+        "lines": 3
+      },
+      {
+        "tag": "h2",
+        "text": "Endless entertainment.",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Apple Footer",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Shop and Learn\n\t\t\t\t\t\n\t\t\t\t\t\tShop and Learn",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Apple Wallet\n\t\t\t\t\t\n\t\t\t\t\t\tApple Wallet",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Account\n\t\t\t\t\t\n\t\t\t\t\t\tAccount",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Entertainment\n\t\t\t\t\t\n\t\t\t\t\t\tEntertainment",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Apple Store\n\t\t\t\t\t\n\t\t\t\t\t\tApple Store",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "For Business\n\t\t\t\t\t\n\t\t\t\t\t\tFor Business",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "For Education\n\t\t\t\t\t\n\t\t\t\t\t\tFor Education",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "For Healthcare\n\t\t\t\t\t\n\t\t\t\t\t\tFor Healthcare",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "For Government\n\t\t\t\t\t\n\t\t\t\t\t\tFor Government",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Apple Values\n\t\t\t\t\t\n\t\t\t\t\t\tApple Values",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "About Apple\n\t\t\t\t\t\n\t\t\t\t\t\tAbout Apple",
+        "lines": 2
+      }
+    ],
+    "transitionAll": 0,
+    "imagesWithoutAlt": 0,
+    "placeholderText": false,
+    "emoji": 0
+  }
+}

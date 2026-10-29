@@ -1,0 +1,208 @@
+{
+  "url": "file:///Users/leocanela279/Projects/how-tf-can-ai-have-taste/experiments/runs/taste/b4/index.html",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "pageHeightScreens": 6.8,
+  "type": {
+    "families": [
+      {
+        "value": "Host Grotesk",
+        "share": 1
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "share": 1
+      }
+    ],
+    "sizesPx": [
+      {
+        "value": 18,
+        "share": 0.52
+      },
+      {
+        "value": 14,
+        "share": 0.24
+      },
+      {
+        "value": 30,
+        "share": 0.23
+      },
+      {
+        "value": 138.2,
+        "share": 0.01
+      },
+      {
+        "value": 77.8,
+        "share": 0.01
+      }
+    ],
+    "distinctSizes": 5,
+    "bodySizePx": 18,
+    "largest": {
+      "size": 138.24,
+      "family": "Host Grotesk",
+      "weight": "400",
+      "text": "I build the part you don’t see.",
+      "lineHeight": 0.92,
+      "tracking": -0.04,
+      "vw": 9.6
+    },
+    "headlineToBody": 7.7,
+    "measureChars": {
+      "median": 63,
+      "max": 75
+    },
+    "monospaceShareOutsideCode": 0
+  },
+  "color": {
+    "inks": [
+      {
+        "value": "rgb(92, 92, 92)",
+        "weight": 2307
+      },
+      {
+        "value": "rgb(22, 22, 22)",
+        "weight": 1509
+      },
+      {
+        "value": "rgb(251, 244, 238)",
+        "weight": 358
+      },
+      {
+        "value": "rgb(235, 205, 185)",
+        "weight": 113
+      },
+      {
+        "value": "rgb(142, 63, 23)",
+        "weight": 13
+      }
+    ],
+    "grounds": [
+      {
+        "value": "rgb(142, 63, 23)",
+        "weight": 226
+      },
+      {
+        "value": "rgb(251, 244, 238)",
+        "weight": 1
+      },
+      {
+        "value": "rgb(250, 250, 250)",
+        "weight": 1
+      }
+    ]
+  },
+  "shape": {
+    "radii": [],
+    "shadows": [],
+    "elementsWithBorders": 0,
+    "gradients": 0,
+    "backdropBlur": 0
+  },
+  "spacingPx": [
+    {
+      "value": 4,
+      "weight": 11
+    },
+    {
+      "value": 8,
+      "weight": 15
+    },
+    {
+      "value": 16,
+      "weight": 30
+    },
+    {
+      "value": 24,
+      "weight": 24
+    },
+    {
+      "value": 48,
+      "weight": 8
+    },
+    {
+      "value": 96,
+      "weight": 4
+    },
+    {
+      "value": 160,
+      "weight": 4
+    }
+  ],
+  "findings": {
+    "overflowX": false,
+    "lowContrast": [],
+    "lowContrastCount": 0,
+    "smallTargets": [],
+    "smallTargetCount": 0,
+    "tinyText": [],
+    "tinyTextCount": 0,
+    "smallCapsLabels": [],
+    "smallCapsCount": 0,
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "I build the partyou don’t see.",
+        "lines": 2
+      },
+      {
+        "tag": "h2",
+        "text": "Work",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "ICEX Next",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Reskillia",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "CPU City",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Tomate",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "db-doctor",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Club Stas Tarat",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Smaller tools",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "About",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Have a product whose logic needs sorting out? Writ",
+        "lines": 2
+      }
+    ],
+    "transitionAll": 0,
+    "imagesWithoutAlt": 0,
+    "placeholderText": false,
+    "emoji": 0
+  }
+}

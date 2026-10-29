@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leandro Canela — Full-stack developer, Barcelona</title>
+  <meta name="description" content="Leandro Canela, full-stack developer in Barcelona with the weight on the backend. Data models, permissions, and what happens when something fails." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Geist', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"Geist Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+            serif: ['Newsreader', 'ui-serif', 'Georgia', 'serif'],
+          },
+          colors: {
+            paper: '#0f0e0c',
+            card: '#171613',
+            ink: '#ece8df',
+            muted: '#a39e93',
+            line: '#2b2925',
+            signal: '#ec7044',
+            deep: '#1a1915',
+            ondeep: '#ece8df',
+          },
+          maxWidth: { page: '1240px' },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { background: #0f0e0c; color: #ece8df; color-scheme: dark; font-feature-settings: "ss01", "cv11"; }
+    ::selection { background: #ec7044; color: #0f0e0c; }
+
+    .display { font-size: clamp(3.1rem, 7.6vw, 7.25rem); line-height: .9; letter-spacing: -0.045em; }
+    .h-section { font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1; letter-spacing: -0.04em; }
+    .h-project { font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1; letter-spacing: -0.035em; }
+
+    header a, .link-u { padding-block: 2px; }
+    footer .link-u { display: inline-block; padding-block: 3px; }
+    .link-u { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .35s cubic-bezier(.2,.7,.2,1); }
+    .link-u:hover, .link-u:focus-visible { background-size: 100% 1px; }
+
+    .shot { transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+    .shot-wrap:hover .shot { transform: scale(1.025); }
+
+    .arrow { display: inline-block; transition: transform .3s cubic-bezier(.2,.7,.2,1); }
+    a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    .no-js .reveal { opacity: 1; transform: none; }
+
+    :focus-visible { outline: 2px solid #ec7044; outline-offset: 3px; border-radius: 2px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal, .shot, .arrow, .link-u { transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+      .pulse { animation: none !important; }
+    }
+
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+  </style>
+</head>
+
+<body class="no-js font-sans antialiased">
+  <script>document.body.classList.remove('no-js');</script>
+
+  <a href="#work" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ink focus:text-paper focus:px-3 focus:py-2 text-sm">Skip to work</a>
+
+  <!-- Top bar -->
+  <header class="sticky top-0 z-40 border-b border-line/70 bg-paper/85 backdrop-blur-md">
+    <div class="mx-auto max-w-page px-4 sm:px-8 h-14 flex items-center justify-between gap-4">
+      <a href="#top" class="font-medium tracking-tight text-[15px] whitespace-nowrap">Leandro Canela</a>
+      <nav class="flex items-center gap-4 sm:gap-8 text-[14px] text-muted">
+        <a href="#work" class="link-u hover:text-ink">Work</a>
+        <a href="#about" class="link-u hover:text-ink hidden sm:inline">About</a>
+        <a href="#contact" class="link-u hover:text-ink hidden min-[400px]:inline">Contact</a>
+        <a href="https://porfoli-leo.vercel.app/cvLeo.pdf" target="_blank" rel="noopener" class="rounded-full bg-ink text-paper px-3.5 py-1.5 text-[13px] hover:bg-signal transition-colors">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="mx-auto max-w-page px-4 sm:px-8 pt-14 sm:pt-20 pb-16 sm:pb-24">
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[12px] uppercase tracking-[0.08em] text-muted">
+        <span class="inline-flex items-center gap-2"><span class="pulse h-1.5 w-1.5 rounded-full bg-signal"></span>Full-stack · backend-weighted</span>
+        <span>Barcelona <span id="bcn-time" class="text-ink tabular-nums"></span></span>
+      </div>
+
+      <h1 class="display font-medium mt-8 sm:mt-10">Leandro<br />Canela<span class="text-signal">.</span></h1>
+
+      <div class="mt-12 sm:mt-16 grid gap-10 lg:grid-cols-12 lg:gap-12">
+        <p class="lg:col-span-7 font-serif text-[1.65rem] sm:text-[2.2rem] leading-[1.15] tracking-[-0.01em]">
+          I enjoy the part of the work that is almost invisible:
+          <em class="text-muted">the data model, the permissions,</em>
+          and <em class="text-muted">what happens when something fails.</em>
+        </p>
+
+        <div class="lg:col-span-4 lg:col-start-9 flex flex-col justify-end">
+          <dl class="divide-y divide-line border-y border-line text-[14px]">
+            <div class="flex justify-between gap-4 py-3"><dt class="text-muted">Currently</dt><dd>Developer at Humannova</dd></div>
+            <div class="flex justify-between gap-4 py-3"><dt class="text-muted">Studying</dt><dd>Computer science</dd></div>
+            <div class="flex justify-between gap-4 py-3"><dt class="text-muted">Based in</dt><dd>Barcelona</dd></div>
+          </dl>
+          <div class="mt-6 flex flex-wrap gap-2.5">
+            <a href="mailto:leandrocanela279@gmail.com" class="rounded-full bg-ink text-paper px-4 py-2 text-[14px] hover:bg-signal transition-colors">Get in touch <span class="arrow">↗</span></a>
+            <a href="#work" class="rounded-full border border-ink/25 px-4 py-2 text-[14px] hover:border-ink transition-colors">See the work ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three invisible things -->
+    <section aria-label="What I focus on" class="border-y border-line bg-card">
+      <div class="mx-auto max-w-page px-4 sm:px-8 grid md:grid-cols-3">
+        <div class="py-8 md:py-10 md:pr-8 border-b md:border-b-0 md:border-r border-line">
+          <p class="font-mono text-[12px] text-muted">01 / schema</p>
+          <h2 class="mt-3 text-xl font-medium tracking-tight">The data model</h2>
+          <p class="mt-2 text-[15px] leading-relaxed text-muted">Versioned questionnaires, drafts that survive a migration, every consent stored with its version and date.</p>
+        </div>
+        <div class="py-8 md:py-10 md:px-8 border-b md:border-b-0 md:border-r border-line">
+          <p class="font-mono text-[12px] text-muted">02 / access</p>
+          <h2 class="mt-3 text-xl font-medium tracking-tight">The permissions</h2>
+          <p class="mt-2 text-[15px] leading-relaxed text-muted">Row-level security in PostgreSQL, encrypted personal data, invite-only access where privacy comes first.</p>
+        </div>
+        <div class="py-8 md:py-10 md:pl-8">
+          <p class="font-mono text-[12px] text-muted">03 / failure</p>
+          <h2 class="mt-3 text-xl font-medium tracking-tight">When it breaks</h2>
+          <p class="mt-2 text-[15px] leading-relaxed text-muted">Scanned CVs that need OCR, a Mac that goes to sleep mid-session, a query that quietly turns into N+1.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="mx-auto max-w-page px-4 sm:px-8 pt-24 sm:pt-32 scroll-mt-14">
+      <div class="grid gap-8 lg:grid-cols-12 items-end">
+        <div class="lg:col-span-6">
+          <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-muted">Selected work · 2025–2026</p>
+          <h2 class="h-section font-medium mt-4">Things I've built,<br /><span class="font-serif italic font-normal text-muted">newest first.</span></h2>
+        </div>
+
+        <!-- Index -->
+        <ol class="lg:col-span-5 lg:col-start-8 border-t border-ink text-[14px]">
+          <li><a href="#icex" class="group flex items-baseline gap-4 border-b border-line py-2.5 hover:text-signal"><span class="font-mono text-[12px] text-muted w-6">01</span><span class="flex-1">ICEX Next</span><span class="text-muted hidden sm:inline">Humannova</span><span class="font-mono text-[12px] text-muted w-10 text-right">2026</span></a></li>
+          <li><a href="#reskillia" class="group flex items-baseline gap-4 border-b border-line py-2.5 hover:text-signal"><span class="font-mono text-[12px] text-muted w-6">02</span><span class="flex-1">Reskillia</span><span class="text-muted hidden sm:inline">Humannova</span><span class="font-mono text-[12px] text-muted w-10 text-right">2026</span></a></li>
+          <li><a href="#cpu-city" class="group flex items-baseline gap-4 border-b border-line py-2.5 hover:text-signal"><span class="font-mono text-[12px] text-muted w-6">03</span><span class="flex-1">CPU City</span><span class="text-muted hidden sm:inline">Personal</span><span class="font-mono text-[12px] text-muted w-10 text-right">2026</span></a></li>
+          <li><a href="#tomate" class="group flex items-baseline gap-4 border-b border-line py-2.5 hover:text-signal"><span class="font-mono text-[12px] text-muted w-6">04</span><span class="flex-1">Tomate</span><span class="text-muted hidden sm:inline">Personal</span><span class="font-mono text-[12px] text-muted w-10 text-right">2026</span></a></li>
+          <li><a href="#db-doctor" class="group flex items-baseline gap-4 border-b border-line py-2.5 hover:text-signal"><span class="font-mono text-[12px] text-muted w-6">05</span><span class="flex-1">db-doctor</span><span class="text-muted hidden sm:inline">Personal</span><span class="font-mono text-[12px] text-muted w-10 text-right">2026</span></a></li>
+          <li><a href="#stastarat" class="group flex items-baseline gap-4 border-b border-line py-2.5 hover:text-signal"><span class="font-mono text-[12px] text-muted w-6">06</span><span class="flex-1">Club Stas Tarat</span><span class="text-muted hidden sm:inline">Team of three</span><span class="font-mono text-[12px] text-muted w-10 text-right">2025</span></a></li>
+        </ol>
+      </div>
+
+      <div class="mt-20 sm:mt-28 space-y-24 sm:space-y-36">
+
+        <!-- 01 ICEX Next -->
+        <article id="icex" class="reveal scroll-mt-20 grid gap-8 lg:grid-cols-12 lg:gap-12">
+          <header class="lg:col-span-4 lg:sticky lg:top-24 lg:self-start">
+            <p class="font-mono text-[12px] text-muted">01 — Sep 2026 – now · Humannova</p>
+            <h3 class="h-project font-medium mt-3">ICEX Next</h3>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">Application portal for the ICEX Next programme. Built on the Reskillia codebase and cut down to what the client needed: no AI, no public sign-up, privacy first.</p>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">The team invites each person, who sets a password via a link, accepts the privacy policy and submits a CV and a questionnaire.</p>
+            <p class="mt-6 font-mono text-[12px] leading-6 text-ink/80">Next.js 16 · React 19 · Tailwind CSS 4 · Supabase · Docker</p>
+            <div class="mt-6 flex gap-5 text-[14px]">
+              <a href="https://icex.humannova.com/" target="_blank" rel="noopener" class="link-u font-medium">Visit site <span class="arrow">↗</span></a>
+            </div>
+          </header>
+          <div class="lg:col-span-8">
+            <a href="https://icex.humannova.com/" target="_blank" rel="noopener" class="shot-wrap block overflow-hidden rounded-xl border border-line bg-card" aria-label="Open ICEX Next">
+              <img src="assets/icex.jpg" alt="ICEX Next sign-in screen: a blue-to-green panel beside the login form" width="1200" height="900" loading="lazy" class="shot block w-full h-auto" />
+            </a>
+            <ul class="mt-6 grid sm:grid-cols-2 gap-x-8 text-[15px] leading-snug">
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">a</span>Reads CVs as PDF or images, with local OCR for scanned documents.</li>
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">b</span>One questionnaire per profile, versioned, with drafts migrated between versions.</li>
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">c</span>Every privacy acceptance recorded with its version and date.</li>
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">d</span>Answers exported to Excel.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 02 Reskillia -->
+        <article id="reskillia" class="reveal scroll-mt-20 grid gap-8 lg:grid-cols-12 lg:gap-12">
+          <header class="lg:col-span-4 lg:sticky lg:top-24 lg:self-start">
+            <p class="font-mono text-[12px] text-muted">02 — Mar 2026 – now · Humannova</p>
+            <h3 class="h-project font-medium mt-3">Reskillia</h3>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">A platform for companies to assess their team's digital skills against DigComp 2.2.</p>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">Each person uploads a CV and fills a profile. Gemini picks seven competences with a target level, writes the questions and scores the answers. The result is a radar chart of expected vs. achieved, downloadable as PDF.</p>
+            <p class="mt-6 font-mono text-[12px] leading-6 text-ink/80">Next.js 16 · React 19 · Tailwind 4 · Supabase · Gemini · Docker</p>
+            <div class="mt-6 flex gap-5 text-[14px]">
+              <a href="https://skillia-dev-production.up.railway.app/es" target="_blank" rel="noopener" class="link-u font-medium">Visit site <span class="arrow">↗</span></a>
+            </div>
+          </header>
+          <div class="lg:col-span-8">
+            <a href="https://skillia-dev-production.up.railway.app/es" target="_blank" rel="noopener" class="shot-wrap block overflow-hidden rounded-xl border border-line bg-card" aria-label="Open Reskillia">
+              <img src="assets/reskillia.jpg" alt="Reskillia landing page with the headline 'Desbloquea tu potencial real'" width="1200" height="900" loading="lazy" class="shot block w-full h-auto" />
+            </a>
+            <ul class="mt-6 grid sm:grid-cols-2 gap-x-8 text-[15px] leading-snug">
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">a</span>Email or Google sign-in on Supabase Auth.</li>
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">b</span>Personal data encrypted with AES-256-GCM, plus RLS policies in PostgreSQL.</li>
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">c</span>Spanish and Catalan interface.</li>
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">d</span>Runs in Docker.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 03 CPU City -->
+        <article id="cpu-city" class="reveal scroll-mt-20 grid gap-8 lg:grid-cols-12 lg:gap-12">
+          <header class="lg:col-span-4 lg:sticky lg:top-24 lg:self-start">
+            <p class="font-mono text-[12px] text-muted">03 — Oct 2026 · Personal</p>
+            <h3 class="h-project font-medium mt-3">CPU City</h3>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">A 3D processor you can explore. As the camera gets closer, it reveals a city.</p>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">It runs RISC-V assembly in a Web Worker and follows each instruction all the way down to the ALU circuit.</p>
+            <p class="mt-6 font-mono text-[12px] leading-6 text-ink/80">TypeScript · Vite · WebGL</p>
+            <div class="mt-6 flex gap-5 text-[14px]">
+              <a href="https://cpu-city.vercel.app" target="_blank" rel="noopener" class="link-u font-medium">Live <span class="arrow">↗</span></a>
+              <a href="https://github.com/Leocanela279/cpu-city" target="_blank" rel="noopener" class="link-u text-muted hover:text-ink">Code <span class="arrow">↗</span></a>
+            </div>
+          </header>
+          <div class="lg:col-span-8">
+            <a href="https://cpu-city.vercel.app" target="_blank" rel="noopener" class="shot-wrap block overflow-hidden rounded-xl border border-line bg-deep" aria-label="Open CPU City">
+              <img src="assets/cpu-city.jpg" alt="CPU City: a 3D rendered processor on a dark motherboard, with an instruction pipeline panel below" width="1200" height="750" loading="lazy" class="shot block w-full h-auto" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 04 Tomate -->
+        <article id="tomate" class="reveal scroll-mt-20 grid gap-8 lg:grid-cols-12 lg:gap-12">
+          <header class="lg:col-span-4 lg:sticky lg:top-24 lg:self-start">
+            <p class="font-mono text-[12px] text-muted">04 — Oct 2026 · Personal</p>
+            <h3 class="h-project font-medium mt-3">Tomate</h3>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">A macOS Pomodoro timer for long study sessions, from 25 to 90 minutes. Sessions over an hour can be split into two blocks with a break in between.</p>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">It lives in the menu bar and is fully local.</p>
+            <p class="mt-6 font-mono text-[12px] leading-6 text-ink/80">SwiftUI · macOS 14+ · Astro site</p>
+            <div class="mt-6 flex gap-5 text-[14px]">
+              <a href="https://usetomate.com" target="_blank" rel="noopener" class="link-u font-medium">usetomate.com <span class="arrow">↗</span></a>
+              <a href="https://github.com/Leocanela279/tomate" target="_blank" rel="noopener" class="link-u text-muted hover:text-ink">Code <span class="arrow">↗</span></a>
+            </div>
+          </header>
+          <div class="lg:col-span-8">
+            <a href="https://usetomate.com" target="_blank" rel="noopener" class="shot-wrap block overflow-hidden rounded-xl border border-line bg-card" aria-label="Open Tomate">
+              <img src="assets/tomate.jpg" alt="Tomate website on a deep red background: 'Estudia en pomodoros de hasta 90 minutos'" width="1200" height="900" loading="lazy" class="shot block w-full h-auto" />
+            </a>
+            <ul class="mt-6 grid sm:grid-cols-2 gap-x-8 text-[15px] leading-snug">
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">a</span>Schedules sessions without overlaps.</li>
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">b</span>Keeps a week of history.</li>
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">c</span>Turns on macOS Focus while studying, via Shortcuts.</li>
+              <li class="flex gap-3 border-t border-line py-3.5"><span class="font-mono text-[12px] text-signal pt-0.5">d</span>Time stored as dates, so it stays exact when the Mac sleeps.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 05 db-doctor -->
+        <article id="db-doctor" class="reveal scroll-mt-20 grid gap-8 lg:grid-cols-12 lg:gap-12">
+          <header class="lg:col-span-4 lg:sticky lg:top-24 lg:self-start">
+            <p class="font-mono text-[12px] text-muted">05 — Oct 2026 · Personal</p>
+            <h3 class="h-project font-medium mt-3">db-doctor</h3>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">A Claude skill that audits an app's database layer and returns a prioritized performance report and an optimization plan.</p>
+            <p class="mt-6 font-mono text-[12px] leading-6 text-ink/80">Python</p>
+            <div class="mt-6 flex gap-5 text-[14px]">
+              <a href="https://github.com/Leocanela279/db-doctor" target="_blank" rel="noopener" class="link-u font-medium">Code <span class="arrow">↗</span></a>
+            </div>
+          </header>
+          <div class="lg:col-span-8">
+            <a href="https://github.com/Leocanela279/db-doctor" target="_blank" rel="noopener" class="group block rounded-xl bg-deep text-ondeep border border-line p-6 sm:p-10 overflow-hidden" aria-label="Open db-doctor on GitHub">
+              <div class="flex items-center justify-between font-mono text-[12px] text-ondeep/60">
+                <span>db-doctor</span><span>audit pipeline</span>
+              </div>
+              <div class="mt-10 sm:mt-14 grid sm:grid-cols-[1fr_auto_1fr] items-center gap-6 sm:gap-8">
+                <div class="space-y-2 font-mono text-[14px]">
+                  <p class="text-ondeep/60 text-[12px] uppercase tracking-[0.08em]">Reads</p>
+                  <p class="border-b border-ondeep/15 pb-2">SQL</p>
+                  <p class="border-b border-ondeep/15 pb-2">ORM N+1 queries</p>
+                  <p class="border-b border-ondeep/15 pb-2">Indexes</p>
+                </div>
+                <span class="hidden sm:block font-mono text-ondeep/60 text-2xl transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+                <div class="space-y-2 font-mono text-[14px]">
+                  <p class="text-ondeep/60 text-[12px] uppercase tracking-[0.08em]">Returns</p>
+                  <p class="border-b border-ondeep/15 pb-2">Prioritized performance report</p>
+                  <p class="border-b border-ondeep/15 pb-2 text-[#f29b76]">Optimization plan</p>
+                </div>
+              </div>
+              <p class="mt-12 sm:mt-16 font-serif italic text-[1.5rem] sm:text-[2rem] leading-tight text-ondeep/90 max-w-xl">Point it at a database layer, get back what to fix first.</p>
+            </a>
+          </div>
+        </article>
+
+        <!-- 06 Club Stas Tarat -->
+        <article id="stastarat" class="reveal scroll-mt-20 grid gap-8 lg:grid-cols-12 lg:gap-12">
+          <header class="lg:col-span-4 lg:sticky lg:top-24 lg:self-start">
+            <p class="font-mono text-[12px] text-muted">06 — Mar 2025 – Jul 2026 · Team of three</p>
+            <h3 class="h-project font-medium mt-3">Club Stas Tarat</h3>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">Website for a board game and role-playing club in Terrassa: almost forty years old, about a hundred members.</p>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">Six sections, a weekly schedule, an event calendar, the game library and a members' area. Built with Manuel Ordoñez and Nicolau Miguel.</p>
+            <p class="mt-6 font-mono text-[12px] leading-6 text-ink/80">Laravel 12 · Tailwind 4 · Vite · Google APIs · PDF &amp; QR generation</p>
+            <div class="mt-6 flex gap-5 text-[14px]">
+              <a href="https://stastarat.com" target="_blank" rel="noopener" class="link-u font-medium">stastarat.com <span class="arrow">↗</span></a>
+            </div>
+          </header>
+          <div class="lg:col-span-8">
+            <a href="https://stastarat.com" target="_blank" rel="noopener" class="shot-wrap block overflow-hidden rounded-xl border border-line bg-card" aria-label="Open Club Stas Tarat">
+              <img src="assets/stastarat.jpg" alt="Club Stas Tarat homepage with a green slime mascot holding a 30th anniversary cake" width="1200" height="900" loading="lazy" class="shot block w-full h-auto" />
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Smaller tools -->
+      <div class="mt-28 sm:mt-36 grid gap-8 lg:grid-cols-12 lg:gap-12">
+        <div class="lg:col-span-4">
+          <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-muted">Smaller tools</p>
+          <p class="mt-3 text-[16px] leading-relaxed text-muted">Outside work I build tools I use myself. Some of them stay small.</p>
+        </div>
+        <ul class="lg:col-span-8 border-t border-ink">
+          <li class="grid grid-cols-[1fr_auto] sm:grid-cols-[12rem_1fr_auto] gap-x-6 gap-y-1 border-b border-line py-4">
+            <span class="font-medium">Cinnamon Key</span>
+            <span class="text-muted text-[15px] col-span-2 sm:col-span-1 row-start-2 sm:row-start-auto">Local-first desktop password manager.</span>
+            <span class="font-mono text-[12px] text-muted text-right col-start-2 row-start-1 sm:col-start-auto">Electron · Vue · SQLite</span>
+          </li>
+          <li class="grid grid-cols-[1fr_auto] sm:grid-cols-[12rem_1fr_auto] gap-x-6 gap-y-1 border-b border-line py-4">
+            <span class="font-medium">vault</span>
+            <span class="text-muted text-[15px] col-span-2 sm:col-span-1 row-start-2 sm:row-start-auto">Password manager for the command line.</span>
+            <span class="font-mono text-[12px] text-muted text-right col-start-2 row-start-1 sm:col-start-auto">Go CLI</span>
+          </li>
+          <li class="grid grid-cols-[1fr_auto] sm:grid-cols-[12rem_1fr_auto] gap-x-6 gap-y-1 border-b border-line py-4">
+            <span class="font-medium">ascii-conversor</span>
+            <span class="text-muted text-[15px] col-span-2 sm:col-span-1 row-start-2 sm:row-start-auto">Turns images into ASCII.</span>
+            <span class="font-mono text-[12px] text-muted text-right col-start-2 row-start-1 sm:col-start-auto">Image → text</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mx-auto max-w-page px-4 sm:px-8 pt-28 sm:pt-40 scroll-mt-14">
+      <div class="grid gap-10 lg:grid-cols-12 lg:gap-12">
+        <div class="lg:col-span-4">
+          <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-muted">About</p>
+        </div>
+        <div class="lg:col-span-8">
+          <p class="font-serif text-[1.6rem] sm:text-[2.1rem] leading-[1.2] tracking-[-0.01em]">
+            I'm a full-stack developer in Barcelona with the weight on the backend, and a computer science student.
+            I work at <span class="italic">Humannova</span>. Before that, Laravel was my main tool.
+          </p>
+          <p class="mt-6 max-w-2xl text-[16px] leading-relaxed text-muted">
+            The screens are what people see, but what I enjoy is underneath them: deciding how the data is shaped, who is allowed to touch it, and making sure that when something fails, it fails in a way someone can understand and recover from.
+          </p>
+
+          <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 border-t border-ink pt-8">
+            <div>
+              <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-signal">Backend</p>
+              <ul class="mt-3 space-y-1.5 text-[15px]"><li>Laravel</li><li>PHP</li><li>Go</li><li>Node.js</li></ul>
+            </div>
+            <div>
+              <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-muted">Frontend</p>
+              <ul class="mt-3 space-y-1.5 text-[15px]"><li>Next.js</li><li>React</li><li>Astro</li><li>Tailwind</li><li>TypeScript</li></ul>
+            </div>
+            <div>
+              <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-signal">Data</p>
+              <ul class="mt-3 space-y-1.5 text-[15px]"><li>PostgreSQL</li><li>Supabase</li><li>MySQL</li></ul>
+            </div>
+            <div>
+              <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-muted">Tools</p>
+              <ul class="mt-3 space-y-1.5 text-[15px]"><li>Docker</li><li>Git</li><li>SwiftUI</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mt-28 sm:mt-40 bg-deep text-ondeep scroll-mt-14">
+      <div class="mx-auto max-w-page px-4 sm:px-8 pt-20 sm:pt-28 pb-10">
+        <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-ondeep/60">Contact</p>
+        <h2 class="mt-6 font-medium tracking-[-0.045em] leading-[0.95] text-[clamp(2.4rem,7vw,6rem)]">
+          Have a system that<br class="hidden sm:block" />
+          <span class="font-serif italic font-normal text-ondeep/60">needs to hold up?</span>
+        </h2>
+
+        <a href="mailto:leandrocanela279@gmail.com" class="group mt-12 inline-flex items-center gap-3 text-[clamp(1.05rem,3.2vw,2rem)] tracking-tight break-all">
+          <span class="link-u">leandrocanela279@gmail.com</span>
+          <span class="arrow text-signal">↗</span>
+        </a>
+
+        <footer class="mt-20 sm:mt-28 border-t border-ondeep/15 pt-10 sm:pt-12 text-[14px] leading-[1.6]">
+          <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-12">
+            <div class="col-span-2 sm:col-span-4">
+              <p class="text-[15px] font-medium tracking-tight">Leandro Canela</p>
+              <p class="mt-2 max-w-[32ch] text-ondeep/60">Full-stack developer in Barcelona. I build the part nobody sees, so the part they do keeps working.</p>
+            </div>
+            <nav aria-label="Work" class="sm:col-span-2 sm:col-start-6">
+              <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-ondeep/60">Work</p>
+              <ul class="mt-4">
+            <li><a class="link-u" href="#icex">ICEX Next</a></li>
+            <li><a class="link-u" href="#reskillia">Reskillia</a></li>
+            <li><a class="link-u" href="#cpu-city">CPU City</a></li>
+            <li><a class="link-u" href="#tomate">Tomate</a></li>
+            <li><a class="link-u" href="#db-doctor">db-doctor</a></li>
+            <li><a class="link-u" href="#stastarat">Club Stas Tarat</a></li>
+              </ul>
+            </nav>
+            <nav aria-label="Elsewhere" class="sm:col-span-2">
+              <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-ondeep/60">Elsewhere</p>
+              <ul class="mt-4">
+                <li><a class="link-u" href="https://github.com/Leocanela279" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a class="link-u" href="https://gitlab.com/leandrocanela279" target="_blank" rel="noopener">GitLab</a></li>
+                <li><a class="link-u" href="https://porfoli-leo.vercel.app/cvLeo.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+                <li><a class="link-u" href="mailto:leandrocanela279@gmail.com">Email</a></li>
+              </ul>
+            </nav>
+            <div class="col-span-2 sm:col-span-3">
+              <p class="font-mono text-[12px] uppercase tracking-[0.08em] text-ondeep/60">Colophon</p>
+              <dl class="mt-4 space-y-1.5">
+                <div class="flex justify-between gap-4"><dt class="text-ondeep/60">Type</dt><dd class="text-right">Geist, Geist Mono, Newsreader</dd></div>
+                <div class="flex justify-between gap-4"><dt class="text-ondeep/60">Built with</dt><dd class="text-right">HTML and Tailwind CSS</dd></div>
+                <div class="flex justify-between gap-4"><dt class="text-ondeep/60">Cookies</dt><dd class="text-right">None, and no tracking</dd></div>
+                <div class="flex justify-between gap-4"><dt class="text-ondeep/60">Barcelona</dt><dd class="text-right tabular-nums"><span id="bcn-time-2"></span></dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="mt-14 sm:mt-20 flex flex-wrap items-center justify-between gap-4 border-t border-ondeep/10 pt-6 font-mono text-[12px] text-ondeep/60">
+            <span>© <span id="year">2026</span> Leandro Canela</span>
+            <a href="#top" class="link-u">Back to top ↑</a>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Barcelona local time
+    (function () {
+      var fmt;
+      try {
+        fmt = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' });
+      } catch (e) { return; }
+      var a = document.getElementById('bcn-time');
+      var b = document.getElementById('bcn-time-2');
+      function tick() {
+        var t = fmt.format(new Date());
+        if (a) a.textContent = '· ' + t;
+        if (b) b.textContent = t;
+      }
+      tick();
+      setInterval(tick, 30000);
+    })();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>

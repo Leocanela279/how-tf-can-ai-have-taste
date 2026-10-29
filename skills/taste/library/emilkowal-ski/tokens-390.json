@@ -1,0 +1,179 @@
+{
+  "url": "https://emilkowal.ski/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pageHeightScreens": 1.9,
+  "type": {
+    "families": [
+      {
+        "value": "Sans",
+        "share": 1
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "share": 0.9
+      },
+      {
+        "value": "500",
+        "share": 0.1
+      }
+    ],
+    "sizesPx": [
+      {
+        "value": 16,
+        "share": 0.95
+      },
+      {
+        "value": 14,
+        "share": 0.05
+      }
+    ],
+    "distinctSizes": 2,
+    "bodySizePx": 16,
+    "largest": {
+      "size": 16,
+      "family": "Sans",
+      "weight": "500",
+      "text": "Emil Kowalski",
+      "lineHeight": 1.5,
+      "tracking": 0,
+      "vw": 4.1
+    },
+    "headlineToBody": 1,
+    "measureChars": null,
+    "monospaceShareOutsideCode": 0
+  },
+  "color": {
+    "inks": [
+      {
+        "value": "rgb(99, 99, 94)",
+        "weight": 686
+      },
+      {
+        "value": "rgb(33, 32, 28)",
+        "weight": 280
+      }
+    ],
+    "grounds": [
+      {
+        "value": "rgb(249, 249, 248)",
+        "weight": 2
+      }
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "6px",
+        "weight": 11
+      }
+    ],
+    "shadows": [],
+    "elementsWithBorders": 1,
+    "gradients": 0,
+    "backdropBlur": 0
+  },
+  "spacingPx": [
+    {
+      "value": 6,
+      "weight": 2
+    },
+    {
+      "value": 8,
+      "weight": 2
+    },
+    {
+      "value": 12,
+      "weight": 1
+    },
+    {
+      "value": 16,
+      "weight": 11
+    },
+    {
+      "value": 20,
+      "weight": 7
+    },
+    {
+      "value": 24,
+      "weight": 3
+    },
+    {
+      "value": 48,
+      "weight": 1
+    },
+    {
+      "value": 64,
+      "weight": 3
+    },
+    {
+      "value": 128,
+      "weight": 1
+    }
+  ],
+  "perf": {
+    "lcp": {
+      "ms": 728,
+      "tag": "p",
+      "lazy": false,
+      "priority": null,
+      "what": "Currently taking a break from work. In the past, I"
+    },
+    "cls": 0,
+    "longTasks": {
+      "count": 2,
+      "longest": 184
+    },
+    "longFrames": {
+      "count": 3,
+      "longest": 295
+    },
+    "blockingScripts": [
+      "https://emilkowal.ski/_next/static/chunks/polyfills-42372ed130431b0a.js"
+    ],
+    "runtimeCss": false,
+    "kb": {
+      "script": 984,
+      "css": 35,
+      "font": 1059,
+      "image": 0
+    },
+    "unknownSizes": 0,
+    "fontsLoaded": [
+      "Sans 100 900"
+    ],
+    "animations": {
+      "running": 1,
+      "nonComposited": [],
+      "infinite": 0,
+      "moving": 0
+    },
+    "blurSurfaces": []
+  },
+  "findings": {
+    "overflowX": false,
+    "lowContrast": [],
+    "lowContrastCount": 0,
+    "smallTargets": [
+      {
+        "text": "Enrollment for my new course aiforui.dev",
+        "w": 331,
+        "h": 17
+      }
+    ],
+    "smallTargetCount": 1,
+    "tinyText": [],
+    "tinyTextCount": 0,
+    "smallCapsLabels": [],
+    "smallCapsCount": 0,
+    "headings": [],
+    "transitionAll": 0,
+    "imagesWithoutAlt": 0,
+    "placeholderText": false,
+    "emoji": 0
+  }
+}
