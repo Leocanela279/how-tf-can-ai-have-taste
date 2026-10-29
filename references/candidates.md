@@ -18,12 +18,13 @@ These come first. They are the owner's own taste, so they outrank every suggesti
 | libraries.dev | To measure |
 | skill-issue.in | To measure |
 | serus.ai | To measure |
+| x.ai | To measure |
 
 The cloud session's network policy blocks these hosts, so measure them from a machine with normal
 network access:
 
 ```bash
-for u in vercel.com apple.com elevenlabs.io libraries.dev skill-issue.in serus.ai emilkowal.ski; do
+for u in vercel.com apple.com elevenlabs.io libraries.dev skill-issue.in serus.ai x.ai emilkowal.ski; do
   slug=$(echo "$u" | tr . -)
   node skills/taste/scripts/probe.mjs "https://$u" --out "skills/taste/library/$slug/tokens.json"
   node skills/taste/scripts/probe.mjs "https://$u" --width 390 --out "skills/taste/library/$slug/tokens-390.json"
