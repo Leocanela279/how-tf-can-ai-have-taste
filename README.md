@@ -29,14 +29,36 @@ Full write-up: [`reports/Giving AI UI design taste.md`](<reports/Giving AI UI de
 | `skills/taste/` | **The skill.** One lean art-direction skill with probe, shoot and lint scripts |
 | `references/candidates.md` | Shortlist of sites to measure into the skill's library (needs picks) |
 | `experiments/prompts.md` | Blind A/B/C briefs (B1–B4) and the replication test (R1) |
+| `portfolio/` | The owner's portfolio (the B4 winner, dark, with the mobile fixes), ready for Cloudflare Pages |
+| `.claude-plugin/` | Plugin and marketplace manifests, so the skill installs with `/plugin` |
 
-## Try the skill
+## Install the skill
 
-Link it into your skills folder:
+**Claude Code, as a plugin (recommended).** Inside Claude Code:
+
+```
+/plugin marketplace add Leocanela279/how-tf-can-ai-have-taste
+/plugin install taste@how-tf-can-ai-have-taste
+```
+
+On Claude Code 2.1.275 or later, one line does both:
+`/plugin install taste --marketplace Leocanela279/how-tf-can-ai-have-taste`.
+Updates arrive with `/plugin marketplace update`.
+
+**Claude Code, as a plain skill.** Copy or link the folder into your skills directory, for every
+project (`~/.claude/skills/`) or one project (`.claude/skills/` in that repo):
 
 ```bash
-ln -s "$PWD/skills/taste" ~/.claude/skills/taste
+git clone https://github.com/Leocanela279/how-tf-can-ai-have-taste
+ln -s "$PWD/how-tf-can-ai-have-taste/skills/taste" ~/.claude/skills/taste
 ```
+
+**Claude apps (claude.ai, desktop).** Zip the `skills/taste` folder and upload it under
+Settings → Capabilities → Skills. The written rules and library work there. The probe, shoot and lint
+scripts need a machine with Node and Chrome, so the measured checks only run in Claude Code.
+
+It triggers on its own when you ask for a page, screen or redesign, or call it directly
+(`/taste`, or `/taste:taste` when installed as a plugin).
 
 For a clean test, temporarily move the other art-direction skills out of `~/.claude/skills`
 (frontend-design, design-taste-frontend, ui-ux-pro-max, design, ui-styling), and disable the
@@ -66,4 +88,7 @@ node skills/taste/scripts/lint.mjs src                             # static defe
       Folded into the skill: phone checks in `probe.mjs --check --width 390`, phone rules in `SKILL.md`,
       and a phone pass in the critic brief
 - [ ] Reference library: 8 of the owner's 9 picks measured with notes; x.ai blocks headless browsers
-- [ ] Experiments B1–B4 and R1, judged blind
+- [x] Portfolio: mobile fixes applied (16px running text on phones, 44px touch targets, build-time
+      CSS, self-hosted fonts, no header blur), packaged in `portfolio/` for Cloudflare Pages
+- [x] Installable as a Claude Code plugin
+- [ ] Experiments B1–B3 and R1, judged blind, plus a B4 re-run with the current skill

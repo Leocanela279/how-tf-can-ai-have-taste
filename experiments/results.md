@@ -51,3 +51,14 @@ does not measure what he likes.
 - links padded to 24px targets
 
 The probe reports 0 errors at 1440 and 390.
+
+**Second follow-up (2026-10-29): mobile fixes**, from `reports/Mobile first UI taste.md`:
+- running text 16px on phones (was 14–15px; desktop unchanged)
+- touch targets: header links fill the 56px bar, a 48px primary action on phones, 44px rows for
+  footer and project links
+- CSS compiled at build time and fonts self-hosted (was the Tailwind CDN and Google Fonts)
+- header blur removed (it sat under an 85% fill and cost frames on phones)
+- a footer margin that leaked a dark band between the contact block and the footer
+
+The probe reports 0 errors at 360, 390 and 1440. Before/after: `runs/baseline/b4-dark/design/mobile-fixes-before-after.png`;
+the previous version is `design/index.before-mobile.html`. The deployable copy is `portfolio/`.

@@ -1,0 +1,14 @@
+{
+  "name": "how-tf-can-ai-have-taste",
+  "owner": {
+    "name": "Leandro Canela"
+  },
+  "description": "The taste skill: art direction for AI-built web UI, from the how-tf-can-ai-have-taste research repo.",
+  "plugins": [
+    {
+      "name": "taste",
+      "source": "./",
+      "description": "Art direction for AI-built web UI, with measured references and desktop and phone checks."
+    }
+  ]
+}
