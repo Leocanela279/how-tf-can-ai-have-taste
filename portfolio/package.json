@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "tailwindcss -c tailwind.config.js -i src.css -o public/styles.css --minify",
-    "deploy": "npm run build && wrangler pages deploy public --project-name leandro-canela"
+    "deploy": "npm run build && wrangler deploy"
   },
   "devDependencies": {
     "tailwindcss": "3.4.17",

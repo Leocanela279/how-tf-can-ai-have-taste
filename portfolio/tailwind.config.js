@@ -1,5 +1,5 @@
 // Build: npx tailwindcss@3 -c tailwind.config.js -i src.css -o public/styles.css --minify
-module.exports = Object.assign({ content: { relative: true, files: ['./public/index.html'] } }, {
+module.exports = Object.assign({ content: { relative: true, files: ['./public/index.html', './public/404.html'] } }, {
   theme: {
     extend: {
       fontFamily: {

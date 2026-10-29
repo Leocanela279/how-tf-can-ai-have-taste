@@ -5,29 +5,26 @@ screenshots. No build step is needed to deploy it.
 
 ## Deploy
 
-**Dashboard (no tools):** Cloudflare dashboard → Workers & Pages → Create → Pages →
-**Upload assets** → name the project → drag in the `public/` folder → Deploy.
+The live site is the Cloudflare Worker `how-tf-can-ai-have-taste`, serving `public/` as static
+assets (`wrangler.jsonc`), with `leo-dev.es` and `www.leo-dev.es` attached as custom domains. It
+redeploys on every push to `main`.
 
-**Git (redeploys on every push):** Workers & Pages → Create → Pages → **Connect to Git** → pick
-this repository, then set:
+Workers Builds settings (Worker → Settings → Build):
 
 | Setting | Value |
 | --- | --- |
-| Production branch | `main` |
-| Framework preset | None |
-| Build command | *(leave empty)* |
-| Build output directory | `portfolio/public` |
+| Root directory | `portfolio` |
+| Build command | *(empty)* |
+| Deploy command | `npx wrangler deploy` |
 
-**Command line:**
+From your machine instead:
 
 ```bash
 cd portfolio
 npm install
 npx wrangler login
-npm run deploy        # rebuilds the CSS, then uploads public/
+npm run deploy        # rebuilds the CSS, then deploys the Worker
 ```
-
-Add a custom domain afterwards under the project's **Custom domains** tab.
 
 ## Editing
 
