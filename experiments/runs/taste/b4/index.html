@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leandro Canela, backend developer in Barcelona</title>
+<meta name="description" content="Leandro Canela, a full-stack developer in Barcelona with the weight on the backend: data models, permissions and what happens when something fails.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FAFAFA;
+    --field: #8E3F17;
+    --ink: #161616;
+    --ink-2: #5C5C5C;
+    --on-field: #FBF4EE;
+    --on-field-2: #EBCDB9;
+
+    --display: clamp(52px, 9.6vw, 148px);
+    --fact: clamp(22px, 2.1vw, 30px);
+    --body: clamp(17px, 1.25vw, 18px);
+    --meta: 14px;
+
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 48px; --s5: 96px; --s6: 160px;
+    --margin: clamp(24px, 3.4vw, 48px);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 var(--body)/1.55 "Host Grotesk", system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, p, ul, dl, dd, figure { margin: 0; padding: 0; }
+  h1, h2, h3 { font-weight: 400; }
+  ul { list-style: none; }
+  img { display: block; width: 100%; height: auto; }
+
+  a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; transition: text-decoration-color 150ms ease-out; }
+  a:hover { text-decoration-color: var(--field); }
+  a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+  .field a:hover { text-decoration-color: var(--on-field-2); }
+
+  .skip { position: absolute; left: var(--margin); top: -100px; background: var(--paper); color: var(--ink); padding: var(--s1) var(--s2); }
+  .skip:focus { top: var(--s2); }
+
+  .wrap { padding-inline: var(--margin); }
+  .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--s3); }
+
+  /* The one bold move: a field the colour of canela. */
+  .field { background: var(--field); color: var(--on-field); }
+
+  .hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; padding-block: var(--s3) var(--s4); }
+  .bar { display: flex; justify-content: space-between; align-items: center; gap: var(--s3); font-size: var(--meta); }
+  .bar a { text-decoration: none; display: inline-block; padding-block: var(--s1); }
+  .bar a:hover { text-decoration: underline; }
+  .bar ul { display: flex; gap: var(--s3); }
+
+  .hero h1 { font-size: var(--display); line-height: 0.92; letter-spacing: -0.04em; margin-top: var(--s5); }
+  .hero .lede { grid-column: 1 / span 6; margin-top: var(--s4); font-size: var(--fact); line-height: 1.3; letter-spacing: -0.01em; }
+  .hero .act { grid-column: 9 / span 4; align-self: end; display: flex; flex-direction: column; align-items: flex-start; gap: var(--s2); }
+  .button { display: inline-block; background: var(--on-field); color: var(--field); text-decoration: none; padding: var(--s2) var(--s3); }
+  .button:hover { background: #FFFFFF; }
+  .hero .note { margin-top: var(--s4); font-size: var(--meta); color: var(--on-field-2); }
+
+  section { padding-block: var(--s6) 0; }
+  .head { grid-column: 1 / span 12; display: grid; grid-template-columns: subgrid; margin-bottom: var(--s5); }
+  .head h2 { grid-column: 1 / span 4; font-size: var(--fact); line-height: 1.22; letter-spacing: -0.015em; }
+  .head p { grid-column: 6 / span 6; color: var(--ink-2); max-width: 46ch; }
+
+  /* A project: the surface people see stays small; what is underneath gets the big type. */
+  .project { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; padding-bottom: var(--s5); }
+  .surface { grid-column: 1 / span 4; }
+  .surface figure { margin-bottom: var(--s2); }
+  .surface h3 { font-size: var(--body); }
+  .surface p { font-size: var(--meta); color: var(--ink-2); }
+  .surface .links { display: flex; gap: var(--s2); margin-top: var(--s1); font-size: var(--meta); }
+  .surface .links a { display: inline-block; padding-block: 4px; }
+  .under { grid-column: 6 / span 7; }
+  .under .fact { font-size: var(--fact); line-height: 1.22; letter-spacing: -0.015em; max-width: 30ch; }
+  .under .more { margin-top: var(--s3); color: var(--ink-2); max-width: 58ch; }
+  .under .stack { margin-top: var(--s2); font-size: var(--meta); color: var(--ink-2); }
+  .noscreen { font-size: var(--meta); color: var(--ink-2); padding-block: var(--s2); }
+
+  .also { grid-column: 6 / span 7; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s3); padding-bottom: var(--s6); }
+  .also-label { grid-column: 1 / span 4; font-size: var(--body); }
+  .also li a { display: inline-block; padding-block: 3px; }
+  .also li span { display: block; color: var(--ink-2); font-size: var(--meta); }
+
+  .about-text { grid-column: 6 / span 6; display: grid; gap: var(--s3); max-width: 60ch; }
+  .tools { grid-column: 6 / span 7; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s3); margin-top: var(--s5); padding-bottom: var(--s6); }
+  .tools dt { font-size: var(--meta); color: var(--ink-2); margin-bottom: var(--s1); }
+  .tools dd { font-size: var(--meta); line-height: 1.7; }
+
+  .close { padding-block: var(--s6) var(--s4); }
+  .close h2 { grid-column: 1 / span 8; font-size: var(--fact); line-height: 1.22; letter-spacing: -0.015em; }
+  .close .mail { grid-column: 1 / -1; margin-top: var(--s4); font-size: clamp(28px, 5.4vw, 84px); line-height: 1; letter-spacing: -0.035em; overflow-wrap: anywhere; }
+  .close .mail a { text-decoration-thickness: 2px; }
+  .close .elsewhere { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--s3); margin-top: var(--s4); }
+  .close .elsewhere a { display: inline-block; padding-block: 4px; }
+  .close .small { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s2); margin-top: var(--s6); font-size: var(--meta); color: var(--on-field-2); }
+
+  @media (max-width: 900px) {
+    .hero .lede, .hero .act, .head h2, .head p, .surface, .under, .also-label, .also, .about-text, .tools, .close h2 { grid-column: 1 / -1; }
+    .head p { margin-top: var(--s2); }
+    .hero .act { margin-top: var(--s4); }
+    .under { margin-top: var(--s3); }
+    .surface { display: grid; grid-template-columns: 40% 1fr; gap: var(--s2); align-items: start; }
+    .surface figure { margin-bottom: 0; }
+    .also { grid-template-columns: 1fr; margin-top: var(--s2); }
+    .tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .about-text { margin-top: var(--s2); }
+  }
+  @media (max-width: 480px) {
+    .bar ul { gap: var(--s2); }
+    .hero h1 { margin-top: var(--s4); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    a { transition: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to the work</a>
+
+<header class="field">
+  <div class="hero wrap">
+    <nav class="bar" aria-label="Main">
+      <a href="#top" id="top">Leandro Canela</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <h1>I build the part<br>you don’t see.</h1>
+      <div class="grid">
+        <p class="lede">Leandro Canela, full-stack developer in Barcelona with the weight on the backend: the data model, the permissions, and what happens when something fails.</p>
+        <div class="act">
+          <a class="button" href="mailto:leandrocanela279@gmail.com">Email Leandro</a>
+          <a href="#work">See what’s underneath</a>
+        </div>
+      </div>
+      <p class="note">Canela is Spanish for cinnamon.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="work" class="wrap" aria-labelledby="work-h">
+    <div class="grid">
+      <div class="head">
+        <h2 id="work-h">Work</h2>
+        <p>The screenshots are what people use. The large text is what I built underneath it. Newest first.</p>
+      </div>
+
+      <article class="project">
+        <div class="surface">
+          <figure><img src="assets/icex.jpg" width="1200" height="900" alt="ICEX Next sign-in screen: the questionnaire message on the left, the sign-in form on the right."></figure>
+          <div>
+            <h3>ICEX Next</h3>
+            <p>Application portal, at Humannova</p>
+            <p>Sep 2026 – now</p>
+            <div class="links"><a href="https://icex.humannova.com/">See the sign-in</a></div>
+          </div>
+        </div>
+        <div class="under">
+          <p class="fact">Every privacy acceptance is stored with the version of the policy and the date it was accepted, and questionnaire drafts survive new versions of the questionnaire.</p>
+          <p class="more">An application portal for the ICEX Next programme, cut down from Reskillia to what the client needed: no AI, no public sign-up, privacy first. The team invites each person, who sets a password, accepts the policy and submits a CV, read from PDF or image with local OCR for scanned documents. Answers export to Excel for the reviewers.</p>
+          <p class="stack">Next.js 16, React 19, Tailwind CSS 4, Supabase, Docker</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="surface">
+          <figure><img src="assets/reskillia.jpg" width="1200" height="900" alt="Reskillia’s home page with the headline “Desbloquea tu potencial real” and buttons to start or sign in." loading="lazy"></figure>
+          <div>
+            <h3>Reskillia</h3>
+            <p>AI skills assessment, at Humannova</p>
+            <p>Mar 2026 – now</p>
+            <div class="links"><a href="https://skillia-dev-production.up.railway.app/es">Visit Reskillia</a></div>
+          </div>
+        </div>
+        <div class="under">
+          <p class="fact">Personal data is encrypted with AES-256-GCM before it reaches PostgreSQL, and row-level security decides who can read each row.</p>
+          <p class="more">Companies assess their team’s digital skills against DigComp 2.2, the European framework. Each person uploads a CV; Gemini picks seven competences with a target level, writes the questions and scores the answers. The result is a radar of expected against achieved, as a PDF. In Spanish and Catalan.</p>
+          <p class="stack">Next.js 16, React 19, Supabase, Gemini, Docker</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="surface">
+          <figure><img src="assets/cpu-city.jpg" width="1200" height="750" alt="CPU City: a 3D processor on a motherboard, with controls to run a program along the bottom." loading="lazy"></figure>
+          <div>
+            <h3>CPU City</h3>
+            <p>Explorable processor, personal</p>
+            <p>Oct 2026</p>
+            <div class="links"><a href="https://cpu-city.vercel.app">Open CPU City</a><a href="https://github.com/Leocanela279/cpu-city">Code</a></div>
+          </div>
+        </div>
+        <div class="under">
+          <p class="fact">RISC-V assembly runs in a Web Worker, and every instruction can be followed down to the ALU circuit that executes it.</p>
+          <p class="more">A processor in 3D that turns into a city as the camera gets closer. Load a program, step through it, and watch each stage (fetch, decode, read, execute, memory, write) happen in the streets.</p>
+          <p class="stack">TypeScript, Vite, WebGL</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="surface">
+          <figure><img src="assets/tomate.jpg" width="1200" height="900" alt="Tomate’s website with the headline “Estudia en pomodoros de hasta 90 minutos” and the app window below." loading="lazy"></figure>
+          <div>
+            <h3>Tomate</h3>
+            <p>macOS study timer, personal</p>
+            <p>Oct 2026</p>
+            <div class="links"><a href="https://usetomate.com">usetomate.com</a><a href="https://github.com/Leocanela279/tomate">Code</a></div>
+          </div>
+        </div>
+        <div class="under">
+          <p class="fact">Time is stored as dates, not as a countdown, so a session stays exact even when the Mac goes to sleep.</p>
+          <p class="more">A Pomodoro timer for long study sessions, from 25 to 90 minutes, that can split anything over an hour into two blocks. Scheduled sessions never overlap, and macOS Focus turns on while you study. Everything stays on the Mac: no accounts, no server.</p>
+          <p class="stack">SwiftUI, macOS 14+, Astro for the site</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="surface">
+          <p class="noscreen">No screen to show: it reads your code and writes a report.</p>
+          <div>
+            <h3>db-doctor</h3>
+            <p>Claude skill, personal</p>
+            <p>Oct 2026</p>
+            <div class="links"><a href="https://github.com/Leocanela279/db-doctor">Code</a></div>
+          </div>
+        </div>
+        <div class="under">
+          <p class="fact">It finds the loop that silently fires 500 queries, and proves it with evidence before proposing the fix.</p>
+          <p class="more">An audit of an app’s database layer: SQL that no index can serve, N+1 queries hidden in ORM code, indexes every write pays for and no read uses. It ranks findings by impact and returns a plan with SQL, risks and how to validate each change.</p>
+          <p class="stack">Python, PostgreSQL, MySQL, Laravel, Prisma, Supabase</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="surface">
+          <figure><img src="assets/stastarat.jpg" width="1200" height="900" alt="stastarat.com home page with the headline “Descobreix el món dels jocs de taula” and the club’s green mascot." loading="lazy"></figure>
+          <div>
+            <h3>Club Stas Tarat</h3>
+            <p>Club website, team of three</p>
+            <p>Mar 2025 – Jul 2026</p>
+            <div class="links"><a href="https://stastarat.com">stastarat.com</a></div>
+          </div>
+        </div>
+        <div class="under">
+          <p class="fact">Six sections, a weekly schedule, events, a game library and a members’ area for a club that has run for almost forty years.</p>
+          <p class="more">The website of a board game and role-playing club in Terrassa with about a hundred members, built with Manuel Ordoñez and Nicolau Miguel. Google APIs for the calendar, and PDF and QR generation for members.</p>
+          <p class="stack">Laravel 12, Tailwind CSS 4, Vite</p>
+        </div>
+      </article>
+
+      <h3 class="also-label">Smaller tools</h3>
+      <ul class="also">
+        <li><a href="https://github.com/Leocanela279/password-manager">Cinnamon Key</a><span>A local-first password manager. Named after the surname.</span></li>
+        <li><a href="https://github.com/Leocanela279/cli-password-manager">vault</a><span>A password manager for the terminal, in Go.</span></li>
+        <li><a href="https://github.com/Leocanela279/ascii-conversor">ascii-conversor</a><span>Turns any image into ASCII.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="wrap" aria-labelledby="about-h">
+    <div class="grid">
+      <div class="head">
+        <h2 id="about-h">About</h2>
+      </div>
+      <div class="about-text">
+        <p>I’m Leandro, a full-stack developer in Barcelona and a computer science student. I enjoy the part of the work that is almost invisible: the data model, the permissions, and what happens when something fails.</p>
+        <p>At Humannova we built Reskillia and the ICEX Next portal with Next.js, Supabase and Docker. Before that, Laravel was my main tool; the Stas Tarat site came from that time. Outside work I build tools I use myself, like Tomate and small utilities in Go.</p>
+      </div>
+      <dl class="tools">
+        <div><dt>Backend</dt><dd>Laravel<br>PHP<br>Go<br>Node.js</dd></div>
+        <div><dt>Frontend</dt><dd>Next.js<br>React<br>Astro<br>Tailwind CSS<br>TypeScript</dd></div>
+        <div><dt>Data</dt><dd>PostgreSQL<br>Supabase<br>MySQL</dd></div>
+        <div><dt>Tools</dt><dd>Docker<br>Git<br>SwiftUI</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="field">
+  <div class="close wrap">
+    <div class="grid">
+      <h2>Have a product whose logic needs sorting out? Write to me and I’ll answer.</h2>
+      <p class="mail"><a href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a></p>
+      <p class="elsewhere">
+        <a href="https://github.com/Leocanela279">GitHub</a>
+        <a href="https://gitlab.com/leandrocanela279">GitLab</a>
+        <a href="https://porfoli-leo.vercel.app/cvLeo.pdf">Download CV</a>
+      </p>
+      <div class="small">
+        <p>Leandro Canela, Barcelona</p>
+        <p>This site uses no cookies and collects nothing about you.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

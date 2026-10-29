@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-A",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4401", "--bind", "127.0.0.1", "--directory", "experiments/runs/baseline/b4"],
+      "port": 4401
+    },
+    {
+      "name": "portfolio-B",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4402", "--bind", "127.0.0.1", "--directory", "experiments/runs/taste/b4"],
+      "port": 4402
+    },
+    {
+      "name": "portfolio-A-dark",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4403", "--bind", "127.0.0.1", "--directory", "experiments/runs/baseline/b4-dark"],
+      "port": 4403
+    }
+  ]
+}
