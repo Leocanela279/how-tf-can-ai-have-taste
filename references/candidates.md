@@ -13,11 +13,11 @@ These come first. They are the owner's own taste, so they outrank every suggesti
 | linear.app | Measured, notes written |
 | emilkowal.ski | Measured, notes written |
 | vercel.com | Measured, notes written |
-| apple.com | Blocked: allow `www.apple.com` |
+| apple.com | Measured, notes written |
 | elevenlabs.io | Measured, notes written |
 | libraries.dev | Measured, notes written |
 | skill-issue.in | Measured, notes written |
-| serus.ai | Blocked: allow `www.serus.ai` |
+| serus.ai | Measured, notes written |
 | x.ai | Site blocks headless browsers; measure from a normal machine |
 
 The cloud session's network policy blocks these hosts, so measure them from a machine with normal
