@@ -171,7 +171,8 @@ export async function launch() {
       ws.close();
       proc.kill();
       await new Promise((r) => (proc.exitCode !== null ? r() : proc.once('exit', r)));
-      rmSync(profile, { recursive: true, force: true, maxRetries: 10, retryDelay: 100 });
+      // Chrome's helpers can still be writing to the profile; leftovers in tmp are harmless.
+      try { rmSync(profile, { recursive: true, force: true, maxRetries: 10, retryDelay: 100 }); } catch {}
     };
     return page;
   } catch (err) {
