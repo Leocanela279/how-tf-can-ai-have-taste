@@ -28,8 +28,8 @@ to a written-down taste:
   subject. None uses stock illustration or decorative blobs.
 - **Colour lives in the content; the chrome is neutral.** Greys or warm greys for the interface,
   saturation only inside the product or the one image, plus at most one coloured button.
-- **Few weights, regular display.** Display type at 300, 400 or 500, never heavy bold. Authority
-  comes from size and tracking.
+- **Few weights, no heavy display.** Display type at 300 to 600 (Apple's 600 is the heaviest),
+  never 700 or more. Authority comes from size and tracking.
 - **Conventional structure.** Nav, hero, proof, sections, footer. None of them reinvents the page
   skeleton; the identity sits on the surface. This matches the B4 blind-test lesson.
 - **Weak spot to avoid copying:** six of the eight run body or meta text at 10–14px, under the

@@ -57,6 +57,10 @@ Start `design/DESIGN.md` with:
   it too.
 - **Subject, audience, job.** The job is one of persuade, operate, read or experience. Add the one
   action the page exists for.
+- **Mode.** Mobile-led (consumer, retail, local, single-action pages, traffic from social or QR),
+  desktop-led (dashboards, pro tools, B2B and developer sites), or both (portfolios, mixed
+  marketing sites). Every mode is complete and comfortable on a phone; the mode only decides which
+  composition leads. Real analytics, if the user has them, beat this table.
 - **Inventory.** 6–10 things that belong to this subject and to no competitor: its name and what the
   name means, its place, materials, numbers, constraints, rituals, the printed things of its world,
   its real data.
@@ -111,10 +115,13 @@ Add these to DESIGN.md, all as numbers, derived from the reference profile:
   - Families: at most two; one is normal.
   - Weights: at most three.
   - Sizes: 3–5 in use, with one decisive jump. Display is at least 3× body on pages and at least 1.6×
-    on app screens.
+    on app screens. On a phone, 2–3× body (about 32–44px at a 16px body), and the longest word
+    fits.
   - Tracking and leading for each size. Large type gets tighter tracking (−0.01 to −0.04em) and
     leading (0.95–1.15).
   - Body: 15–20px on pages, 13–15px on app screens, line-height 1.4–1.6, lines of 45–75 characters.
+    On a phone, running text is at least 16px (lines of 30–60 characters), nothing is under 12px,
+    and weight 300 or lighter only appears at 20px and up.
 - **Spacing:** a set of 5–7 values. The gap between groups is at least 2× the gap inside a group.
 - **Radii:** one rule (square, small or full), decided by hierarchy. Never one radius on everything.
 - **Boldness:** the one place it is spent: a scale jump, a field of colour, an image, a live element.
@@ -146,6 +153,23 @@ moment gets its own line, and the performance budget applies to it.
 - **The first screen first,** at 1440 and 390 wide, until it is right. Then each section, each one
   carrying the idea. Neighbouring sections never share a layout. A section exists only if the content
   has a claim for it.
+- **Two compositions, one priority.** 390 and 1440 share the content and its order; each is composed
+  for its width. The desktop uses the width (columns, a side element, a wider figure), never a
+  phone column floating in the middle. The phone gets one column of text, never two side by side.
+- **The phone screen:**
+  - The first screen says what this is, shows one real visual or a typographic statement, and lets
+    the next section peek in. No full-height hero that ends in empty space.
+  - One filled primary action per screen, at least 48px tall, in the lower-middle where the thumb
+    and the gaze already are. Rare actions can live in the top corners.
+  - Navigation stays visible: 3–5 labelled items, or a short top bar. A hamburger alone hides
+    destinations that would fit.
+  - Nothing is removed for the phone. Secondary detail collapses under clear headers; decision
+    content (price, proof, the action) stays visible.
+  - Form fields at 16px or more (iOS zooms below that), and zoom is never disabled.
+  - No auto-advancing carousel and no autoplay video. Horizontal rows show part of the next item.
+  - Everything reachable by hover is also reachable by tap.
+  - Novelty goes into type, the one visual, motion and copy. Navigation, back, scrolling and tap
+    stay standard.
 - **Rich, not sparse.** Every screen carries real content and enough parts to reward a look: meta,
   figures, real fragments of the work. Group things to lower complexity. Don't delete them. Empty
   space is spent once per page at most, on purpose.
@@ -158,7 +182,7 @@ moment gets its own line, and the performance budget applies to it.
 - **Interaction:**
   - a real button for the action, labelled verb + noun
   - `:focus-visible` styles
-  - targets of at least 24px (44px on touch)
+  - targets of at least 24px, and 44px or more on touch (bigger at the screen edges)
   - `<a>` for navigation
   - `tabular-nums` on figures
 - **Product fragments:** a product fragment shown as a picture (a hero mockup of the app) gets
@@ -173,7 +197,13 @@ For app screens (dashboards, settings, lists, editors), read `references/craft.m
 ```bash
 node <skill>/scripts/lint.mjs <source files or folder>
 node <skill>/scripts/probe.mjs <url or index.html> --check
+node <skill>/scripts/probe.mjs <url or index.html> --check --width 390
+node <skill>/scripts/probe.mjs <url or index.html> --check --width 360
 ```
+
+The phone runs add their own checks: running text under 16px, form fields under 16px, touch targets
+under 44px, a first screen that ends in empty space, a buried h1, centred paragraphs, thin small
+text, overflowing headings and disabled zoom.
 
 `--check` runs three passes:
 - **Design:** contrast, targets, type and colour budgets.
@@ -216,7 +246,12 @@ Only now add motion, and keep it within these limits:
   - `transform` and `opacity` only. Timings from `references/defaults.md`: 70–150ms micro,
     150–250ms small, 200–350ms modals, exits shorter.
   - Ease-out, never from `scale(0)`.
-- **Always:** a reduced-motion fallback (a cross-fade).
+- **Always:** a reduced-motion fallback (a cross-fade). On a phone, anything that moves across
+  the screen fills most of the view, so keep large motion rare and short.
+- **Never** sell a palette as easier on the eyes. Blue-light and "dark mode is healthier" claims
+  are not supported. Comfort comes from size, contrast and stillness. Dark text on a light ground
+  reads best; offer dark when the user wants it, on a near-black (about `#121212`), never pure
+  black under white body text.
 
 Use the `animate` skill for anything beyond that. Then look in the mirror and remove one thing.
 
@@ -251,6 +286,7 @@ earns it. If the user loves mono labels, they're in.
 | `references/performance.md` | Budget, the cheap way to get each costly effect, platform feature readiness |
 | `references/craft.md` | App-screen rules: states, feedback, density, copy |
 | `references/tells.md` | Default patterns paired with their replacements |
+| `../../reports/Mobile first UI taste.md` | The evidence behind the phone rules, with sources and confidence (in this repo only) |
 | `scripts/probe.mjs` | Measures a live page into a profile; `--check` adds the design, cost and reduced-motion passes |
 | `scripts/shoot.mjs` | Screenshots of page and reference at three widths, plus a blur copy |
 | `scripts/lint.mjs` | Static checks on source for defects code can prove |

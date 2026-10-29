@@ -63,5 +63,7 @@ node skills/taste/scripts/lint.mjs src                             # static defe
       `references/defaults.md`, `references/performance.md`, and a cost and reduced-motion pass in
       `probe.mjs --check`
 - [x] Research round 4: mobile first, attention, density, eye comfort and reach (`reports/Mobile first UI taste.md`)
+      Folded into the skill: phone checks in `probe.mjs --check --width 390`, phone rules in `SKILL.md`,
+      and a phone pass in the critic brief
 - [ ] Reference library: 8 of the owner's 9 picks measured with notes; x.ai blocks headless browsers
 - [ ] Experiments B1–B4 and R1, judged blind

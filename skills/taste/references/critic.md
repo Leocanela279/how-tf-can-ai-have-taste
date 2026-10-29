@@ -39,11 +39,21 @@ Files are named like this:
    carry through to the last section, or does the page fall back to stock blocks after the hero?
 6. **Content.** Can a stranger tell what this is and what to do within five seconds? Is the copy
    specific to this subject? Does every section deliver its information completely?
-7. **Phone.** Look at `page-390.png`:
-   - headlines over three lines
-   - text against the edge
-   - cramped targets
-   - anything cut off
+7. **Phone.** Look at `page-390.png` and the `-390-sN` screens. A phone is a window about 12° wide
+   held 32cm away: the whole width is seen in one glance, and the gaze rests in the middle.
+   - Is there one focal element in the upper-middle to centre band, or do several compete?
+   - Does the first screen say what this is, show one real visual or a typographic statement, and
+     let the next section peek in? A full-height first screen that ends in empty space looks
+     finished; that is a P1.
+   - Is it a re-composition for the phone, or the desktop squeezed (cramped columns, side-by-side
+     text) or a phone column stretched across 1440 (one narrow centred column, a hamburger at full
+     width)? Either is a P1.
+   - Is anything decision-critical missing on the phone that the desktop has (proof, price, the
+     action)? Collapsed is fine; removed is a P0.
+   - Is the primary action within easy reach (lower-middle) and clearly the only filled one?
+   - Are navigation, back, scrolling and tapping conventional? Any novelty in the controls rather
+     than the surface is a P1.
+   - Headlines over three lines, text against the edge, cramped targets, anything cut off.
 8. **Tells.** Check `tells.md`. List every tell you can see that DESIGN.md does not justify. A tell
    the user said they like is justified. Tells are at most P2, unless one breaks hierarchy or
    legibility.

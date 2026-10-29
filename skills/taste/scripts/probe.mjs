@@ -37,6 +37,24 @@ function review(p) {
   if (f.transitionAll) errors.push(`${f.transitionAll} elements use transition: all (name the properties)`);
   if (f.emoji) errors.push(`${f.emoji} emoji in page text`);
 
+  const phone = p.viewport.width <= 480;
+  if (f.zoomLocked) errors.push('the viewport meta disables zoom (maximum-scale=1 or user-scalable=no)');
+  if (f.overflowingHeadings?.length) errors.push(`headings overflow their box: ${f.overflowingHeadings.slice(0, 3).map((t) => `"${t}"`).join(', ')}`);
+  if (phone) {
+    if (f.smallInputs?.length) errors.push(`${f.smallInputs.length} form field(s) under 16px (iOS zooms in on focus): ${f.smallInputs.map((x) => `${x.field} ${x.size}px`).join(', ')}`);
+    if (f.prose?.under14 > 0) errors.push(`${Math.round(f.prose.under14 * 100)}% of running text is under 14px on a phone`);
+    else if (f.prose?.under16 > 0.25) warns.push(`${Math.round(f.prose.under16 * 100)}% of running text is under 16px on a phone (16px is the comfort floor at 32cm)`);
+    if (f.touchTargetCount) warns.push(`${f.touchTargetCount} touch targets under 44px, e.g. ${f.touchTargets.slice(0, 3).map((x) => `"${x.text}" ${x.w}×${x.h}`).join('; ')}`);
+  }
+  const s1 = f.firstScreen;
+  if (s1) {
+    if (!s1.bottomBandFilled) warns.push('the bottom 30% of the first screen is empty: the page looks finished there; let the next section peek in');
+    if (s1.h1Top !== null && s1.h1Top > 0.6) warns.push(`the h1 starts ${Math.round(s1.h1Top * 100)}% of the way down the first screen`);
+    if (s1.words < 15 && !s1.visual) warns.push(`the first screen holds ${s1.words} words and no picture: say what this is`);
+  }
+  if (f.thinSmallCount) warns.push(`${f.thinSmallCount} text elements at weight 300 or lighter under 20px, e.g. "${f.thinSmall[0].text}"`);
+  if (f.centredParagraphs?.length) warns.push(`${f.centredParagraphs.length} centred paragraph(s) longer than two lines: left-align running text`);
+
   const families = used(p.type.families);
   if (families.length > 2) warns.push(`${families.length} font families carry text: ${families.map((x) => x.value).join(', ')}`);
   const weights = used(p.type.weights);
@@ -44,10 +62,12 @@ function review(p) {
   const sizes = used(p.type.sizesPx);
   if (sizes.length > 6) warns.push(`${sizes.length} font sizes carry 3%+ of text: ${sizes.map((x) => x.value).join(', ')}px`);
   const ratio = p.type.headlineToBody;
-  if (ratio && ratio < 2.5) warns.push(`largest type is only ${ratio}× body: no decisive size jump`);
-  if (p.type.bodySizePx && p.type.bodySizePx < 13) warns.push(`body text ${p.type.bodySizePx}px`);
+  // A phone fits a 2–3× jump; past about 3.5× long words start to overflow.
+  if (ratio && ratio < (phone ? 2 : 2.5)) warns.push(`largest type is only ${ratio}× body: no decisive size jump (fine if hierarchy is carried by ink, weight and space on purpose)`);
+  if (phone && ratio > 3.5) warns.push(`largest type is ${ratio}× body on a phone: check long words and line count`);
+  if (p.type.bodySizePx && p.type.bodySizePx < (phone ? 16 : 13)) warns.push(`body text ${p.type.bodySizePx}px${phone ? ' on a phone (16px floor)' : ''}`);
   const m = p.type.measureChars;
-  if (m && m.max > 85) warns.push(`running text reaches ${m.max} characters per line (aim for 45–75)`);
+  if (m && m.max > (phone ? 60 : 85)) warns.push(`running text reaches ${m.max} characters per line (aim for ${phone ? '30–60 on a phone' : '45–75'})`);
   for (const h of f.headings) if (h.lines > 3) warns.push(`${h.tag} "${h.text}" runs ${h.lines} lines`);
   if (f.tinyTextCount) warns.push(`${f.tinyTextCount} text elements under 12px`);
   if (f.smallCapsCount >= 3) warns.push(`${f.smallCapsCount} small uppercase labels (eyebrows?): ${f.smallCapsLabels.slice(0, 3).join(' | ')}`);
@@ -128,6 +148,7 @@ try {
     for (const e of errors) console.log(`ERROR ${e}`);
     for (const w of warns) console.log(`WARN  ${w}`);
     console.log(`\n${errors.length} error(s), ${warns.length} warning(s) at ${width}px. A WARN stays only if DESIGN.md justifies it.`);
+    if (width > 480) console.log('Run again with --width 390 (and 360): the phone checks only run there.');
     process.exitCode = errors.length ? 1 : 0;
   }
 } finally {

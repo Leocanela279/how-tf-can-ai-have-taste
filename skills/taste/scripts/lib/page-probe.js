@@ -68,6 +68,14 @@
     grounds = new Map(), radii = new Map(), shadows = new Map(), spacing = new Map(), bodySizes = new Map();
   let gradients = 0, borders = 0, blur = 0, transitionAll = 0, monoText = 0, totalText = 0;
   const smallCaps = [], tinyText = [], lowContrast = [], smallTargets = [], blurSurfaces = [];
+  // Phone checks (reports/Mobile first UI taste.md): touch targets, form text, thin small text,
+  // centred paragraphs, and what the first screen holds.
+  const touchTargets = [], smallInputs = [], thinSmall = [], centred = [];
+  const proseSizes = new Map();
+  const vh = innerHeight;
+  let firstWords = 0, firstVisual = false, bottomBandFilled = false;
+  const inFirst = (r) => r.top < vh && r.bottom > 0;
+  const inBottomBand = (r) => r.top < vh && r.bottom > vh * 0.7;
   let largest = { size: 0 };
 
   for (const el of document.querySelectorAll('body *')) {
@@ -107,10 +115,23 @@
     const srOnly = r.width <= 1 && r.height <= 1;
     if (!picture && !srOnly && el.matches('button, a[href], input:not([type=hidden]), select, textarea, summary, [role=button]')) {
       const inline = el.matches('a') && [...el.parentElement.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
+      const label = (el.textContent || el.getAttribute('aria-label') || el.tagName).trim().slice(0, 40);
       if (!inline && (r.width < 24 || r.height < 24)) {
-        smallTargets.push({ text: (el.textContent || el.getAttribute('aria-label') || el.tagName).trim().slice(0, 40), w: Math.round(r.width), h: Math.round(r.height) });
+        smallTargets.push({ text: label, w: Math.round(r.width), h: Math.round(r.height) });
+      } else if (!inline && (r.width < 44 || r.height < 44)) {
+        touchTargets.push({ text: label, w: Math.round(r.width), h: Math.round(r.height) });
+      }
+      if (el.matches('input:not([type=checkbox]):not([type=radio]):not([type=range]), select, textarea') && parseFloat(cs.fontSize) < 16) {
+        smallInputs.push({ field: el.name || el.type || el.tagName.toLowerCase(), size: parseFloat(cs.fontSize) });
       }
     }
+
+    // A real picture or media in the first screen (not icons).
+    if (!picture && el.matches('img, picture, video, canvas, svg') && r.width >= 120 && r.height >= 80) {
+      if (inFirst(r)) firstVisual = true;
+      if (inBottomBand(r)) bottomBandFilled = true;
+    }
+    if (!picture && el.matches('button, a[href], input, select, textarea') && inBottomBand(r)) bottomBandFilled = true;
 
     // Text: only elements that own a non-empty text node.
     const own = [...el.childNodes].filter((n) => n.nodeType === 3).map((n) => n.textContent.trim()).join(' ').trim();
@@ -126,6 +147,13 @@
     if (/mono|courier|consolas/i.test(cs.fontFamily) && !el.closest('pre, code, kbd, samp')) monoText += chars;
     if (cs.textTransform === 'uppercase' && size <= 14 && chars < 40) smallCaps.push(own.slice(0, 30));
     if (size < 12) tinyText.push({ text: own.slice(0, 30), size });
+    if (Number(cs.fontWeight) <= 300 && size < 20) thinSmall.push({ text: own.slice(0, 30), size, weight: cs.fontWeight });
+    if (inFirst(r)) firstWords += own.split(/\s+/).length;
+    if (inBottomBand(r)) bottomBandFilled = true;
+    if (el.matches('p, li, dd, blockquote') && chars > 80) {
+      tally(proseSizes, round(size, 1), chars);
+      if (cs.textAlign === 'center' && lines(el) > 2) centred.push(own.slice(0, 40));
+    }
 
     const fg = parse(cs.color), bg = picture ? null : backdrop(el);
     if (fg && bg) {
@@ -154,6 +182,13 @@
     .map((h) => ({ tag: h.tagName.toLowerCase(), text: h.textContent.trim().slice(0, 50), lines: lines(h) }));
 
   const body = top(bodySizes, 1)[0]?.value ?? null;
+  const proseTotal = [...proseSizes.values()].reduce((a, b) => a + b, 0);
+  const proseUnder = (px) => round([...proseSizes].filter(([k]) => k < px).reduce((a, [, v]) => a + v, 0) / Math.max(proseTotal, 1));
+  const h1 = [...document.querySelectorAll('h1')].find((h) => h.getBoundingClientRect().width > 0);
+  const viewportMeta = document.querySelector('meta[name=viewport]')?.content || '';
+  const overflowingHeadings = [...document.querySelectorAll('h1, h2')]
+    .filter((h) => h.getBoundingClientRect().width > 0 && (h.scrollWidth > h.clientWidth + 1 || h.getBoundingClientRect().right > vw + 1))
+    .map((h) => h.textContent.trim().slice(0, 40));
   const text = document.body.innerText;
 
   // Performance: what loading and motion cost. __tastePerf exists when probe.mjs instrumented the load.
@@ -237,9 +272,22 @@
       tinyText: tinyText.slice(0, 5), tinyTextCount: tinyText.length,
       smallCapsLabels: smallCaps.slice(0, 6), smallCapsCount: smallCaps.length,
       headings,
+      overflowingHeadings,
       transitionAll,
       imagesWithoutAlt: document.querySelectorAll('img:not([alt])').length,
       placeholderText: /lorem ipsum|john doe|jane doe|\bacme\b/i.test(text),
+      touchTargets: touchTargets.slice(0, 10), touchTargetCount: touchTargets.length,
+      smallInputs: smallInputs.slice(0, 5),
+      zoomLocked: /maximum-scale\s*=\s*1(\.0)?\b|user-scalable\s*=\s*(no|0)/i.test(viewportMeta),
+      prose: proseTotal ? { under16: proseUnder(16), under14: proseUnder(14) } : null,
+      thinSmall: thinSmall.slice(0, 5), thinSmallCount: thinSmall.length,
+      centredParagraphs: centred.slice(0, 5),
+      firstScreen: {
+        words: firstWords,
+        visual: firstVisual,
+        bottomBandFilled,
+        h1Top: h1 ? round(h1.getBoundingClientRect().top / vh) : null,
+      },
       emoji: (text.match(/\p{Emoji_Presentation}|\p{Extended_Pictographic}️/gu) || []).length,
     },
   };
