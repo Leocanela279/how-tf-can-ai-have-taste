@@ -4,6 +4,34 @@ Each approved site gets `references/<slug>/` with `desktop.png`, `mobile.png`, `
 (extracted from live computed styles) and `notes.md` (why it works, the one bold move, what it
 leaves out).
 
+## The owner's picks (2026-10-29)
+
+These come first. They are the owner's own taste, so they outrank every suggestion below.
+
+| Site | Status |
+| --- | --- |
+| linear.app | Measured, notes written |
+| emilkowal.ski | Measured (`tokens.json`), notes to write |
+| vercel.com | To measure |
+| apple.com | To measure |
+| elevenlabs.io | To measure |
+| libraries.dev | To measure |
+| skill-issue.in | To measure |
+| serus.ai | To measure |
+
+The cloud session's network policy blocks these hosts, so measure them from a machine with normal
+network access:
+
+```bash
+for u in vercel.com apple.com elevenlabs.io libraries.dev skill-issue.in serus.ai emilkowal.ski; do
+  slug=$(echo "$u" | tr . -)
+  node skills/taste/scripts/probe.mjs "https://$u" --out "skills/taste/library/$slug/tokens.json"
+  node skills/taste/scripts/probe.mjs "https://$u" --width 390 --out "skills/taste/library/$slug/tokens-390.json"
+done
+```
+
+## Suggestions
+
 Selection rule: every site has to teach something specific and different. No two sites should be
 there for the same lesson. Strike, swap or add freely.
 

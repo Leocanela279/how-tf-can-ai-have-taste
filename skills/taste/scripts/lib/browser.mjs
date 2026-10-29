@@ -148,10 +148,16 @@ export async function launch() {
   const exe = findBrowser();
   if (!exe) throw new Error('No Chrome, Chromium, Edge or Brave found. Install one or set CHROME_PATH.');
   const profile = mkdtempSync(join(tmpdir(), 'taste-browser-'));
+  const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
   const proc = spawn(exe, [
     '--headless=new', '--remote-debugging-port=0', `--user-data-dir=${profile}`,
     '--no-first-run', '--no-default-browser-check', '--hide-scrollbars', '--mute-audio',
-    '--force-color-profile=srgb', 'about:blank',
+    '--force-color-profile=srgb',
+    // Chrome refuses to start sandboxed as root (containers, CI).
+    ...(process.getuid?.() === 0 ? ['--no-sandbox'] : []),
+    // Headless Chrome ignores proxy env vars; pass one through when set.
+    ...(proxy ? [`--proxy-server=${proxy}`] : []),
+    'about:blank',
   ], { stdio: 'ignore' });
 
   try {
@@ -165,12 +171,12 @@ export async function launch() {
       ws.close();
       proc.kill();
       await new Promise((r) => (proc.exitCode !== null ? r() : proc.once('exit', r)));
-      rmSync(profile, { recursive: true, force: true });
+      rmSync(profile, { recursive: true, force: true, maxRetries: 10, retryDelay: 100 });
     };
     return page;
   } catch (err) {
     proc.kill();
-    rmSync(profile, { recursive: true, force: true });
+    rmSync(profile, { recursive: true, force: true, maxRetries: 10, retryDelay: 100 });
     throw err;
   }
 }
