@@ -11,14 +11,14 @@ These come first. They are the owner's own taste, so they outrank every suggesti
 | Site | Status |
 | --- | --- |
 | linear.app | Measured, notes written |
-| emilkowal.ski | Measured (`tokens.json`), notes to write |
-| vercel.com | To measure |
-| apple.com | To measure |
-| elevenlabs.io | To measure |
-| libraries.dev | To measure |
-| skill-issue.in | To measure |
-| serus.ai | To measure |
-| x.ai | To measure |
+| emilkowal.ski | Measured, notes written |
+| vercel.com | Measured, notes written |
+| apple.com | Blocked: allow `www.apple.com` |
+| elevenlabs.io | Measured, notes written |
+| libraries.dev | Measured, notes written |
+| skill-issue.in | Measured, notes written |
+| serus.ai | Blocked: allow `www.serus.ai` |
+| x.ai | Site blocks headless browsers; measure from a normal machine |
 
 The cloud session's network policy blocks these hosts, so measure them from a machine with normal
 network access:

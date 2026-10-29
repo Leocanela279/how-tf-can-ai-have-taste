@@ -62,5 +62,6 @@ node skills/taste/scripts/lint.mjs src                             # static defe
 - [x] Research rounds 2 and 3: what makes UI captivating, and fast and beautiful UI. They became
       `references/defaults.md`, `references/performance.md`, and a cost and reduced-motion pass in
       `probe.mjs --check`
-- [ ] Reference library: 1 of ~25 sites measured (waiting on picks in `references/candidates.md`)
+- [x] Research round 4: mobile first, attention, density, eye comfort and reach (`reports/Mobile first UI taste.md`)
+- [ ] Reference library: 6 of the owner's 9 picks measured with notes; apple.com, serus.ai and x.ai to go
 - [ ] Experiments B1–B4 and R1, judged blind

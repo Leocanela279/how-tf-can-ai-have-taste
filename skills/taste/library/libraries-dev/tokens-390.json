@@ -1,0 +1,503 @@
+{
+  "url": "https://libraries.dev/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pageHeightScreens": 7.5,
+  "type": {
+    "families": [
+      {
+        "value": "Inter",
+        "share": 0.94
+      },
+      {
+        "value": "Saans",
+        "share": 0.04
+      },
+      {
+        "value": "Roboto Mono",
+        "share": 0.03
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "share": 0.85
+      },
+      {
+        "value": "500",
+        "share": 0.15
+      }
+    ],
+    "sizesPx": [
+      {
+        "value": 14,
+        "share": 0.49
+      },
+      {
+        "value": 13,
+        "share": 0.27
+      },
+      {
+        "value": 15,
+        "share": 0.12
+      },
+      {
+        "value": 16,
+        "share": 0.04
+      },
+      {
+        "value": 30,
+        "share": 0.03
+      },
+      {
+        "value": 12,
+        "share": 0.03
+      },
+      {
+        "value": 11,
+        "share": 0.02
+      },
+      {
+        "value": 23,
+        "share": 0.01
+      }
+    ],
+    "distinctSizes": 8,
+    "bodySizePx": 14,
+    "largest": {
+      "size": 30,
+      "family": "Saans",
+      "weight": "500",
+      "text": "Libraries and models for next-gen UI",
+      "lineHeight": 1.13,
+      "tracking": -0.007,
+      "vw": 7.7
+    },
+    "headlineToBody": 2.1,
+    "measureChars": {
+      "median": 45,
+      "max": 45
+    },
+    "monospaceShareOutsideCode": 0
+  },
+  "color": {
+    "inks": [
+      {
+        "value": "rgba(202, 202, 202, 0.7)",
+        "weight": 1418
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "weight": 325
+      },
+      {
+        "value": "rgb(118, 118, 118)",
+        "weight": 312
+      },
+      {
+        "value": "rgb(237, 237, 237)",
+        "weight": 197
+      },
+      {
+        "value": "rgb(115, 115, 115)",
+        "weight": 106
+      },
+      {
+        "value": "rgb(158, 158, 158)",
+        "weight": 55
+      },
+      {
+        "value": "rgb(201, 201, 201)",
+        "weight": 43
+      },
+      {
+        "value": "rgb(254, 254, 254)",
+        "weight": 36
+      }
+    ],
+    "grounds": [
+      {
+        "value": "rgb(24, 24, 24)",
+        "weight": 132
+      },
+      {
+        "value": "rgb(16, 16, 16)",
+        "weight": 80
+      },
+      {
+        "value": "rgb(19, 19, 19)",
+        "weight": 68
+      },
+      {
+        "value": "rgb(26, 26, 26)",
+        "weight": 14
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.05)",
+        "weight": 1
+      },
+      {
+        "value": "rgb(34, 34, 34)",
+        "weight": 1
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "weight": 1
+      },
+      {
+        "value": "rgb(0, 113, 252)",
+        "weight": 1
+      }
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "24px",
+        "weight": 34
+      },
+      {
+        "value": "50px",
+        "weight": 15
+      },
+      {
+        "value": "14px",
+        "weight": 15
+      },
+      {
+        "value": "12px",
+        "weight": 10
+      },
+      {
+        "value": "6px",
+        "weight": 6
+      },
+      {
+        "value": "2px",
+        "weight": 2
+      },
+      {
+        "value": "8px",
+        "weight": 1
+      }
+    ],
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.04) 0px 1px 3px 0px, rgba(255, 255, 255, 0.04) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.06) 0px -1px 0px 0px inset, rgba(196, 196, 196, 0.07) 0px 0px 0px 1px inset",
+        "weight": 18
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.09) 0px 0px 0px 1px inset",
+        "weight": 6
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.04) 0px 1px 3px 0px, rgba(255, 255, 255, 0.04) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+        "weight": 4
+      },
+      {
+        "value": "rgb(48, 48, 48) 0px 0px 0px 0.5px inset",
+        "weight": 3
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.02) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.02) 0px 0px 0px 1px inset",
+        "weight": 3
+      }
+    ],
+    "elementsWithBorders": 5,
+    "gradients": 0,
+    "backdropBlur": 0
+  },
+  "spacingPx": [
+    {
+      "value": 2,
+      "weight": 15
+    },
+    {
+      "value": 6,
+      "weight": 20
+    },
+    {
+      "value": 8,
+      "weight": 12
+    },
+    {
+      "value": 9,
+      "weight": 20
+    },
+    {
+      "value": 10,
+      "weight": 2
+    },
+    {
+      "value": 11,
+      "weight": 8
+    },
+    {
+      "value": 12,
+      "weight": 42
+    },
+    {
+      "value": 16,
+      "weight": 21
+    },
+    {
+      "value": 20,
+      "weight": 11
+    },
+    {
+      "value": 24,
+      "weight": 15
+    },
+    {
+      "value": 25,
+      "weight": 2
+    },
+    {
+      "value": 28,
+      "weight": 3
+    },
+    {
+      "value": 32,
+      "weight": 4
+    },
+    {
+      "value": 34,
+      "weight": 2
+    },
+    {
+      "value": 40,
+      "weight": 2
+    },
+    {
+      "value": 64,
+      "weight": 3
+    }
+  ],
+  "perf": {
+    "lcp": {
+      "ms": 772,
+      "tag": "h1",
+      "lazy": false,
+      "priority": null,
+      "what": "Libraries and models for next-gen UI"
+    },
+    "cls": 0,
+    "longTasks": {
+      "count": 10,
+      "longest": 208
+    },
+    "longFrames": {
+      "count": 10,
+      "longest": 270
+    },
+    "blockingScripts": [],
+    "runtimeCss": false,
+    "kb": {
+      "script": 40,
+      "css": 18,
+      "font": 56,
+      "image": 294
+    },
+    "unknownSizes": 2,
+    "fontsLoaded": [
+      "Saans 500",
+      "Inter 400",
+      "Inter 500",
+      "Roboto Mono 400"
+    ],
+    "animations": {
+      "running": 0,
+      "nonComposited": [],
+      "infinite": 0,
+      "moving": 0
+    },
+    "blurSurfaces": []
+  },
+  "findings": {
+    "overflowX": false,
+    "lowContrast": [
+      {
+        "text": "Get full access",
+        "ratio": 4.4,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Used by designers and engineers at compa",
+        "ratio": 3.95,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "A soft glow that rides the border",
+        "ratio": 3.91,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Orbs that think while you wait",
+        "ratio": 3.91,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Pieces that merge like goo",
+        "ratio": 3.91,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "A glow that rises with your voice",
+        "ratio": 3.91,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Light that bends with your voice",
+        "ratio": 3.91,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Animated faces for your AI agents",
+        "ratio": 3.91,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "Liquid metal for your buttons",
+        "ratio": 3.91,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "A loader that becomes the image",
+        "ratio": 3.91,
+        "size": 13,
+        "need": 4.5
+      }
+    ],
+    "lowContrastCount": 19,
+    "smallTargets": [
+      {
+        "text": "Guillermo Rauch on X",
+        "w": 14,
+        "h": 14
+      },
+      {
+        "text": "Guillermo Rauch",
+        "w": 102,
+        "h": 16
+      },
+      {
+        "text": "Des Traynor on X",
+        "w": 14,
+        "h": 14
+      },
+      {
+        "text": "Des Traynor",
+        "w": 76,
+        "h": 16
+      },
+      {
+        "text": "Kris Puckett on X",
+        "w": 14,
+        "h": 14
+      },
+      {
+        "text": "Kris Puckett",
+        "w": 75,
+        "h": 16
+      },
+      {
+        "text": "Border beam",
+        "w": 84,
+        "h": 18
+      },
+      {
+        "text": "Thinking orbs",
+        "w": 84,
+        "h": 18
+      },
+      {
+        "text": "Gooey",
+        "w": 84,
+        "h": 18
+      },
+      {
+        "text": "Voice",
+        "w": 84,
+        "h": 18
+      }
+    ],
+    "smallTargetCount": 23,
+    "tinyText": [
+      {
+        "text": "1",
+        "size": 11
+      },
+      {
+        "text": "2",
+        "size": 11
+      },
+      {
+        "text": "3",
+        "size": 11
+      },
+      {
+        "text": "Made with help from (Orbs)",
+        "size": 11
+      },
+      {
+        "text": "Alexandr Brinza",
+        "size": 11
+      }
+    ],
+    "tinyTextCount": 5,
+    "smallCapsLabels": [],
+    "smallCapsCount": 0,
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Libraries and models for next-gen UI",
+        "lines": 2
+      },
+      {
+        "tag": "h2",
+        "text": "Kind words from X",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Copy the prompt.Paste it to coding agent",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Copy the prompt",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Paste it in your agent",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Make it yours",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "FAQs",
+        "lines": 1
+      }
+    ],
+    "transitionAll": 0,
+    "imagesWithoutAlt": 0,
+    "placeholderText": false,
+    "emoji": 0
+  }
+}

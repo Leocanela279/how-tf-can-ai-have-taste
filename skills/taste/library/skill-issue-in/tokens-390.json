@@ -1,0 +1,447 @@
+{
+  "url": "https://skill-issue.in/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pageHeightScreens": 4.4,
+  "type": {
+    "families": [
+      {
+        "value": "GeistSans",
+        "share": 0.98
+      },
+      {
+        "value": "Instrument Serif",
+        "share": 0.02
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "share": 0.8
+      },
+      {
+        "value": "600",
+        "share": 0.15
+      },
+      {
+        "value": "500",
+        "share": 0.05
+      }
+    ],
+    "sizesPx": [
+      {
+        "value": 10.9,
+        "share": 0.47
+      },
+      {
+        "value": 10,
+        "share": 0.32
+      },
+      {
+        "value": 12.2,
+        "share": 0.14
+      },
+      {
+        "value": 11.5,
+        "share": 0.05
+      },
+      {
+        "value": 30.7,
+        "share": 0.01
+      },
+      {
+        "value": 24.3,
+        "share": 0
+      },
+      {
+        "value": 19.2,
+        "share": 0
+      },
+      {
+        "value": 115.2,
+        "share": 0
+      },
+      {
+        "value": 13,
+        "share": 0
+      }
+    ],
+    "distinctSizes": 9,
+    "bodySizePx": 10.9,
+    "largest": {
+      "size": 115.2,
+      "family": "Instrument Serif",
+      "weight": "400",
+      "text": "Skill Issue",
+      "lineHeight": 1,
+      "tracking": 0,
+      "vw": 29.5
+    },
+    "headlineToBody": 10.6,
+    "measureChars": null,
+    "monospaceShareOutsideCode": 0
+  },
+  "color": {
+    "inks": [
+      {
+        "value": "rgb(74, 74, 74)",
+        "weight": 2084
+      },
+      {
+        "value": "rgb(21, 21, 21)",
+        "weight": 477
+      },
+      {
+        "value": "rgb(107, 107, 107)",
+        "weight": 286
+      },
+      {
+        "value": "rgb(79, 79, 79)",
+        "weight": 96
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "weight": 72
+      },
+      {
+        "value": "rgb(245, 216, 122)",
+        "weight": 19
+      }
+    ],
+    "grounds": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "weight": 92
+      },
+      {
+        "value": "rgb(244, 242, 238)",
+        "weight": 13
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.04)",
+        "weight": 3
+      },
+      {
+        "value": "rgb(240, 238, 233)",
+        "weight": 2
+      },
+      {
+        "value": "rgb(251, 250, 248)",
+        "weight": 1
+      },
+      {
+        "value": "rgb(21, 21, 21)",
+        "weight": 0
+      },
+      {
+        "value": "rgb(59, 130, 246)",
+        "weight": 0
+      },
+      {
+        "value": "rgb(180, 83, 9)",
+        "weight": 0
+      }
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "3.35544e+07px",
+        "weight": 143
+      },
+      {
+        "value": "14.4px",
+        "weight": 20
+      },
+      {
+        "value": "11.2px",
+        "weight": 20
+      },
+      {
+        "value": "14px",
+        "weight": 1
+      }
+    ],
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.04) 0px 1px 2px 0px, rgba(0, 0, 0, 0.1) 0px 8px 24px -12px, rgba(255, 255, 255, 0) 0px 1px 0px 0px inset",
+        "weight": 20
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.06) 0px 1px 2px 0px",
+        "weight": 20
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
+        "weight": 1
+      }
+    ],
+    "elementsWithBorders": 101,
+    "gradients": 2,
+    "backdropBlur": 0
+  },
+  "spacingPx": [
+    {
+      "value": 2,
+      "weight": 20
+    },
+    {
+      "value": 3,
+      "weight": 82
+    },
+    {
+      "value": 5,
+      "weight": 122
+    },
+    {
+      "value": 6,
+      "weight": 52
+    },
+    {
+      "value": 8,
+      "weight": 64
+    },
+    {
+      "value": 10,
+      "weight": 47
+    },
+    {
+      "value": 11,
+      "weight": 10
+    },
+    {
+      "value": 13,
+      "weight": 5
+    },
+    {
+      "value": 14,
+      "weight": 40
+    },
+    {
+      "value": 19,
+      "weight": 4
+    },
+    {
+      "value": 28,
+      "weight": 1
+    },
+    {
+      "value": 32,
+      "weight": 1
+    }
+  ],
+  "perf": {
+    "lcp": {
+      "ms": 3480,
+      "tag": "span",
+      "lazy": false,
+      "priority": null,
+      "what": "Skill Issue"
+    },
+    "cls": 0,
+    "longTasks": {
+      "count": 2,
+      "longest": 62
+    },
+    "longFrames": {
+      "count": 3,
+      "longest": 74
+    },
+    "blockingScripts": [
+      "https://skill-issue.in/_next/static/chunks/polyfills-42372ed130431b0a.js"
+    ],
+    "runtimeCss": false,
+    "kb": {
+      "script": 274,
+      "css": 9,
+      "font": 84,
+      "image": 2076
+    },
+    "unknownSizes": 1,
+    "fontsLoaded": [
+      "GeistSans 100 900",
+      "Instrument Serif 400"
+    ],
+    "animations": {
+      "running": 0,
+      "nonComposited": [],
+      "infinite": 0,
+      "moving": 0
+    },
+    "blurSurfaces": []
+  },
+  "findings": {
+    "overflowX": false,
+    "lowContrast": [
+      {
+        "text": "Have a Skill Issue?",
+        "ratio": 1.34,
+        "size": 30.72,
+        "need": 3
+      },
+      {
+        "text": "A ranked library of agent skills, curate",
+        "ratio": 1.04,
+        "size": 11.52,
+        "need": 4.5
+      }
+    ],
+    "lowContrastCount": 2,
+    "smallTargets": [
+      {
+        "text": "Privacy Policy",
+        "w": 63,
+        "h": 15
+      },
+      {
+        "text": "AI Lately",
+        "w": 45,
+        "h": 16
+      },
+      {
+        "text": "Dismiss",
+        "w": 19,
+        "h": 19
+      }
+    ],
+    "smallTargetCount": 3,
+    "tinyText": [
+      {
+        "text": "Login",
+        "size": 11.52
+      },
+      {
+        "text": "A ranked library of agent skil",
+        "size": 11.52
+      },
+      {
+        "text": "All",
+        "size": 11.52
+      },
+      {
+        "text": "Design",
+        "size": 11.52
+      },
+      {
+        "text": "Frontend",
+        "size": 11.52
+      }
+    ],
+    "tinyTextCount": 117,
+    "smallCapsLabels": [],
+    "smallCapsCount": 0,
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Have a Skill Issue?",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "ui-ux-pro-max-skill",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "frontend-design",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "taste-skill",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "design-system-patterns",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "agent-browser",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "nextjs-app-router-patterns",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "react-state-management",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "react-best-practices",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "tailwind-design-system",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "responsive-design",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "lark-skills (Lark/Feishu suite)",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "accessibility-compliance",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "modern-javascript-patterns",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "web-design-guidelines",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "react-native-architecture",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "api-design-principles",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "remotion-best-practices",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "openapi-spec-generation",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "auth-implementation-patterns",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "design-taste-frontend",
+        "lines": 1
+      }
+    ],
+    "transitionAll": 0,
+    "imagesWithoutAlt": 0,
+    "placeholderText": false,
+    "emoji": 1
+  }
+}

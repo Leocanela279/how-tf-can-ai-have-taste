@@ -1,0 +1,713 @@
+{
+  "url": "https://elevenlabs.io/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pageHeightScreens": 17.8,
+  "type": {
+    "families": [
+      {
+        "value": "Inter",
+        "share": 0.88
+      },
+      {
+        "value": "Geist Mono",
+        "share": 0.07
+      },
+      {
+        "value": "Waldenburg",
+        "share": 0.05
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "share": 0.82
+      },
+      {
+        "value": "500",
+        "share": 0.14
+      },
+      {
+        "value": "300",
+        "share": 0.05
+      }
+    ],
+    "sizesPx": [
+      {
+        "value": 16,
+        "share": 0.33
+      },
+      {
+        "value": 15,
+        "share": 0.29
+      },
+      {
+        "value": 14,
+        "share": 0.19
+      },
+      {
+        "value": 13,
+        "share": 0.08
+      },
+      {
+        "value": 30,
+        "share": 0.04
+      },
+      {
+        "value": 17,
+        "share": 0.03
+      },
+      {
+        "value": 18,
+        "share": 0.02
+      },
+      {
+        "value": 12,
+        "share": 0.01
+      },
+      {
+        "value": 36,
+        "share": 0
+      },
+      {
+        "value": 26,
+        "share": 0
+      },
+      {
+        "value": 10,
+        "share": 0
+      }
+    ],
+    "distinctSizes": 11,
+    "bodySizePx": 16,
+    "largest": {
+      "size": 36,
+      "family": "Waldenburg",
+      "weight": "300",
+      "text": "Bringing",
+      "lineHeight": 1.17,
+      "tracking": -0.02,
+      "vw": 9.2
+    },
+    "headlineToBody": 2.3,
+    "measureChars": {
+      "median": 21,
+      "max": 39
+    },
+    "monospaceShareOutsideCode": 0
+  },
+  "color": {
+    "inks": [
+      {
+        "value": "rgb(0, 0, 0)",
+        "weight": 4250
+      },
+      {
+        "value": "rgb(119, 113, 105)",
+        "weight": 1693
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "weight": 766
+      },
+      {
+        "value": "rgba(0, 0, 0, 0)",
+        "weight": 294
+      },
+      {
+        "value": "rgb(68, 64, 59)",
+        "weight": 226
+      },
+      {
+        "value": "rgb(5, 47, 112)",
+        "weight": 211
+      },
+      {
+        "value": "rgb(165, 159, 151)",
+        "weight": 118
+      },
+      {
+        "value": "rgb(10, 89, 210)",
+        "weight": 86
+      }
+    ],
+    "grounds": [
+      {
+        "value": "rgb(253, 252, 252)",
+        "weight": 523
+      },
+      {
+        "value": "rgb(245, 243, 241)",
+        "weight": 265
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "weight": 63
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.3)",
+        "weight": 6
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "weight": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.01)",
+        "weight": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.05)",
+        "weight": 1
+      },
+      {
+        "value": "rgb(239, 239, 239)",
+        "weight": 1
+      }
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "9999px",
+        "weight": 117
+      },
+      {
+        "value": "4px",
+        "weight": 109
+      },
+      {
+        "value": "12px",
+        "weight": 69
+      },
+      {
+        "value": "8px",
+        "weight": 9
+      },
+      {
+        "value": "2px",
+        "weight": 8
+      },
+      {
+        "value": "10px",
+        "weight": 7
+      },
+      {
+        "value": "16px",
+        "weight": 6
+      },
+      {
+        "value": "20px",
+        "weight": 4
+      }
+    ],
+    "shadows": [
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.125) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.04) 0px 1px 1px 0px, rgba(0, 0, 0, 0.04) 0px 2px 4px 0px",
+        "weight": 27
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.075) 0px 0px 0px 0.5px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "weight": 22
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.1) 0px 0px 0px 0.5px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "weight": 12
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.125) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.04) 0px 1px 1px 0px, rgba(0, 0, 0, 0.04) 0px 2px 4px 0px",
+        "weight": 7
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(255, 255, 255, 0.6) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "weight": 2
+      }
+    ],
+    "elementsWithBorders": 30,
+    "gradients": 10,
+    "backdropBlur": 0
+  },
+  "spacingPx": [
+    {
+      "value": 3,
+      "weight": 6
+    },
+    {
+      "value": 4,
+      "weight": 25
+    },
+    {
+      "value": 6,
+      "weight": 100
+    },
+    {
+      "value": 8,
+      "weight": 130
+    },
+    {
+      "value": 9,
+      "weight": 66
+    },
+    {
+      "value": 10,
+      "weight": 11
+    },
+    {
+      "value": 12,
+      "weight": 29
+    },
+    {
+      "value": 14,
+      "weight": 7
+    },
+    {
+      "value": 16,
+      "weight": 120
+    },
+    {
+      "value": 18,
+      "weight": 14
+    },
+    {
+      "value": 20,
+      "weight": 24
+    },
+    {
+      "value": 24,
+      "weight": 28
+    },
+    {
+      "value": 32,
+      "weight": 26
+    },
+    {
+      "value": 48,
+      "weight": 12
+    },
+    {
+      "value": 64,
+      "weight": 9
+    },
+    {
+      "value": 120,
+      "weight": 8
+    }
+  ],
+  "perf": {
+    "lcp": {
+      "ms": 676,
+      "tag": "img",
+      "lazy": false,
+      "priority": "high",
+      "what": "https://elevenlabs.io/_next/image?url=https%3A%2F%"
+    },
+    "cls": 0,
+    "longTasks": {
+      "count": 1,
+      "longest": 148
+    },
+    "longFrames": {
+      "count": 1,
+      "longest": 272
+    },
+    "blockingScripts": [
+      "https://eleven-public-cdn.elevenlabs.io/marketing_website/_next/static/chunks/polyfills-42372ed130431b0a.js?dpl=55b1449bb40ceb85b8eb302c572bfea59266ae05"
+    ],
+    "runtimeCss": false,
+    "kb": {
+      "script": 0,
+      "css": 0,
+      "font": 0,
+      "image": 426
+    },
+    "unknownSizes": 110,
+    "fontsLoaded": [],
+    "animations": {
+      "running": 0,
+      "nonComposited": [],
+      "infinite": 0,
+      "moving": 0
+    },
+    "blurSurfaces": []
+  },
+  "findings": {
+    "overflowX": false,
+    "lowContrast": [
+      {
+        "text": "Expressive voices that bring audiobooks ",
+        "ratio": 4.36,
+        "size": 13,
+        "need": 4.5
+      },
+      {
+        "text": "All-in-one AI editor",
+        "ratio": 1.08,
+        "size": 15,
+        "need": 4.5
+      },
+      {
+        "text": "Create podcasts, audiobooks and voiceove",
+        "ratio": 1.11,
+        "size": 15,
+        "need": 4.5
+      },
+      {
+        "text": "Ultra-realistic speech",
+        "ratio": 4.36,
+        "size": 15,
+        "need": 4.5
+      },
+      {
+        "text": "In the ancient land of Eldoria, where sk",
+        "ratio": 1,
+        "size": 16,
+        "need": 4.5
+      },
+      {
+        "text": "Music",
+        "ratio": 4.36,
+        "size": 15,
+        "need": 4.5
+      },
+      {
+        "text": "SFX",
+        "ratio": 4.36,
+        "size": 15,
+        "need": 4.5
+      },
+      {
+        "text": "Voices",
+        "ratio": 4.36,
+        "size": 15,
+        "need": 4.5
+      },
+      {
+        "text": "Image & Video",
+        "ratio": 4.36,
+        "size": 15,
+        "need": 4.5
+      },
+      {
+        "text": "Omnichannel agents",
+        "ratio": 1.08,
+        "size": 15,
+        "need": 4.5
+      }
+    ],
+    "lowContrastCount": 31,
+    "smallTargets": [
+      {
+        "text": "Ultra-realistic speech",
+        "w": 149,
+        "h": 22
+      },
+      {
+        "text": "Music",
+        "w": 56,
+        "h": 22
+      },
+      {
+        "text": "SFX",
+        "w": 46,
+        "h": 22
+      },
+      {
+        "text": "Voices",
+        "w": 59,
+        "h": 22
+      },
+      {
+        "text": "Image & Video",
+        "w": 112,
+        "h": 22
+      },
+      {
+        "text": "Deliveroo",
+        "w": 77,
+        "h": 11
+      },
+      {
+        "text": "Text to Speech API",
+        "w": 127,
+        "h": 17
+      },
+      {
+        "text": "Speech to Text API",
+        "w": 126,
+        "h": 17
+      },
+      {
+        "text": "Music API",
+        "w": 70,
+        "h": 17
+      },
+      {
+        "text": "Introducing Flows in ElevenCreative",
+        "w": 266,
+        "h": 20
+      }
+    ],
+    "smallTargetCount": 10,
+    "tinyText": [
+      {
+        "text": "17 Aug",
+        "size": 10
+      },
+      {
+        "text": "24 Aug",
+        "size": 10
+      }
+    ],
+    "tinyTextCount": 2,
+    "smallCapsLabels": [],
+    "smallCapsCount": 0,
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Bringing technology to life",
+        "lines": 3
+      },
+      {
+        "tag": "h2",
+        "text": "Powering the best enterprises, creators, and devel",
+        "lines": 4
+      },
+      {
+        "tag": "h2",
+        "text": "Trusted by leading developers and enterprises",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Two platforms built on the same research foundatio",
+        "lines": 3
+      },
+      {
+        "tag": "h3",
+        "text": "ElevenCreative",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "ElevenAgents",
+        "lines": 2
+      },
+      {
+        "tag": "h2",
+        "text": "Create, edit, and localize in one AI platform",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Create ultra-realistic speech, turn ideas into vid",
+        "lines": 6
+      },
+      {
+        "tag": "h3",
+        "text": "All-in-one AI editor",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Ultra-realistic speech",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Music",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "SFX",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Voices",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Image & Video",
+        "lines": 2
+      },
+      {
+        "tag": "h2",
+        "text": "Deploy agents that talk, type, and take action",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Configure, deploy and monitor natural, human-sound",
+        "lines": 4
+      },
+      {
+        "tag": "h3",
+        "text": "Omnichannel agents",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Analytics",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Testing",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Guardrails",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Workflows",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Or build anything with a powerful host of APIs",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Text to Speech API",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Speech to Text API",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Music API",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Showcasing the global impact of AI audio research",
+        "lines": 3
+      },
+      {
+        "tag": "h2",
+        "text": "Research that redefines human technology interacti",
+        "lines": 3
+      },
+      {
+        "tag": "h3",
+        "text": "Eleven Multilingual v2",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Eleven Turbo v2",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Eleven Flash v2.5",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Scribe",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Eleven v3",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Eleven Music",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Scribe v2 Realtime",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Scribe v2",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Expressive Mode for Agents",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Music v2",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Dubbing v2",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Eleven v4",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Advancing research beyond voice into transcription",
+        "lines": 3
+      },
+      {
+        "tag": "h2",
+        "text": "Safety, built in",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Moderation",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Accountability",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Provenance",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Latest updates",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Introducing Flows in ElevenCreative",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Introducing ElevenLabs for Government",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Introducing Expressive Mode for ElevenAgents",
+        "lines": 2
+      }
+    ],
+    "transitionAll": 2,
+    "imagesWithoutAlt": 0,
+    "placeholderText": true,
+    "emoji": 0
+  }
+}
