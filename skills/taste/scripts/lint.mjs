@@ -40,7 +40,16 @@ const RULES = [
   ['WARN', 'font-axes', /fonts\.googleapis\.com\/css2\?[^"'\s]*(opsz|wdth),/, 'Google Fonts optical-size or width axis range downloads a much larger file; pin the axis'],
   ['ERROR', 'img-size', /<img\b(?![^>]*\bwidth=)[^>]*>|<img\b(?![^>]*\bheight=)[^>]*>/, 'image without width and height causes layout shift'],
   ['WARN', 'gif', /\.gif\b/, 'animated GIF; a muted looping WebM is about 10x smaller'],
+
+  // Components: see references/components.md.
+  ['ERROR', 'tabindex-order', /tabIndex=\{?\s*["']?[1-9]|tabindex=["']?[1-9]/, 'positive tabindex scrambles keyboard order; use 0 or -1 and the DOM order'],
+  ['WARN', 'hand-rolled-widget', /role=\{?\s*["'](dialog|alertdialog|menu|menubar|menuitem|listbox|combobox|tooltip|tablist|tab|tabpanel)["']/, 'hand-written widget role; use <dialog>, popover or a tested primitive (references/components.md)'],
+  ['WARN', 'stale-library', /from\s+['"](vaul|radix-vue|cmdk|@headlessui\/vue)['"]/, 'unmaintained or frozen library (vaul, radix-vue, cmdk, Headless UI Vue); see references/components.md for the current choice'],
+  ['WARN', 'kit-default-theme', /--primary:\s*(222\.2 47\.4% 11\.2%|oklch\(0\.205 0 0\))|#1976d2\b|#0d6efd\b/i, "a component kit's default theme is untouched (shadcn, MUI or Bootstrap); derive the tokens from DESIGN.md"],
 ];
+
+// Files that import a tested primitive library get their widget roles from it.
+const PRIMITIVE_IMPORT = /from\s+['"](@radix-ui\/|radix-ui|react-aria|@react-aria\/|@base-ui|@ark-ui\/|reka-ui|radix-vue|bits-ui|@headlessui\/|@melt-ui\/|@kobalte\/|@ariakit\/|@zag-js\/|cmdk|sonner)/;
 
 // Checks that need more than one line: setState inside per-frame or scroll callbacks.
 const FRAME_CALLBACK = /new IntersectionObserver|addEventListener\(\s*['"](scroll|pointermove|mousemove|wheel)['"]|requestAnimationFrame\(/;
@@ -82,9 +91,11 @@ for (const root of roots) {
     if (/focus-visible/.test(source)) focusVisible = true;
 
     const lines = source.split('\n');
+    const usesPrimitives = PRIMITIVE_IMPORT.test(source);
     lines.forEach((line, i) => {
       if (/^\s*(\/\/|\/\*|\*|<!--)/.test(line)) return;
       for (const [level, id, pattern, message] of RULES) {
+        if (id === 'hand-rolled-widget' && usesPrimitives) continue;
         if (pattern.test(line)) findings.push({ level, id, where: `${display(file)}:${i + 1}`, message });
       }
       if (FRAME_CALLBACK.test(line) && lines.slice(i, i + 10).some((l) => SET_STATE.test(l))) {

@@ -185,6 +185,10 @@ moment gets its own line, and the performance budget applies to it.
   - targets of at least 24px, and 44px or more on touch (bigger at the screen edges)
   - `<a>` for navigation
   - `tabular-nums` on figures
+- **Components: borrow the behaviour, own the look.** Dialogs, menus, selects, comboboxes, tabs,
+  tooltips, toasts and date pickers come from native HTML or a tested headless primitive, never
+  hand-rolled. They are styled only with the plan's tokens, and a kit's default theme never ships.
+  Which primitive to use for each pattern and stack: `references/components.md`.
 - **Product fragments:** a product fragment shown as a picture (a hero mockup of the app) gets
   `data-ui` and `aria-hidden="true"`. That keeps it out of the contrast and target checks. Everything
   a person can really use stays in.
@@ -285,6 +289,7 @@ earns it. If the user loves mono labels, they're in.
 | `references/defaults.md` | Values for type, buttons, states, colour, dark mode and motion when nothing else decides |
 | `references/performance.md` | Budget, the cheap way to get each costly effect, platform feature readiness |
 | `references/craft.md` | App-screen rules: states, feedback, density, copy |
+| `references/components.md` | Native elements and headless primitives per pattern and stack; the token → component layering |
 | `references/tells.md` | Default patterns paired with their replacements |
 | `../../reports/Mobile first UI taste.md` | The evidence behind the phone rules, with sources and confidence (in this repo only) |
 | `scripts/probe.mjs` | Measures a live page into a profile; `--check` adds the design, cost and reduced-motion passes |

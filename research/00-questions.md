@@ -18,3 +18,4 @@ short, with an evidence grade for each.
 | Q10 | Or do I just not have taste? | Report: "Taste is trainable…"; `skills/taste/library/` notes as a training tool |
 | Q11 | Do skills even matter? Can't I just prompt well myself? If the AI has access to everything online, why doesn't it apply design principles and learn from the people doing unique work? | Report: mode and skills sections; experiment R1 (prompt only vs skill) |
 | Q12 | How do I get an outstanding UI without sacrificing performance? Why do my best animations and transitions end up slow, and why do I so often trade performance for a mediocre UI? | Report: `reports/Fast and beautiful UI.md` (in progress) |
+| Q13 | What makes a reusable component important? Do I need them? Why reinvent the wheel when tested components exist? How do I apply the same principles to my own system, app, SaaS and portfolio? | Report: `reports/Reusable UI components.md`; `skills/taste/references/components.md` |

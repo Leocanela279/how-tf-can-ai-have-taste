@@ -87,6 +87,9 @@ node skills/taste/scripts/lint.mjs src                             # static defe
 - [x] Research round 4: mobile first, attention, density, eye comfort and reach (`reports/Mobile first UI taste.md`)
       Folded into the skill: phone checks in `probe.mjs --check --width 390`, phone rules in `SKILL.md`,
       and a phone pass in the critic brief
+- [x] Research round 5: reusable components (`reports/Reusable UI components.md`). Folded into the skill:
+      `references/components.md` (native first, then one primitive family, then your own component) and
+      lint rules for hand-rolled widget roles, positive tabindex, untouched kit themes and stale libraries
 - [ ] Reference library: 8 of the owner's 9 picks measured with notes; x.ai blocks headless browsers
 - [x] Portfolio: mobile fixes applied (16px running text on phones, 44px touch targets, build-time
       CSS, self-hosted fonts, no header blur), packaged in `portfolio/` for Cloudflare Pages
