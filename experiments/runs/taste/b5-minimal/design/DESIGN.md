@@ -115,3 +115,12 @@ Contact fell below the fold at 1024×768. Open P2s: repeated role and city, phon
 **Round 3** (`shots/r3`): Today line no longer repeats the role or city; `text-wrap: pretty` on
 running text; section gap and top padding `clamp(64px, 14vh, 128px)` on desktop, so tall screens keep
 the reference's 128 and 768px screens keep Contact on the first screen.
+
+**Owner request (2026-11-04): a light/dark switch.** A 16px half-filled circle beside the clock,
+in a 44px target. The choice is stored in `localStorage` and applied by a one-line inline script
+in `<head>` before first paint (no flash); with nothing stored, the system setting decides.
+Switching runs a same-document View Transition: the new theme grows as a circle from the button
+(`clip-path` on `::view-transition-new(root)`, 450ms, ease-out `cubic-bezier(.2, .7, .2, 1)`).
+Cost: one compositor animation over two snapshots, no layout. Fallback: an instant switch when
+the browser has no View Transitions or the visitor asks for reduced motion. The icon turns 180°
+with the theme.

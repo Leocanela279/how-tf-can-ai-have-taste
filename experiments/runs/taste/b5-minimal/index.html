@@ -10,6 +10,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/styles.css" />
+  <script>try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}</script>
 </head>
 <body>
   <main>
@@ -18,7 +19,12 @@
         <h1 class="name">Leandro Canela<span class="dot" aria-hidden="true">.</span></h1>
         <p class="role">Full-stack developer</p>
       </div>
-      <p class="time" aria-label="Time in Barcelona"><span id="bcn"></span></p>
+      <div class="meta">
+        <p class="time" aria-label="Time in Barcelona"><span id="bcn"></span></p>
+        <button class="theme" type="button" aria-label="Switch to dark theme">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 0 0 12.5z" fill="currentColor"/></svg>
+        </button>
+      </div>
     </header>
 
     <section aria-labelledby="today">
@@ -48,6 +54,43 @@
       function tick() { el.textContent = 'Barcelona ' + fmt.format(new Date()); }
       tick();
       setInterval(tick, 15000);
+    })();
+
+    (function () {
+      var root = document.documentElement;
+      var button = document.querySelector('.theme');
+      var systemDark = matchMedia('(prefers-color-scheme: dark)');
+      var reduce = matchMedia('(prefers-reduced-motion: reduce)');
+
+      function current() { return root.dataset.theme || (systemDark.matches ? 'dark' : 'light'); }
+      function sync() {
+        var dark = current() === 'dark';
+        button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+          m.content = dark ? '#0f0e0c' : '#fafaf8';
+        });
+      }
+      function apply(theme) {
+        root.dataset.theme = theme;
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+        sync();
+      }
+
+      button.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        if (!document.startViewTransition || reduce.matches) { apply(next); return; }
+        var r = button.getBoundingClientRect();
+        var x = r.left + r.width / 2, y = r.top + r.height / 2;
+        var end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+        document.startViewTransition(function () { apply(next); }).ready.then(function () {
+          root.animate(
+            { clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + end + 'px at ' + x + 'px ' + y + 'px)'] },
+            { duration: 450, easing: 'cubic-bezier(.2, .7, .2, 1)', pseudoElement: '::view-transition-new(root)' }
+          );
+        });
+      });
+      systemDark.addEventListener('change', sync);
+      sync();
     })();
   </script>
 </body>
