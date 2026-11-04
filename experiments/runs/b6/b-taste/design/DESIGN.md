@@ -146,7 +146,25 @@ only appear after a click or a hover). The chrome stays grey.
 - Signature moment: none planned beyond the cut line, which is static.
 
 ## Warnings kept, and why
-(filled after lint)
+
+- `3 font families carry text: Geist, Newsreader, Geist Mono` (probe, all widths). The owner asked
+  to keep the fonts. Mono is held to years, indices, stack strings and the cut label (probe: 7% of
+  text at the first build, below the 8% the original page ran).
+- Gate results (final): lint 0/0; probe `--check` 0 errors at 1440, 390 and 360, only the warning
+  above. Fonts went from 311 KB to 77 KB by instancing the same families (Geist wght 400–500,
+  Newsreader wght 400 at opsz 36, Geist Mono 400 only; Mono 500 dropped as unused).
+- Measured sizes at 1440: 17 / 15 / 13 / 32 / 64 / 120px; display/body 7.1; weights 400 (94%)
+  and 500.
+
+## Build notes
+
+- Tailwind removed (`src.css`, `tailwind.config.js` deleted); `styles.css` is plain CSS whose values
+  all come from the `:root` tokens. No build step.
+- The accordion index and the cursor-following preview are gone: every project's screenshot is
+  visible, so the hover-only preview had no job left. No JavaScript besides the clock and the
+  copy button.
+- `scroll-behavior: smooth` removed: on a page this long it made scripted and keyboard jumps slow,
+  and it skewed the screenshot tool's first frame.
 
 ## 7. Critique, round 1 (separate pass: shots in `design/shots/r1` + this file only)
 
@@ -187,3 +205,49 @@ four inks used, as Linear; surfaces separate by tone (paper → card frames → 
 do; gap inside a case 16–24px vs 128px between cases (ratio ~5–8, Linear ~4). No mismatch worth a fix.
 
 Fixing 1, 2, 3 this round (the skill allows the target plus two).
+
+## Round 2 (pairwise, `design/shots/r2` vs `r1` as best)
+
+```
+VERDICT: new — the "Underneath" facts now read as one spec sheet (label column + text, hairline
+rows) instead of three ragged columns; tools read left to right; About uses the width.
+REGRESSIONS: none seen. At 390, "Removed for ICEX" wraps to two lines in its label column (fine).
+```
+
+Then three defects fixed without a new round: the strata titles and the cut label had inherited the
+browser's bold (700, outside the weight plan); strata titles set to body size so the thesis line
+stays above them in the hierarchy; the hero's lead now sits under the name (top-aligned) and the
+900–1199px hero splits 7/5 instead of squeezing the buttons. Project names use the 32px token (a
+stray 40px was outside the plan). Round 1 found no P0, so no second critique round.
+
+Still flagged by the critic, not fixed: P2 #5 (show "About" in the phone nav from 360px) and P2 #6
+(contact band's empty right side, kept as the page's one rest).
+
+## 8. Motion and finish
+
+Kept to feedback only, all on composite or tiny paint:
+- link underline drawn with `::after` `scaleX`, 200ms ease-out (hover and focus);
+- arrow nudge `translate(2px,-2px)`, 150ms; button background/border colour 150ms;
+- press `scale(.97)`, 100ms, on buttons;
+- copy button swaps its icon and label for 2s, announced through a status region.
+No scroll reveals, no signature moment: the cut line is static on purpose. Reduced motion collapses
+every transition to 0.01ms.
+
+Mirror pass, removed one thing: the "Or read the CV (PDF) first." line under the email (the CV is
+already in the top bar and the footer).
+
+## 9. Hand-over
+
+- **Reference:** linear.app (ink staircase, tone-step surfaces, small-inside/big-between spacing) and
+  libraries.dev (grey chrome, colour only inside the work, nested-radius frames).
+- **Idea:** the invisible layer he says he enjoys becomes a cut line under every screen: real
+  screenshot above, a dashed "Underneath" rule, the data/permission/failure facts below.
+- **Plan in five lines:** owner's palette as 3 tone-step grounds + a 4-ink staircase (15.8 / 11.8 /
+  7.2 / 5.3:1); orange only on the logo period and the action; Geist 400/500 + Newsreader voice +
+  Geist Mono for years and stack; sizes 13/15–17/32/64/120 with one 7× jump; spacing 4–128 with
+  128 between sections; 14/6px nested frames, pills for buttons, square everything else.
+- **To confirm:** the Path timeline taken from the CV; "Currently at Humannova" vs the CV's end date
+  of Oct 2026; the new "Runs/Traces", "Calendar/Members", "Finds/Proves" labels re-group the
+  page's existing sentences (no new claims).
+- **Runner-up direction:** E, the page as an access log ("who can touch what") built on his access
+  control past.
