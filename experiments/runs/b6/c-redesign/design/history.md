@@ -13,3 +13,5 @@
 - **Gate:** probe 0 errors at 1440/390/360; compare no regressions; parity 0/0/0.
 - **Critic:** verdict new (separate pass, one round).
 - **Verdict from the owner:** pending.
+
+- 2026-11-04: blind B6 verdict from the owner: this arm (Z) preferred, weakly ("maybe Z, but they're not completely different").

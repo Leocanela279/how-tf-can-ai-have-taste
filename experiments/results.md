@@ -84,3 +84,30 @@ which is the reference's design.
 switch with a circular reveal, GitHub as a header icon, the CV removed, link previews, and the taste
 skill added as a project. Asked afterwards what makes the reference work; the answer became
 `skills/taste/references/restraint.md`.
+
+## B6: redesign of an existing page (2026-11-04)
+
+**Before:** the B4-dark portfolio. **Brief (identical for all arms):** "Make it better. Keep the
+palette, the fonts and the logo." Three fresh agents, no access to each other's work; the owner
+judged blind from full-page screenshots at 1440 and 390 (dark scheme), labelled at random:
+X = taste, Y = no skill, Z = taste-redesign.
+
+| | Arm | What it did | Page length at 1440 | Gates |
+| --- | --- | --- | --- | --- |
+| Y | No skill | Opened the five accordion rows into always-visible case studies with screenshots and an "Underneath" list; name on one line; fixed the Smaller tools grid | 8,123px | none run |
+| X | `taste`, full process | Same structural move (open case studies, large screenshots in nested frames), a dashed "Underneath" idea line, calibrated to linear.app and libraries.dev, plain CSS instead of Tailwind, fonts 311 → 77 KB, a Path timeline from the CV | 7,138px | probe 0 errors at 1440/390/360 |
+| **Z** | **`taste-redesign`, restyle** | **Kept layout, navigation and copy. 43 mono caps labels → serif italic section titles and sentence-case labels; orange on the logo and actions only; 14 → 9 font sizes, all running text 16px; one spacing value per level; defects and dead code fixed. Structural ideas proposed, not built** | **3,911px** | **compare: no regressions; parity: 0 lost; probe 0 errors** |
+
+**Verdict (owner, blind): Z, weakly.** "Maybe Z, but they're not completely different actually."
+
+**Reading it.** One judge and a soft preference: a signal, not proof.
+1. The arm that changed least was preferred. Both other arms restructured the work section into
+   long case studies (about twice the length); the owner did not prefer that. This agrees with the
+   redesign research: change the surface first, and propose structure instead of shipping it.
+2. "Not completely different" is what a restyle should look like when the brief fixes palette,
+   fonts and logo and the before is already good (it won B4). The test was close to a ceiling.
+3. All three kept the first screen almost identical, so the decision was made below the fold.
+
+**Next test.** Run taste-redesign on a page with real problems (a typical AI-generated landing page
+or app screen) where a redesign should be clearly better, and on an app screen with daily users
+(where parity matters more).
