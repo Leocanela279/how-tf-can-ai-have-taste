@@ -124,3 +124,7 @@ Switching runs a same-document View Transition: the new theme grows as a circle 
 Cost: one compositor animation over two snapshots, no layout. Fallback: an instant switch when
 the browser has no View Transitions or the visitor asks for reduced motion. The icon turns 180°
 with the theme.
+
+**Owner request (2026-11-04): icons for GitHub and the CV**, inside the Contact sentence, before
+the link text: the GitHub mark and a page outline drawn on the theme button's 16px grid with
+1.5px strokes, 14px, in the second ink, turning first ink on hover. Email keeps no icon.

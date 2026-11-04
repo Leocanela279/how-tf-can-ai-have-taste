@@ -130,6 +130,19 @@ p a {
 }
 p a:hover, p a:focus-visible { text-decoration-color: var(--accent); }
 
+/* Link icons: drawn like the theme button (16px grid, 1.5px strokes), in the second ink. */
+.with-icon { white-space: nowrap; }
+.icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  vertical-align: -2px;
+  color: var(--ink-2);
+  transition: color 150ms ease-out;
+}
+.with-icon:hover .icon, .with-icon:focus-visible .icon { color: var(--ink); }
+
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* Desktop: labels move into a gutter on the left, the text column stays a reading width. */
