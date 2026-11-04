@@ -2,11 +2,9 @@
   "name": "leandro-canela-portfolio",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -c tailwind.config.js -i src.css -o public/styles.css --minify",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "wrangler deploy"
   },
   "devDependencies": {
-    "tailwindcss": "3.4.17",
     "wrangler": "^4"
   }
 }

@@ -1,7 +1,11 @@
-# Portfolio, ready for Cloudflare Pages
+# Portfolio
 
-`public/` is the whole site: static HTML, compiled CSS, self-hosted fonts and the project
-screenshots. No build step is needed to deploy it.
+Live at https://leo-dev.es. `public/` is the whole site: one HTML page, one stylesheet, one
+self-hosted font (Geist), a favicon, the CV and a 404 page. Plain HTML and CSS, no build step.
+
+The design, its plan and the critique rounds are in `experiments/runs/taste/b5-minimal/` (made with
+`skills/taste`, with emilkowal.ski as the reference). The previous, richer version is
+`experiments/runs/baseline/b4-dark/`.
 
 ## Deploy
 
@@ -23,16 +27,14 @@ From your machine instead:
 cd portfolio
 npm install
 npx wrangler login
-npm run deploy        # rebuilds the CSS, then deploys the Worker
+npm run deploy        # deploys the Worker
 ```
 
 ## Editing
 
-Edit `public/index.html`. If you add or change Tailwind classes, rebuild the CSS with
-`npm run build` (it scans `public/index.html`). Plain CSS in the page's `<style>` block needs no
-build.
+Edit `public/index.html` and `public/styles.css` directly; a push to `main` publishes them. The page
+follows the visitor's light or dark setting; both palettes are the custom properties at the top of
+`styles.css`.
 
-`public/_headers` sets long caching for fonts, a week for screenshots, and a few safe security
+`public/_headers` caches the font for a year and the CV for an hour, and sets a few safe security
 headers.
-
-The design source and its history live in `experiments/runs/baseline/b4-dark/`.
