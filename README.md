@@ -29,7 +29,7 @@ Full write-up: [`reports/Giving AI UI design taste.md`](<reports/Giving AI UI de
 | `skills/taste/` | **The skill.** One lean art-direction skill with probe, shoot and lint scripts |
 | `references/candidates.md` | Shortlist of sites to measure into the skill's library (needs picks) |
 | `experiments/prompts.md` | Blind A/B/C briefs (B1–B4) and the replication test (R1) |
-| `portfolio/` | The owner's portfolio (the B4 winner, dark, with the mobile fixes), ready for Cloudflare Pages |
+| `portfolio/` | The owner's live portfolio (leo-dev.es): the B5 minimal design, deployed as a Cloudflare Worker |
 | `.claude-plugin/` | Plugin and marketplace manifests, so the skill installs with `/plugin` |
 
 ## Install the skill
@@ -94,4 +94,5 @@ node skills/taste/scripts/lint.mjs src                             # static defe
 - [x] Portfolio: mobile fixes applied (16px running text on phones, 44px touch targets, build-time
       CSS, self-hosted fonts, no header blur), packaged in `portfolio/` for Cloudflare Pages
 - [x] Installable as a Claude Code plugin
+- [x] B5: the owner's minimal portfolio, built with the skill end to end, three critique rounds
 - [ ] Experiments B1–B3 and R1, judged blind, plus a B4 re-run with the current skill

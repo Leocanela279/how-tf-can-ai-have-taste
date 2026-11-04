@@ -62,3 +62,22 @@ The probe reports 0 errors at 1440 and 390.
 
 The probe reports 0 errors at 360, 390 and 1440. Before/after: `runs/baseline/b4-dark/design/mobile-fixes-before-after.png`;
 the previous version is `design/index.before-mobile.html`. The deployable copy is `portfolio/`.
+
+## B5: minimal portfolio (2026-11-04)
+
+**Brief (owner):** "a very minimalistic portfolio, use emilkowal.ski as the reference, do not use
+photos to show my work, only links, and use reskillia.humannova.com, usetomate.com and
+stastarat.com, that's it."
+
+Built with `skills/taste` end to end (`runs/taste/b5-minimal/design/DESIGN.md`): the reference's
+calibration (one size, two weights, two inks, 16/64/128 rhythm), a label gutter on desktop, light
+and dark by system setting, and one idea: the year beside each project and the live time in
+Barcelona as the only ornament.
+
+Critic, three rounds: round 1 found a P0 (the paragraph outweighed the name because the inks were the
+reverse of the reference's); round 2 fixed it and matched the reference's spacing; round 3 removed a
+repeated role and city, single-word lines on phones, and kept Contact near the fold on short
+screens. The probe reports 0 errors at 360, 390, 1024 and 1440; the only WARN is the one-size type,
+which is the reference's design.
+
+**Verdict (owner):** pending.
