@@ -21,7 +21,7 @@ const CANDIDATES = [
 ];
 
 // Viewport height used for each width, so every run frames the same first screen.
-export const HEIGHTS = { 390: 844, 768: 1024, 1024: 768, 1440: 900 };
+export const HEIGHTS = { 360: 800, 390: 844, 414: 896, 430: 932, 768: 1024, 1024: 768, 1280: 800, 1440: 900 };
 
 export function findBrowser() {
   const env = process.env.CHROME_PATH;
@@ -114,7 +114,8 @@ class Page {
   }
 
   async viewport(width) {
-    const height = HEIGHTS[width] ?? Math.round(width * 0.625);
+    // Unlisted widths: phones are portrait (about 2.2× taller than wide), larger screens landscape.
+    const height = HEIGHTS[width] ?? Math.round(width < 600 ? width * 2.2 : width * 0.625);
     await this.send('Emulation.setDeviceMetricsOverride', {
       width, height, deviceScaleFactor: 1, mobile: width < 768,
     });
