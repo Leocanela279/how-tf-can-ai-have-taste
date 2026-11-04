@@ -134,3 +134,6 @@ never wrap; from 600px it sits in the header row, 28px from the icons, the same 
 **Owner request (2026-11-04): link previews.** Open Graph and Twitter tags, a canonical URL and
 a 1200×630 `og.png`, rendered from `design/og.html` (Geist, the light palette, name with the orange
 period, role, the three projects with years, the domain) by `design/og-render.cjs`.
+
+**Owner request (2026-11-04): add the taste skill** (this repo, github.com/Leocanela279/how-tf-can-ai-have-taste)
+as a fourth project, third in the list with the other 2026 work; also on `og.png`.
