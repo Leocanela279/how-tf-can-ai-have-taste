@@ -27,6 +27,7 @@ Full write-up: [`reports/Giving AI UI design taste.md`](<reports/Giving AI UI de
 | `reports/` | The research report, with every claim tagged by its evidence grade |
 | `research_notes/` | The raw research notes behind the report, with sources |
 | `skills/taste/` | **The skill.** One lean art-direction skill with probe, shoot and lint scripts |
+| `skills/taste-redesign/` | **The redesign skill.** For UIs that already exist: classify, record the before, diagnose, change the cheapest layer, prove it against the before. Shares taste's scripts and library, adds inventory, parity and compare |
 | `references/candidates.md` | Shortlist of sites to measure into the skill's library (needs picks) |
 | `experiments/prompts.md` | Blind A/B/C briefs (B1–B4) and the replication test (R1) |
 | `portfolio/` | The owner's live portfolio (leo-dev.es): the B5 minimal design, deployed as a Cloudflare Worker |
@@ -57,8 +58,10 @@ ln -s "$PWD/how-tf-can-ai-have-taste/skills/taste" ~/.claude/skills/taste
 Settings → Capabilities → Skills. The written rules and library work there. The probe, shoot and lint
 scripts need a machine with Node and Chrome, so the measured checks only run in Claude Code.
 
-It triggers on its own when you ask for a page, screen or redesign, or call it directly
-(`/taste`, or `/taste:taste` when installed as a plugin).
+The plugin has two skills. `taste` triggers when you ask for a new page or screen; `taste-redesign`
+when you ask to redesign, restyle, polish or review a UI that already exists. Call them directly
+with `/taste` and `/taste-redesign` (`/taste:taste`, `/taste:taste-redesign` as a plugin). If you
+install them as plain skills, link both folders: `taste-redesign` uses `taste`'s scripts and library.
 
 For a clean test, temporarily move the other art-direction skills out of `~/.claude/skills`
 (frontend-design, design-taste-frontend, ui-ux-pro-max, design, ui-styling), and disable the
@@ -97,4 +100,6 @@ node skills/taste/scripts/lint.mjs src                             # static defe
 - [x] B5: the owner's minimal portfolio, built with the skill end to end, three critique rounds
 - [x] Why minimal works (Q14): `references/restraint.md`, with Emil's font and fallback measured
 - [x] Skill kept as one entry point: a fast path for small edits, phone rules moved to `references/mobile.md`
+- [x] Research round: redesigning existing UIs (`reports/Redesigning existing project UIs.md`), and the `taste-redesign` skill built from it
+- [ ] Blind test for `taste-redesign`: B4-dark as the before, three arms (no skill, taste, taste-redesign in restyle mode)
 - [ ] Experiments B1–B3 and R1, judged blind, plus a B4 re-run with the current skill

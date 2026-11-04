@@ -4,10 +4,11 @@ description: >-
   Art direction and visual taste for any web UI: landing pages, product and marketing sites,
   portfolios, app screens, dashboards, settings, lists. Grounds the design in the subject, measures
   real reference sites into numbers, writes a token plan before code, lints, and runs a screenshot
-  critique loop against the reference. Use whenever you build, design, redesign, restyle or polish a
-  web page or screen in any stack (HTML/CSS, React, Next.js, Tailwind, Vue, Svelte, Astro), and
-  whenever output looks generic, templated or AI-made. For motion polish after the layout is settled,
-  use the animate or review-animations skills.
+  critique loop against the reference. Use whenever you build or design a new web page or screen in
+  any stack (HTML/CSS, React, Next.js, Tailwind, Vue, Svelte, Astro), when new output looks generic,
+  templated or AI-made, and for small edits to a design this skill planned (design/DESIGN.md). To
+  redesign, restyle, polish or review a UI that already exists, use taste-redesign. For motion
+  polish after the layout is settled, use the animate or review-animations skills.
 ---
 
 # Taste

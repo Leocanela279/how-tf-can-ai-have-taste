@@ -95,3 +95,17 @@ REGRESSIONS: <anything that got worse in the version you picked>
 
 Choose `new` only if it is better on the priority target and worse on nothing that matters. When
 in doubt, choose `best`.
+
+## Before mode (taste-redesign)
+
+The reference is the page's own previous version: `ref-*.png` are the *before* shots. Judge the same
+nine points, comparing new against before, and add two checks:
+
+- **Recognisable.** Would a returning user know at once that this is the same product? The logo,
+  brand hues, faces and copy voice listed under "Must survive" in DESIGN.md are intact. A lost
+  constant is a P0.
+- **Nothing moved without a reason.** Primary actions, navigation and controls are where they were,
+  unless DESIGN.md's Before | After | Why table says otherwise. An unexplained move is a P1.
+
+Answer with the pairwise block (`VERDICT: new|best`), where `best` is the before in round 1. Choose
+`new` only if it is better on the findings it targeted and worse on nothing that matters.
