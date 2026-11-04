@@ -37,6 +37,7 @@ body {
 }
 
 h1, h2, p, ul { margin: 0; padding: 0; font: inherit; }
+p, .desc { text-wrap: pretty; }
 ul { list-style: none; }
 
 ::selection { background: var(--accent); color: var(--ground); }
@@ -100,7 +101,7 @@ p a:hover, p a:focus-visible { text-decoration-color: var(--accent); }
 @media (min-width: 960px) {
   main {
     max-width: calc(var(--gutter) + var(--column) + 48px);
-    padding-top: 128px;
+    padding-top: clamp(64px, 14vh, 128px);
     display: grid;
     grid-template-columns: var(--gutter) var(--column);
   }
@@ -109,7 +110,8 @@ p a:hover, p a:focus-visible { text-decoration-color: var(--accent); }
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: var(--gutter) var(--column);
-    margin-top: 128px;
+    /* 128 on tall screens; shorter screens keep Contact on the first screen. */
+    margin-top: clamp(64px, 14vh, 128px);
   }
   section h2 { margin-bottom: 0; }
   .projects { margin-top: -8px; }

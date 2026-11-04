@@ -23,9 +23,9 @@ board game club; DigComp 2.2; Humannova.
 
 **Real content.**
 - Leandro Canela — Full-stack developer
-- Today: Full-stack developer at Humannova in Barcelona, and a computer science student. I work
-  mostly on the part people don't see: how the data is shaped, who is allowed to touch it, and what
-  happens when something fails.
+- Today: Working at Humannova and studying computer science. I spend most of my time on the part
+  people don't see: how the data is shaped, who is allowed to touch it, and what happens when
+  something fails.
 - Projects (2026, 2026, 2025):
   - Reskillia → https://reskillia.humannova.com — Measures a team's digital skills against DigComp 2.2.
   - Tomate → https://usetomate.com — A macOS timer for 25 to 90 minute study sessions.
@@ -108,3 +108,10 @@ decisive size jump" WARN is expected and justified by the reference and the owne
 first ink outweighed the name). P1: section gap 64 against the reference's 128. P2: role and city
 repeated in the Today line; one-word orphans in phone descriptions; CV link text "here"; Geist not
 justified. Fixed in round 2: the P0, the P1, the CV link text, and the Geist note.
+
+**Round 2** (`shots/r2`), pairwise: new kept; the name now leads, as in the reference. Regression:
+Contact fell below the fold at 1024×768. Open P2s: repeated role and city, phone orphans.
+
+**Round 3** (`shots/r3`): Today line no longer repeats the role or city; `text-wrap: pretty` on
+running text; section gap and top padding `clamp(64px, 14vh, 128px)` on desktop, so tall screens keep
+the reference's 128 and 768px screens keep Contact on the first screen.
