@@ -96,4 +96,5 @@ node skills/taste/scripts/lint.mjs src                             # static defe
 - [x] Installable as a Claude Code plugin
 - [x] B5: the owner's minimal portfolio, built with the skill end to end, three critique rounds
 - [x] Why minimal works (Q14): `references/restraint.md`, with Emil's font and fallback measured
+- [x] Skill kept as one entry point: a fast path for small edits, phone rules moved to `references/mobile.md`
 - [ ] Experiments B1–B3 and R1, judged blind, plus a B4 re-run with the current skill
