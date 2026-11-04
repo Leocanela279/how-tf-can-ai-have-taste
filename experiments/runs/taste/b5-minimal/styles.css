@@ -1,0 +1,120 @@
+@font-face {
+  font-family: Geist;
+  src: url(/fonts/geist-latin-wght-normal.woff2) format("woff2");
+  font-weight: 400 500;
+  font-display: swap;
+}
+
+:root {
+  --ground: #fafaf8;
+  --ink: #21201c;
+  --ink-2: #63635e;
+  --accent: #d4572a;
+  --gutter: 160px;
+  --column: 560px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #0f0e0c;
+    --ink: #ece8df;
+    --ink-2: #a39e93;
+    --accent: #ec7044;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 16px/1.6 Geist, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, p, ul { margin: 0; padding: 0; font: inherit; }
+ul { list-style: none; }
+
+::selection { background: var(--accent); color: var(--ground); }
+
+main {
+  max-width: calc(var(--column) + 48px);
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+
+/* Header: name and role, the time in Barcelona beside them. */
+.intro { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.name { font-weight: 500; }
+.dot { color: var(--accent); }
+.role, .muted { color: var(--ink-2); }
+.intro h1, .intro .role { line-height: 1.25; }
+section p { color: var(--ink-2); }
+section p a { color: var(--ink); }
+.time { font-size: 14px; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.time:empty { display: none; }
+
+section { margin-top: 64px; }
+section h2 { font-weight: 500; margin-bottom: 16px; }
+
+/* Projects: whole-row links, the year in a quiet column. */
+.projects { display: grid; gap: 8px; margin-inline: -8px; }
+.projects a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 16px;
+  padding: 8px;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 0;
+}
+.projects .title {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ink-2) 45%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 150ms ease-out;
+}
+.projects .year { font-size: 14px; color: var(--ink-2); font-variant-numeric: tabular-nums; padding-top: 1px; }
+.projects .desc { grid-column: 1 / -1; color: var(--ink-2); }
+.projects a:hover .title, .projects a:focus-visible .title { text-decoration-color: var(--accent); }
+
+/* Running-text links. */
+p a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ink-2) 45%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 150ms ease-out;
+}
+p a:hover, p a:focus-visible { text-decoration-color: var(--accent); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Desktop: labels move into a gutter on the left, the text column stays a reading width. */
+@media (min-width: 960px) {
+  main {
+    max-width: calc(var(--gutter) + var(--column) + 48px);
+    padding-top: 128px;
+    display: grid;
+    grid-template-columns: var(--gutter) var(--column);
+  }
+  .intro { grid-column: 2; }
+  section {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: var(--gutter) var(--column);
+    margin-top: 128px;
+  }
+  section h2 { margin-bottom: 0; }
+  .projects { margin-top: -8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leandro Canela — Full-stack developer</title>
+  <meta name="description" content="Leandro Canela, full-stack developer in Barcelona. Reskillia, Tomate and Club Stas Tarat." />
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0e0c" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <div>
+        <h1 class="name">Leandro Canela<span class="dot" aria-hidden="true">.</span></h1>
+        <p class="role">Full-stack developer</p>
+      </div>
+      <p class="time" aria-label="Time in Barcelona"><span id="bcn"></span></p>
+    </header>
+
+    <section aria-labelledby="today">
+      <h2 id="today">Today</h2>
+      <p>Full-stack developer at Humannova in Barcelona, and a computer science student. I work mostly on the part people don't see: how the data is shaped, who is allowed to touch it, and what happens when something fails.</p>
+    </section>
+
+    <section aria-labelledby="projects">
+      <h2 id="projects">Projects</h2>
+      <ul class="projects">
+        <li><a href="https://reskillia.humannova.com" target="_blank" rel="noopener"><span class="title">Reskillia</span><span class="year">2026</span><span class="desc">Measures a team's digital skills against DigComp 2.2.</span></a></li>
+        <li><a href="https://usetomate.com" target="_blank" rel="noopener"><span class="title">Tomate</span><span class="year">2026</span><span class="desc">A macOS timer for 25 to 90 minute study sessions.</span></a></li>
+        <li><a href="https://stastarat.com" target="_blank" rel="noopener"><span class="title">Club Stas Tarat</span><span class="year">2025</span><span class="desc">Website for a 40-year-old board game club in Terrassa.</span></a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <p>Write to me at <a href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a>. More of my code is on <a href="https://github.com/Leocanela279" target="_blank" rel="noopener">GitHub</a>, and you can read <a href="/Leandro-Canela-CV.pdf" target="_blank" rel="noopener">my CV (PDF)</a>.</p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var el = document.getElementById('bcn');
+      var fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit' });
+      function tick() { el.textContent = 'Barcelona ' + fmt.format(new Date()); }
+      tick();
+      setInterval(tick, 15000);
+    })();
+  </script>
+</body>
+</html>
