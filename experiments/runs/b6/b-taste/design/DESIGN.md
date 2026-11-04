@@ -147,3 +147,43 @@ only appear after a click or a hover). The chrome stays grey.
 
 ## Warnings kept, and why
 (filled after lint)
+
+## 7. Critique, round 1 (separate pass: shots in `design/shots/r1` + this file only)
+
+No subagent tool is available in this environment, so the critic ran as the skill's separate pass:
+`references/critic.md` re-read, only the screenshots and this plan looked at, written before any fix.
+Reference shots: linear.app (`ref-*.png`).
+
+```
+FOCAL POINT: the name "Leandro Canela." with its orange period (blur view, y 160–260) — matches plan:
+partly. The plan spends boldness on the work, which first appears on screen 2 at 1440; the first
+screen is a typographic statement, which the brief allows for a portfolio whose logo is the name.
+ISSUES:
+1. [P1] The idea's own content is hard to read: at 1440 the "Underneath" facts sit in three ~210px
+   columns under each screenshot; "Added for ICEX" runs 8 lines, "Kept" 4, "Removed" 1, so the
+   cut reads as ragged columns, not a spec sheet (r1/page-1440-s2).
+   FIX: under the cut, one row per fact: label in a fixed 8rem column, text beside it, hairline
+   between rows (the same rule as the Role/Stack spec on the left).
+2. [P1] Smaller tools at 1440: the row reads name … mono stack mid-row … description flush right;
+   the eye zig-zags across 776px (r1/page-1440-s6).
+   FIX: columns name | description | stack, stack right-aligned at the end.
+3. [P1] About at 1440: the label "About" sits alone in a 400px-wide left column for ~600px of
+   height (r1/page-1440-s6, s7); the second sparse rest on the page after the contact band.
+   FIX: statement across columns 1–8 with the label above it, the body paragraph in columns 9–12.
+4. [P2] Tier-2 tell: monospace on labels that aren't code ("Kept", "Added for ICEX", "Calendar").
+   FIX: those labels in the sans at 13px muted; mono stays on years, indices, stack strings.
+5. [P2] Phone nav shows only Work + CV at 390; "About" fits (logo 112 + 3 items ≈ 330px).
+   FIX: show About from 360px up.
+6. [P2] Contact at 1440: the right ~45% beside the headline is empty.
+   FIX: leave; it is the page's one planned rest before the footer.
+PRIORITY TARGET: 1. Fix this one first; the others must not break it.
+KEEP: the always-visible screenshots in nested frames; the dashed "Underneath" cut line as the
+repeated device; the phone first screen (name, thesis, facts, one filled action, next section
+peeking in).
+```
+
+Calibration against linear.app: display/body 7× here vs 4.8× there (the name is the logo, kept);
+four inks used, as Linear; surfaces separate by tone (paper → card frames → deep band) as Linear's
+do; gap inside a case 16–24px vs 128px between cases (ratio ~5–8, Linear ~4). No mismatch worth a fix.
+
+Fixing 1, 2, 3 this round (the skill allows the target plus two).

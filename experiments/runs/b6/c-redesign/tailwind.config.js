@@ -17,6 +17,8 @@ module.exports = Object.assign({ content: { relative: true, files: ['./index.htm
         deep: '#1a1915',
         ondeep: '#ece8df',
       },
+      // Size tokens: data (mono) 12, UI and meta 14, running text 16, labels (Newsreader italic) 20.
+      fontSize: { micro: '12px', small: '14px', body: '16px', label: ['1.25rem', { lineHeight: '1.2', letterSpacing: '-0.005em' }] },
       maxWidth: { page: '1240px' },
     },
   },
