@@ -44,6 +44,23 @@ Four beliefs behind every step:
 `<skill>` is this folder. Working files go in `design/` at the project root. The scripts need Node 22+
 and Chrome, Chromium, Edge or Brave (set `CHROME_PATH` if it isn't found).
 
+## Small edits: the fast path
+
+When `design/DESIGN.md` already exists and the request is a small edit to that design (copy, a
+link, an icon, a colour, one component, one section's spacing), skip steps 1–4:
+
+1. Use the plan's tokens as they are. A new value is allowed only if the plan has no fitting one;
+   add it to the plan.
+2. Build the change (step 5's rules still apply).
+3. Lint, and run the probe at 1440 and 390 (step 6).
+4. Screenshot the changed area at both widths, with the previous version beside it, and compare them
+   yourself. Run the critic (step 7) only if the change touches the first screen or the hierarchy.
+5. Add one line to DESIGN.md: the date, the request, what changed.
+
+Not a small edit, so run the full process: a new page or section, a change of direction, palette,
+type or layout, or anything the user calls a redesign. If you are unsure, ask the user which one
+they mean.
+
 ## 1. Ground the brief
 
 Start `design/DESIGN.md` with:
@@ -102,6 +119,10 @@ best carries an item from the inventory and fits the user's taste. Then write th
 Then run the competitor test: put the nearest competitor's name in the sentence. If it still works,
 it is a category idea. Go back to the inventory.
 
+If the user asks for a minimal, simple or text-first page, or loves one (emilkowal.ski,
+Apple-like), read `references/restraint.md` now. It says when restraint is enough, and which
+few values must then be exact.
+
 ## 4. Write the token plan before any code
 
 Add these to DESIGN.md, all as numbers, derived from the reference profile:
@@ -156,20 +177,8 @@ moment gets its own line, and the performance budget applies to it.
 - **Two compositions, one priority.** 390 and 1440 share the content and its order; each is composed
   for its width. The desktop uses the width (columns, a side element, a wider figure), never a
   phone column floating in the middle. The phone gets one column of text, never two side by side.
-- **The phone screen:**
-  - The first screen says what this is, shows one real visual or a typographic statement, and lets
-    the next section peek in. No full-height hero that ends in empty space.
-  - One filled primary action per screen, at least 48px tall, in the lower-middle where the thumb
-    and the gaze already are. Rare actions can live in the top corners.
-  - Navigation stays visible: 3–5 labelled items, or a short top bar. A hamburger alone hides
-    destinations that would fit.
-  - Nothing is removed for the phone. Secondary detail collapses under clear headers; decision
-    content (price, proof, the action) stays visible.
-  - Form fields at 16px or more (iOS zooms below that), and zoom is never disabled.
-  - No auto-advancing carousel and no autoplay video. Horizontal rows show part of the next item.
-  - Everything reachable by hover is also reachable by tap.
-  - Novelty goes into type, the one visual, motion and copy. Navigation, back, scrolling and tap
-    stay standard.
+- **The phone layout:** read `references/mobile.md` before building it: the first screen, the one
+  primary action, visible navigation, forms, touch and comfort.
 - **Rich, not sparse.** Every screen carries real content and enough parts to reward a look: meta,
   figures, real fragments of the work. Group things to lower complexity. Don't delete them. Empty
   space is spent once per page at most, on purpose.
@@ -250,12 +259,8 @@ Only now add motion, and keep it within these limits:
   - `transform` and `opacity` only. Timings from `references/defaults.md`: 70–150ms micro,
     150–250ms small, 200–350ms modals, exits shorter.
   - Ease-out, never from `scale(0)`.
-- **Always:** a reduced-motion fallback (a cross-fade). On a phone, anything that moves across
-  the screen fills most of the view, so keep large motion rare and short.
-- **Never** sell a palette as easier on the eyes. Blue-light and "dark mode is healthier" claims
-  are not supported. Comfort comes from size, contrast and stillness. Dark text on a light ground
-  reads best; offer dark when the user wants it, on a near-black (about `#121212`), never pure
-  black under white body text.
+- **Always:** a reduced-motion fallback (a cross-fade). Phone motion and comfort:
+  `references/mobile.md`.
 
 Use the `animate` skill for anything beyond that. Then look in the mirror and remove one thing.
 
@@ -291,6 +296,8 @@ earns it. If the user loves mono labels, they're in.
 | `references/craft.md` | App-screen rules: states, feedback, density, copy |
 | `references/components.md` | Native elements and headless primitives per pattern and stack; the token → component layering |
 | `references/tells.md` | Default patterns paired with their replacements |
+| `references/mobile.md` | Phone layout, touch and comfort rules for the 390px build |
+| `references/restraint.md` | Minimal pages: when restraint is enough, the exact few values, the critic's checks |
 | `../../reports/Mobile first UI taste.md` | The evidence behind the phone rules, with sources and confidence (in this repo only) |
 | `scripts/probe.mjs` | Measures a live page into a profile; `--check` adds the design, cost and reduced-motion passes |
 | `scripts/shoot.mjs` | Screenshots of page and reference at three widths, plus a blur copy |

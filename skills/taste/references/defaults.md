@@ -15,7 +15,8 @@ convention: safe and consistent, but not proven.
 - **Skeleton (M).** Keep the category's typical structure. Spend novelty on type, one visual, one
   motion and the accent.
 - **Complexity (M).** Few, well-grouped regions. Group content, don't delete it. A page stripped to
-  emptiness loses.
+  emptiness loses, unless the user asked for minimal and the work lives one click away
+  (`restraint.md`).
 - **Theme (M).** Ask first. Without an answer, use light for reading-heavy pages and general
   audiences. Light text loses legibility faster as it gets smaller.
 
