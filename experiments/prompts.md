@@ -47,3 +47,23 @@ You judge blind. Variants are shuffled to A/B/C per brief before you see them. F
 1. Which one would you ship?
 2. Which one looks the most AI-made?
 3. One sentence on why.
+
+## B6. Redesign of an existing page (taste-redesign)
+
+**Before:** `runs/baseline/b4-dark/` (the owner's dark portfolio from B4), copied unchanged into
+each arm's folder under `runs/b6/`.
+
+**Brief (identical for every arm):** "This is my portfolio (index.html in this folder). Make it
+better. Keep the palette, the fonts and the logo (my name with the orange period)." The owner is
+not available for questions; each arm records its assumptions.
+
+| Arm | Folder | Instructions |
+| --- | --- | --- |
+| A | `runs/b6/a-none/` | No skill; may not read skills/, reports/ or other experiments |
+| B | `runs/b6/b-taste/` | `skills/taste`, full process |
+| C | `runs/b6/c-redesign/` | `skills/taste-redesign`, all stages |
+
+Each arm is built by a fresh agent that cannot see the others. Judging: the owner picks blind from
+the same set of screenshots (first screen and following screens at 1440 and 390), labelled X/Y/Z
+in a random order kept hidden until the verdict. Also recorded: probe errors, `compare` and
+`parity` against the before.
