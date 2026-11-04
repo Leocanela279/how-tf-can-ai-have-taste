@@ -125,6 +125,8 @@ Cost: one compositor animation over two snapshots, no layout. Fallback: an insta
 the browser has no View Transitions or the visitor asks for reduced motion. The icon turns 180°
 with the theme.
 
-**Owner request (2026-11-04): icons for GitHub and the CV**, inside the Contact sentence, before
-the link text: the GitHub mark and a page outline drawn on the theme button's 16px grid with
-1.5px strokes, 14px, in the second ink, turning first ink on hover. Email keeps no icon.
+**Owner request (2026-11-04): icons, then less.** The CV is gone from the site (link and file).
+GitHub became an icon-only link in the header, beside the theme button: the same 16px mark size in
+a 44px target, `aria-label="GitHub"`, in the second ink, turning first ink on hover. Contact is the
+email alone. On phones (< 600px) the Barcelona time moves under the role so the name and role
+never wrap; from 600px it sits in the header row, 28px from the icons, the same gap as between them.
