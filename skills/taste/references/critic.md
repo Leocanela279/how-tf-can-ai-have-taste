@@ -54,7 +54,10 @@ Files are named like this:
    - Are navigation, back, scrolling and tapping conventional? Any novelty in the controls rather
      than the surface is a P1.
    - Headlines over three lines, text against the edge, cramped targets, anything cut off.
-8. **Tells.** Check `tells.md`. List every tell you can see that DESIGN.md does not justify. A tell
+8. **Restraint.** If DESIGN.md says the page is minimal, run the four checks at the end of
+   `references/restraint.md` (blur test, exactness, enough, template test). A minimal page shows a
+   4px or one-ink mismatch that a busy page hides, so these count as P1.
+9. **Tells.** Check `tells.md`. List every tell you can see that DESIGN.md does not justify. A tell
    the user said they like is justified. Tells are at most P2, unless one breaks hierarchy or
    legibility.
 
@@ -83,7 +86,7 @@ List no more than six issues, the most important first. Do not praise beyond KEE
 
 ## Pairwise round (from round 2 on)
 
-You get two shot folders, `best/` and `new/`. Compare them on the same eight points and answer:
+You get two shot folders, `best/` and `new/`. Compare them on the same nine points and answer:
 
 ```
 VERDICT: new|best — <one sentence on the deciding difference>

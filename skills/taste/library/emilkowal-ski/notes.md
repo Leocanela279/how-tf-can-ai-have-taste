@@ -12,6 +12,13 @@ list the work, nothing more.
   "Projects") are just 16px medium words with a large gap above.
 - **A narrow column on a wide screen.** About 640px of text column, left-aligned inside a centred
   frame. It reads like a note, not a page.
+- **The face is Inter.** The CSS calls it "Sans", but the file is Inter Variable (Rasmus
+  Andersson) with optical-size (14–32) and weight (100–900) axes, used at 400 and 500 only. Inter
+  is close to SF Pro, which is most of the Apple-like feel; the warm near-black on off-white
+  (`#21201C` on `#F9F9F8`) is the rest (Apple: `#1D1D1F` on `#F5F5F7`).
+- **A fallback that doesn't jump.** "Sans Fallback" is Arial with `size-adjust: 107.89%`,
+  `ascent-override: 89.79%`, `descent-override: 22.36%`, so text keeps its size and position while
+  Inter loads. On a page this quiet, any layout shift would show.
 - **The work is elsewhere.** Sonner, Vaul and the courses are the portfolio; the site only
   points at them. The craft he is known for (motion) is in the products, not on the page.
 

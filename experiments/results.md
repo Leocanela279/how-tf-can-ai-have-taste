@@ -80,4 +80,7 @@ repeated role and city, single-word lines on phones, and kept Contact near the f
 screens. The probe reports 0 errors at 360, 390, 1024 and 1440; the only WARN is the one-size type,
 which is the reference's design.
 
-**Verdict (owner):** pending.
+**Verdict (owner):** kept and shipped to leo-dev.es, then refined at his request: a light/dark
+switch with a circular reveal, GitHub as a header icon, the CV removed, link previews, and the taste
+skill added as a project. Asked afterwards what makes the reference work; the answer became
+`skills/taste/references/restraint.md`.

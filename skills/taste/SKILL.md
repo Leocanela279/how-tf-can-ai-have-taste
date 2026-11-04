@@ -102,6 +102,10 @@ best carries an item from the inventory and fits the user's taste. Then write th
 Then run the competitor test: put the nearest competitor's name in the sentence. If it still works,
 it is a category idea. Go back to the inventory.
 
+If the user asks for a minimal, simple or text-first page, or loves one (emilkowal.ski,
+Apple-like), read `references/restraint.md` now. It says when restraint is enough, and which
+few values must then be exact.
+
 ## 4. Write the token plan before any code
 
 Add these to DESIGN.md, all as numbers, derived from the reference profile:
@@ -291,6 +295,7 @@ earns it. If the user loves mono labels, they're in.
 | `references/craft.md` | App-screen rules: states, feedback, density, copy |
 | `references/components.md` | Native elements and headless primitives per pattern and stack; the token → component layering |
 | `references/tells.md` | Default patterns paired with their replacements |
+| `references/restraint.md` | Minimal pages: when restraint is enough, the exact few values, the critic's checks |
 | `../../reports/Mobile first UI taste.md` | The evidence behind the phone rules, with sources and confidence (in this repo only) |
 | `scripts/probe.mjs` | Measures a live page into a profile; `--check` adds the design, cost and reduced-motion passes |
 | `scripts/shoot.mjs` | Screenshots of page and reference at three widths, plus a blur copy |

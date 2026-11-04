@@ -95,4 +95,5 @@ node skills/taste/scripts/lint.mjs src                             # static defe
       CSS, self-hosted fonts, no header blur), packaged in `portfolio/` for Cloudflare Pages
 - [x] Installable as a Claude Code plugin
 - [x] B5: the owner's minimal portfolio, built with the skill end to end, three critique rounds
+- [x] Why minimal works (Q14): `references/restraint.md`, with Emil's font and fallback measured
 - [ ] Experiments B1–B3 and R1, judged blind, plus a B4 re-run with the current skill
