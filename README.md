@@ -27,14 +27,43 @@ Full write-up: [`reports/Giving AI UI design taste.md`](<reports/Giving AI UI de
 | `reports/` | The research report, with every claim tagged by its evidence grade |
 | `research_notes/` | The raw research notes behind the report, with sources |
 | `skills/taste/` | **The skill.** One lean art-direction skill with probe, shoot and lint scripts |
+| `skills/taste-redesign/` | **The redesign skill.** For UIs that already exist: classify, record the before, diagnose, change the cheapest layer, prove it against the before. Shares taste's scripts and library, adds inventory, parity and compare |
 | `references/candidates.md` | Shortlist of sites to measure into the skill's library (needs picks) |
 | `experiments/prompts.md` | Blind A/B/C briefs (B1–B4) and the replication test (R1) |
 | `portfolio/` | The owner's live portfolio (leo-dev.es): the B5 minimal design, deployed as a Cloudflare Worker |
-| `.claude-plugin/` | Plugin and marketplace manifests, so the skill installs with `/plugin` |
+| `.claude-plugin/` | Plugin and marketplace manifests, so the skills install with `/plugin` |
+| `install.mjs`, `package.json` | The one-command installer for any agent (`npx github:Leocanela279/how-tf-can-ai-have-taste`) |
 
-## Install the skill
+## Install the skills
 
-**Claude Code, as a plugin (recommended).** Inside Claude Code:
+Two skills that work in any agent that reads `SKILL.md` folders (the open Agent Skills format):
+`taste` for new pages and screens, and `taste-redesign` for UIs that already exist. Always install
+both; `taste-redesign` uses `taste`'s scripts and library.
+
+**Any agent, one command** (Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, OpenCode,
+Windsurf, Cline, Amp, Kiro, Roo, Goose, Warp…). Run it in your project:
+
+```bash
+npx github:Leocanela279/how-tf-can-ai-have-taste              # this project, detected agents
+npx github:Leocanela279/how-tf-can-ai-have-taste -g           # your user folder, all projects
+npx github:Leocanela279/how-tf-can-ai-have-taste --agent codex,cursor
+npx github:Leocanela279/how-tf-can-ai-have-taste --list       # agents and their folders
+npx github:Leocanela279/how-tf-can-ai-have-taste --uninstall
+```
+
+It has no dependencies and copies the two skill folders into each agent's skills folder. Without
+`--agent`, it installs for Claude Code (`.claude/skills/`) and the shared `.agents/skills/` folder
+that Codex, Cursor, Gemini CLI, Copilot, OpenCode, Cline, Amp and Warp read, plus any other agent
+whose config folder it finds in your home directory.
+
+**With the skills.sh installer.** The repo uses the standard `skills/` layout, so this also works
+(pick both skills when asked):
+
+```bash
+npx skills add Leocanela279/how-tf-can-ai-have-taste
+```
+
+**Claude Code, as a plugin.** Inside Claude Code:
 
 ```
 /plugin marketplace add Leocanela279/how-tf-can-ai-have-taste
@@ -45,20 +74,31 @@ On Claude Code 2.1.275 or later, one line does both:
 `/plugin install taste --marketplace Leocanela279/how-tf-can-ai-have-taste`.
 Updates arrive with `/plugin marketplace update`.
 
-**Claude Code, as a plain skill.** Copy or link the folder into your skills directory, for every
-project (`~/.claude/skills/`) or one project (`.claude/skills/` in that repo):
+**By hand.** Copy `skills/taste` and `skills/taste-redesign` into your agent's skills folder:
 
-```bash
-git clone https://github.com/Leocanela279/how-tf-can-ai-have-taste
-ln -s "$PWD/how-tf-can-ai-have-taste/skills/taste" ~/.claude/skills/taste
-```
+| Agent | In a project | For your user |
+| --- | --- | --- |
+| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
+| Codex, Cline, Warp | `.agents/skills/` | `~/.agents/skills/` |
+| Cursor | `.agents/skills/` | `~/.cursor/skills/` |
+| Gemini CLI | `.agents/skills/` | `~/.gemini/skills/` |
+| GitHub Copilot | `.agents/skills/` | `~/.copilot/skills/` |
+| OpenCode | `.agents/skills/` | `~/.config/opencode/skills/` |
+| Windsurf | `.windsurf/skills/` | `~/.codeium/windsurf/skills/` |
+| Kiro CLI | `.kiro/skills/` | `~/.kiro/skills/` |
 
-**Claude apps (claude.ai, desktop).** Zip the `skills/taste` folder and upload it under
-Settings → Capabilities → Skills. The written rules and library work there. The probe, shoot and lint
-scripts need a machine with Node and Chrome, so the measured checks only run in Claude Code.
+(Paths from the skills.sh agent table, November 2026.)
 
-It triggers on its own when you ask for a page, screen or redesign, or call it directly
-(`/taste`, or `/taste:taste` when installed as a plugin).
+**Claude apps (claude.ai, desktop).** Zip each of the two folders and upload both under
+Settings → Capabilities → Skills. The written rules and library work there. The probe, shoot,
+lint, inventory, parity and compare scripts need a machine with Node 22+ and a Chromium-based
+browser, so the measured checks run only in coding agents.
+
+The agent picks the right skill on its own: `taste` when you ask for a new page or screen,
+`taste-redesign` when you ask to redesign, restyle, polish or review a UI that already exists. In
+Claude Code you can also call them as `/taste` and `/taste-redesign` (`/taste:taste` and
+`/taste:taste-redesign` when installed as a plugin). Agents without subagents run the critic as a
+separate pass, as the skill describes.
 
 For a clean test, temporarily move the other art-direction skills out of `~/.claude/skills`
 (frontend-design, design-taste-frontend, ui-ux-pro-max, design, ui-styling), and disable the
@@ -97,4 +137,7 @@ node skills/taste/scripts/lint.mjs src                             # static defe
 - [x] B5: the owner's minimal portfolio, built with the skill end to end, three critique rounds
 - [x] Why minimal works (Q14): `references/restraint.md`, with Emil's font and fallback measured
 - [x] Skill kept as one entry point: a fast path for small edits, phone rules moved to `references/mobile.md`
+- [x] Research round: redesigning existing UIs (`reports/Redesigning existing project UIs.md`), and the `taste-redesign` skill built from it
+- [x] One-command install for any agent (`npx github:…`), plus skills.sh and the Claude Code plugin
+- [ ] Blind test for `taste-redesign`: B4-dark as the before, three arms (no skill, taste, taste-redesign in restyle mode)
 - [ ] Experiments B1–B3 and R1, judged blind, plus a B4 re-run with the current skill

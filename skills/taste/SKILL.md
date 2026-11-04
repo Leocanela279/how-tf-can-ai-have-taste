@@ -4,10 +4,11 @@ description: >-
   Art direction and visual taste for any web UI: landing pages, product and marketing sites,
   portfolios, app screens, dashboards, settings, lists. Grounds the design in the subject, measures
   real reference sites into numbers, writes a token plan before code, lints, and runs a screenshot
-  critique loop against the reference. Use whenever you build, design, redesign, restyle or polish a
-  web page or screen in any stack (HTML/CSS, React, Next.js, Tailwind, Vue, Svelte, Astro), and
-  whenever output looks generic, templated or AI-made. For motion polish after the layout is settled,
-  use the animate or review-animations skills.
+  critique loop against the reference. Use whenever you build or design a new web page or screen in
+  any stack (HTML/CSS, React, Next.js, Tailwind, Vue, Svelte, Astro), when new output looks generic,
+  templated or AI-made, and for small edits to a design this skill planned (design/DESIGN.md). To
+  redesign, restyle, polish or review a UI that already exists, use taste-redesign. For motion
+  polish after the layout is settled, use the animate or review-animations skills.
 ---
 
 # Taste
@@ -235,7 +236,9 @@ earns it. The gate measures defects, not liking. A clean gate is the floor, not 
 2. **Critique.** Spawn a critic subagent with a fresh context, one that did not build the page. Give
    it `<skill>/references/critic.md`, the shots folder and DESIGN.md. If `design/critiques.md`
    exists, give it that file too: it holds the user's own example critiques and outranks the rubric.
-   The critic returns ranked issues and one priority target.
+   The critic returns ranked issues and one priority target. If your agent cannot run subagents, do
+   it as a separate pass: re-read `references/critic.md`, look only at the shots and DESIGN.md (not
+   the code), and write the critique before changing anything.
 3. **Fix.** Fix the priority target and at most two more issues, without breaking what already works.
 4. **Compare.** Shoot again into `r2`. The critic compares the new version with the best so far,
    pairwise. Keep the new version only if it is strictly better; otherwise revert it.
@@ -290,7 +293,7 @@ earns it. If the user loves mono labels, they're in.
 | Path | Use |
 | --- | --- |
 | `library/` | Measured reference profiles (`tokens.json` + `notes.md`), indexed in `library/README.md` |
-| `references/critic.md` | Brief for the critic subagent |
+| `references/critic.md` | Brief for the critic (a subagent, or a separate pass) |
 | `references/defaults.md` | Values for type, buttons, states, colour, dark mode and motion when nothing else decides |
 | `references/performance.md` | Budget, the cheap way to get each costly effect, platform feature readiness |
 | `references/craft.md` | App-screen rules: states, feedback, density, copy |
