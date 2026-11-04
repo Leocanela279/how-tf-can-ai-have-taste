@@ -15,8 +15,17 @@
   color-scheme: light dark;
 }
 
+/* Dark: chosen with the theme button, or from the system setting when nothing was chosen. */
+:root[data-theme="dark"] {
+  --ground: #0f0e0c;
+  --ink: #ece8df;
+  --ink-2: #a39e93;
+  --accent: #ec7044;
+  color-scheme: dark;
+}
+:root[data-theme="light"] { color-scheme: light; }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --ground: #0f0e0c;
     --ink: #ece8df;
     --ink-2: #a39e93;
@@ -48,8 +57,9 @@ main {
   padding: 64px 24px 96px;
 }
 
-/* Header: name and role, the time in Barcelona beside them. */
-.intro { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+/* Header: name and role, the time in Barcelona and the theme button beside them. */
+.intro { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.meta { display: flex; align-items: center; height: 20px; gap: 2px; }
 .name { font-weight: 500; }
 .dot { color: var(--accent); }
 .role, .muted { color: var(--ink-2); }
@@ -58,6 +68,31 @@ section p { color: var(--ink-2); }
 section p a { color: var(--ink); }
 .time { font-size: 14px; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .time:empty { display: none; }
+
+/* Theme button: a 16px half-filled circle in a 44px target, flush with the column edge. */
+.theme {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: -12px -14px -12px 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink-2);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme:hover { color: var(--ink); }
+.theme svg { transition: transform 450ms cubic-bezier(.2, .7, .2, 1); }
+:root[data-theme="dark"] .theme svg { transform: rotate(180deg); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme svg { transform: rotate(180deg); }
+}
+
+/* The new theme grows out of the button as a circle (script below); no cross-fade. */
+::view-transition-old(root),
+::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
 
 section { margin-top: 64px; }
 section h2 { font-weight: 500; margin-bottom: 16px; }
