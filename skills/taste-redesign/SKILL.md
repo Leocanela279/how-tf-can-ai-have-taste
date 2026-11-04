@@ -25,7 +25,8 @@ Three beliefs:
   something people use needs the user's sign-off.
 
 `<taste>` is the sibling `taste` skill folder (`<skill>/../taste`). This skill uses its scripts,
-library and references in place. Working files go in `design/` at the project root, as in taste.
+library and references in place. If that folder is missing, stop and ask the user to install both
+skills (`npx github:Leocanela279/how-tf-can-ai-have-taste` always installs them together). Working files go in `design/` at the project root, as in taste.
 The scripts need Node 22+ and Chrome, Chromium, Edge or Brave.
 
 ## 0. Classify

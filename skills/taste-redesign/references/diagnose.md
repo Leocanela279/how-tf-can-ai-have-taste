@@ -6,7 +6,8 @@ structural conclusions as hypotheses, and say so in the report.
 
 ## The diagnostic critic
 
-Spawn a critic with a fresh context, as in taste step 7, on the *before* shots. Give it this file,
+Spawn a critic with a fresh context, as in taste step 7 (or, if your agent has no subagents, the
+separate pass described there), on the *before* shots. Give it this file,
 `<taste>/references/critic.md` and DESIGN.md (with the must-survive list). It judges first and
 reads numbers second, so the numbers don't anchor it:
 

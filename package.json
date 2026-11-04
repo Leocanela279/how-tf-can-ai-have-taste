@@ -1,0 +1,19 @@
+{
+  "name": "how-tf-can-ai-have-taste",
+  "version": "0.3.0",
+  "description": "The taste skills for coding agents: taste builds new web UI with measured references; taste-redesign improves existing UI without losing the brand.",
+  "type": "module",
+  "bin": {
+    "how-tf-can-ai-have-taste": "install.mjs"
+  },
+  "files": [
+    "install.mjs",
+    "skills/",
+    ".claude-plugin/"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": "github:Leocanela279/how-tf-can-ai-have-taste",
+  "keywords": ["agent-skills", "claude-code", "codex", "cursor", "design", "ui", "taste"]
+}
