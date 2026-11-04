@@ -124,3 +124,16 @@ Switching runs a same-document View Transition: the new theme grows as a circle 
 Cost: one compositor animation over two snapshots, no layout. Fallback: an instant switch when
 the browser has no View Transitions or the visitor asks for reduced motion. The icon turns 180°
 with the theme.
+
+**Owner request (2026-11-04): icons, then less.** The CV is gone from the site (link and file).
+GitHub became an icon-only link in the header, beside the theme button: the same 16px mark size in
+a 44px target, `aria-label="GitHub"`, in the second ink, turning first ink on hover. Contact is the
+email alone. On phones (< 600px) the Barcelona time moves under the role so the name and role
+never wrap; from 600px it sits in the header row, 28px from the icons, the same gap as between them.
+
+**Owner request (2026-11-04): link previews.** Open Graph and Twitter tags, a canonical URL and
+a 1200×630 `og.png`, rendered from `design/og.html` (Geist, the light palette, name with the orange
+period, role, the three projects with years, the domain) by `design/og-render.cjs`.
+
+**Owner request (2026-11-04): add the taste skill** (this repo, github.com/Leocanela279/how-tf-can-ai-have-taste)
+as a fourth project, third in the list with the other 2026 work; also on `og.png`.
