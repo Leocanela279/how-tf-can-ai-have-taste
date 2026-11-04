@@ -1,0 +1,217 @@
+{
+  "target": "http://localhost:8794/index.html",
+  "width": 1440,
+  "pages": {
+    "/index.html": {
+      "url": "http://localhost:8794/index.html",
+      "title": "Leandro Canela — Full-stack developer, Barcelona",
+      "links": [
+        {
+          "href": "/index.html#work",
+          "name": "Skip to work",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#top",
+          "name": "Leandro Canela",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#work",
+          "name": "Work",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#about",
+          "name": "About",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#contact",
+          "name": "Contact",
+          "hidden": false
+        },
+        {
+          "href": "/Leandro-Canela-CV.pdf",
+          "name": "CV",
+          "hidden": false
+        },
+        {
+          "href": "mailto:leandrocanela279@gmail.com",
+          "name": "Get in touch ↗",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#work",
+          "name": "See the work ↓",
+          "hidden": false
+        },
+        {
+          "href": "https://skillia-dev-production.up.railway.app/es",
+          "name": "Visit Reskillia ↗",
+          "hidden": false
+        },
+        {
+          "href": "https://icex.humannova.com/",
+          "name": "See the ICEX sign-in ↗",
+          "hidden": false
+        },
+        {
+          "href": "https://cpu-city.vercel.app/",
+          "name": "Open CPU City ↗",
+          "hidden": false
+        },
+        {
+          "href": "https://github.com/Leocanela279/cpu-city",
+          "name": "Code ↗",
+          "hidden": false
+        },
+        {
+          "href": "https://usetomate.com/",
+          "name": "usetomate.com ↗",
+          "hidden": false
+        },
+        {
+          "href": "https://github.com/Leocanela279/tomate",
+          "name": "Code ↗",
+          "hidden": false
+        },
+        {
+          "href": "https://github.com/Leocanela279/db-doctor",
+          "name": "Code ↗",
+          "hidden": false
+        },
+        {
+          "href": "https://stastarat.com/",
+          "name": "stastarat.com ↗",
+          "hidden": false
+        },
+        {
+          "href": "mailto:leandrocanela279@gmail.com",
+          "name": "leandrocanela279@gmail.com ↗",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#humannova",
+          "name": "Reskillia and ICEX Next",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#cpu-city",
+          "name": "CPU City",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#tomate",
+          "name": "Tomate",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#db-doctor",
+          "name": "db-doctor",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#stastarat",
+          "name": "Club Stas Tarat",
+          "hidden": false
+        },
+        {
+          "href": "https://github.com/Leocanela279",
+          "name": "GitHub ↗",
+          "hidden": false
+        },
+        {
+          "href": "https://gitlab.com/leandrocanela279",
+          "name": "GitLab ↗",
+          "hidden": false
+        },
+        {
+          "href": "/Leandro-Canela-CV.pdf",
+          "name": "CV (PDF) ↗",
+          "hidden": false
+        },
+        {
+          "href": "mailto:leandrocanela279@gmail.com",
+          "name": "Email",
+          "hidden": false
+        },
+        {
+          "href": "/index.html#top",
+          "name": "Back to top ↑",
+          "hidden": false
+        }
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "LeandroCanela."
+        },
+        {
+          "level": 2,
+          "text": "The data model"
+        },
+        {
+          "level": 2,
+          "text": "The permissions"
+        },
+        {
+          "level": 2,
+          "text": "When it breaks"
+        },
+        {
+          "level": 2,
+          "text": "Things I've built,newest first."
+        },
+        {
+          "level": 2,
+          "text": "Have a system that needs to hold up?"
+        }
+      ],
+      "landmarks": [
+        "header",
+        "nav",
+        "main",
+        "footer",
+        "nav:Work",
+        "nav:Elsewhere"
+      ],
+      "forms": [],
+      "controls": [
+        {
+          "kind": "summary",
+          "name": "2026 Reskillia and ICEX Next One codebase, two products for Humannova Full-stack",
+          "hidden": false
+        },
+        {
+          "kind": "summary",
+          "name": "2026 CPU City A processor you can explore, down to the ALU Solo project +",
+          "hidden": false
+        },
+        {
+          "kind": "summary",
+          "name": "2026 Tomate A macOS timer for 25 to 90 minute sessions Solo project +",
+          "hidden": false
+        },
+        {
+          "kind": "summary",
+          "name": "2026 db-doctor A Claude skill that audits database layers Solo project +",
+          "hidden": false
+        },
+        {
+          "kind": "summary",
+          "name": "2025 Club Stas Tarat Website for a 40-year-old board game club Team of three +",
+          "hidden": false
+        },
+        {
+          "kind": "button",
+          "name": "Copy",
+          "hidden": false
+        }
+      ],
+      "testIds": [],
+      "analytics": [],
+      "shortcuts": []
+    }
+  }
+}

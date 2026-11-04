@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leandro Canela — Full-stack developer, Barcelona</title>
+  <meta name="description" content="Leandro Canela, full-stack developer in Barcelona with the weight on the backend. Data models, permissions, and what happens when something fails." />
+  <meta name="theme-color" content="#0f0e0c" />
+  <link rel="preload" href="fonts/geist-latin-400-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a href="#work" class="skip">Skip to work</a>
+
+  <header class="bar">
+    <div class="wrap">
+      <a href="#top" class="logo" aria-label="Leandro Canela, back to top">Leandro Canela<span class="dot">.</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#about" class="hide-s">About</a>
+        <a href="#contact" class="hide-s">Contact</a>
+        <a href="Leandro-Canela-CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- First screen: the surface (name, thesis, action), then the cut, then what is underneath -->
+    <section class="hero wrap" aria-labelledby="name">
+      <p class="hero-meta"><span>Full-stack, backend-weighted</span><span>Barcelona <time id="bcn-time" class="mono">--:--</time></span></p>
+
+      <h1 id="name" class="display">Leandro<br class="br-s"> Canela<span class="dot">.</span></h1>
+
+      <div class="hero-grid">
+        <p class="lead serif">
+          I enjoy the part of the work that is almost invisible:
+          <em>the data model, the permissions,</em>
+          and <em>what happens when something fails.</em>
+        </p>
+
+        <div class="hero-side">
+          <dl class="facts">
+            <div><dt>Currently</dt><dd>Developer at Humannova</dd></div>
+            <div><dt>Studying</dt><dd>Computer science</dd></div>
+            <div><dt>Based in</dt><dd>Barcelona</dd></div>
+          </dl>
+          <div class="actions">
+            <a href="mailto:leandrocanela279@gmail.com" class="btn btn-primary">Get in touch <span class="arrow" aria-hidden="true">↗</span></a>
+            <a href="#work" class="btn btn-ghost">See the work <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="cut">Underneath</h2>
+      <ol class="strata">
+        <li>
+          <span class="mono">01 / schema</span>
+          <h3>The data model</h3>
+          <p>Versioned questionnaires, drafts that survive a migration, every consent stored with its version and date.</p>
+        </li>
+        <li>
+          <span class="mono">02 / access</span>
+          <h3>The permissions</h3>
+          <p>Row-level security in PostgreSQL, encrypted personal data, invite-only access where privacy comes first.</p>
+        </li>
+        <li>
+          <span class="mono">03 / failure</span>
+          <h3>When it breaks</h3>
+          <p>Scanned CVs that need OCR, a Mac that goes to sleep mid-session, a query that quietly turns into N+1.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="work wrap" aria-labelledby="work-title">
+      <div class="sec-head">
+        <h2 id="work-title" class="sec-title">Things I've built, <em>newest first.</em></h2>
+        <p class="sec-note">Each one shown as it looks, then what's underneath: the part I spent the time on.</p>
+      </div>
+
+      <div class="cases">
+
+        <span id="reskillia" class="anchor"></span><span id="icex" class="anchor"></span>
+        <article class="case" id="humannova" aria-labelledby="c1">
+          <div class="case-text">
+            <header class="case-head">
+              <p class="case-meta mono"><span>01</span><span>Mar 2026 – now</span></p>
+              <h3 id="c1" class="case-name">Reskillia and ICEX Next</h3>
+              <p class="case-line">One codebase, two products for Humannova</p>
+            </header>
+            <div class="case-copy">
+              <p>Reskillia assesses a team's digital skills against DigComp 2.2, the European framework. Each person uploads a CV; Gemini picks seven competences with a target level, writes the questions and scores the answers. The result is a radar of expected against achieved, as a PDF.</p>
+              <p>ICEX Next is the same codebase cut down for a client who needed privacy first: no AI and no public sign-up. The team invites each person, who sets a password, accepts the policy and submits a CV and a questionnaire.</p>
+              <dl class="spec">
+                <div><dt>Role</dt><dd>Full-stack developer at Humannova</dd></div>
+                <div><dt>Stack</dt><dd>Next.js 16 · React 19 · Tailwind 4 · Supabase · Gemini · Docker</dd></div>
+                <div><dt>Outcome</dt><dd>Both live. Reskillia for companies, ICEX Next for the ICEX programme</dd></div>
+              </dl>
+            </div>
+            <p class="case-links"><a href="https://skillia-dev-production.up.railway.app/es" target="_blank" rel="noopener"><span class="u">Visit Reskillia</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a><a href="https://icex.humannova.com/" target="_blank" rel="noopener" class="quiet"><span class="u">See the ICEX sign-in</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a></p>
+          </div>
+          <div class="case-media">
+            <figure class="frame pair">
+              <img src="assets/reskillia.jpg" alt="Reskillia landing page with the headline 'Desbloquea tu potencial real'" width="1200" height="900" decoding="async">
+              <img src="assets/icex.jpg" alt="ICEX Next sign-in screen: a blue-to-green panel beside the login form" width="1200" height="900" decoding="async">
+            </figure>
+            <div class="under">
+              <p class="cut">Underneath</p>
+              <dl class="under-list">
+                <div><dt>Kept</dt><dd>Supabase Auth, personal data encrypted with AES-256-GCM, RLS policies in PostgreSQL, Docker</dd></div>
+                <div><dt>Added for ICEX</dt><dd>Local OCR for scanned CVs; questionnaires versioned per profile, with drafts migrated between versions; every privacy acceptance stored with its version and date; Excel export</dd></div>
+                <div><dt>Removed for ICEX</dt><dd>Gemini, public sign-up</dd></div>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <article class="case" id="cpu-city" aria-labelledby="c2">
+          <div class="case-text">
+            <header class="case-head">
+              <p class="case-meta mono"><span>02</span><span>Oct 2026</span></p>
+              <h3 id="c2" class="case-name">CPU City</h3>
+              <p class="case-line">A processor you can explore, down to the ALU</p>
+            </header>
+            <div class="case-copy">
+              <p>A 3D processor you can explore. As the camera gets closer, it reveals a city.</p>
+              <dl class="spec">
+                <div><dt>Role</dt><dd>Design and code, solo</dd></div>
+                <div><dt>Stack</dt><dd>TypeScript · Vite · WebGL</dd></div>
+                <div><dt>Outcome</dt><dd>Live: runs real RISC-V programs in the browser</dd></div>
+              </dl>
+            </div>
+            <p class="case-links"><a href="https://cpu-city.vercel.app" target="_blank" rel="noopener"><span class="u">Open CPU City</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/Leocanela279/cpu-city" target="_blank" rel="noopener" class="quiet"><span class="u">Code</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a></p>
+          </div>
+          <div class="case-media">
+            <figure class="frame">
+              <img src="assets/cpu-city.jpg" alt="CPU City: a 3D rendered processor on a dark motherboard, with an instruction pipeline panel below" width="1200" height="750" loading="lazy" decoding="async">
+            </figure>
+            <div class="under">
+              <p class="cut">Underneath</p>
+              <dl class="under-list">
+                <div><dt>Runs</dt><dd>RISC-V assembly in a Web Worker</dd></div>
+                <div><dt>Traces</dt><dd>Every instruction, down to the ALU circuit that executes it</dd></div>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <article class="case" id="tomate" aria-labelledby="c3">
+          <div class="case-text">
+            <header class="case-head">
+              <p class="case-meta mono"><span>03</span><span>Oct 2026</span></p>
+              <h3 id="c3" class="case-name">Tomate</h3>
+              <p class="case-line">A macOS timer for 25 to 90 minute sessions</p>
+            </header>
+            <div class="case-copy">
+              <p>A Pomodoro timer for long study sessions, from 25 to 90 minutes. Anything over an hour can be split into two blocks with a break in between. It lives in the menu bar.</p>
+              <dl class="spec">
+                <div><dt>Role</dt><dd>App and download site, solo</dd></div>
+                <div><dt>Stack</dt><dd>SwiftUI · macOS 14+ · Astro</dd></div>
+                <div><dt>Outcome</dt><dd>Released at usetomate.com; fully local, no accounts or server</dd></div>
+              </dl>
+            </div>
+            <p class="case-links"><a href="https://usetomate.com" target="_blank" rel="noopener"><span class="u">usetomate.com</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/Leocanela279/tomate" target="_blank" rel="noopener" class="quiet"><span class="u">Code</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a></p>
+          </div>
+          <div class="case-media">
+            <figure class="frame">
+              <img src="assets/tomate.jpg" alt="Tomate website on a deep red background: 'Estudia en pomodoros de hasta 90 minutos'" width="1200" height="900" loading="lazy" decoding="async">
+            </figure>
+            <div class="under">
+              <p class="cut">Underneath</p>
+              <dl class="under-list">
+                <div><dt>Scheduling</dt><dd>Sessions never overlap; notifications to start or decline</dd></div>
+                <div><dt>Focus</dt><dd>Turns on macOS Focus while studying, through Shortcuts</dd></div>
+                <div><dt>Timekeeping</dt><dd>Stored as dates, not a countdown, so it stays exact when the Mac sleeps</dd></div>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <article class="case" id="db-doctor" aria-labelledby="c4">
+          <div class="case-text">
+            <header class="case-head">
+              <p class="case-meta mono"><span>04</span><span>Oct 2026</span></p>
+              <h3 id="c4" class="case-name">db-doctor</h3>
+              <p class="case-line">A Claude skill that audits database layers</p>
+            </header>
+            <div class="case-copy">
+              <p>An audit of an app's database layer. It finds the loop that silently fires 500 queries, SQL no index can serve, and indexes every write pays for and no read uses, and it proves each finding with evidence.</p>
+              <dl class="spec">
+                <div><dt>Role</dt><dd>Solo</dd></div>
+                <div><dt>Stack</dt><dd>Python, standard library only</dd></div>
+              </dl>
+            </div>
+            <p class="case-links"><a href="https://github.com/Leocanela279/db-doctor" target="_blank" rel="noopener"><span class="u">Code</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a></p>
+          </div>
+          <div class="case-media">
+            <figure class="frame">
+              <div class="panel">
+                <dl class="flow">
+                  <div><dt class="mono">Reads</dt><dd>SQL, ORM code, the schema and its indexes</dd></div>
+                  <div><dt class="mono">Returns</dt><dd class="small">Findings ranked by impact, and a phased plan with SQL, risks, validation and rollback</dd></div>
+                </dl>
+                <div>
+                  <p class="mono cov">In-depth coverage</p>
+                  <ul class="engines">
+                    <li>PostgreSQL</li><li>MySQL</li><li>Eloquent</li><li>JPA/Hibernate</li><li>Prisma</li><li>TypeORM</li><li>Sequelize</li><li>Supabase</li>
+                  </ul>
+                </div>
+              </div>
+            </figure>
+            <div class="under">
+              <p class="cut">Underneath</p>
+              <dl class="under-list">
+                <div><dt>Finds</dt><dd>N+1 loops, SQL no index can serve, indexes no read uses</dd></div>
+                <div><dt>Proves</dt><dd>Each finding with evidence before it suggests a change</dd></div>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <article class="case" id="stastarat" aria-labelledby="c5">
+          <div class="case-text">
+            <header class="case-head">
+              <p class="case-meta mono"><span>05</span><span>Mar 2025 – Jul 2026</span></p>
+              <h3 id="c5" class="case-name">Club Stas Tarat</h3>
+              <p class="case-line">Website for a 40-year-old board game club</p>
+            </header>
+            <div class="case-copy">
+              <p>Website for a board game and role-playing club in Terrassa that has run for almost forty years: six sections, a weekly schedule, an event calendar, the game library and a members' area.</p>
+              <dl class="spec">
+                <div><dt>Role</dt><dd>One of three developers, with Manuel Ordoñez and Nicolau Miguel</dd></div>
+                <div><dt>Stack</dt><dd>Laravel 12 · Tailwind 4 · Vite · Google APIs</dd></div>
+                <div><dt>Outcome</dt><dd>Live at stastarat.com for a club of about a hundred members</dd></div>
+              </dl>
+            </div>
+            <p class="case-links"><a href="https://stastarat.com" target="_blank" rel="noopener"><span class="u">stastarat.com</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a></p>
+          </div>
+          <div class="case-media">
+            <figure class="frame">
+              <img src="assets/stastarat.jpg" alt="Club Stas Tarat homepage with a green slime mascot holding a 30th anniversary cake" width="1200" height="900" loading="lazy" decoding="async">
+            </figure>
+            <div class="under">
+              <p class="cut">Underneath</p>
+              <dl class="under-list">
+                <div><dt>Calendar</dt><dd>Google APIs feed the event calendar</dd></div>
+                <div><dt>Members</dt><dd>PDF and QR generation for members, behind a members' area</dd></div>
+              </dl>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Smaller tools -->
+      <div class="tools">
+        <div class="tools-head">
+          <h3>Smaller tools</h3>
+          <p>Outside work I build tools I use myself. Some of them stay small.</p>
+        </div>
+        <ul class="tool-list">
+          <li><span class="name">Cinnamon Key</span><span class="mono">Electron · Vue · SQLite</span><span class="what">Local-first desktop password manager.</span></li>
+          <li><span class="name">vault</span><span class="mono">Go CLI</span><span class="what">Password manager for the command line.</span></li>
+          <li><span class="name">ascii-conversor</span><span class="mono">Image → text</span><span class="what">Turns images into ASCII.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about wrap" aria-labelledby="about-title">
+      <h2 id="about-title" class="label">About</h2>
+      <div class="about-main">
+        <p class="statement">
+          I'm a full-stack developer in Barcelona with the weight on the backend, and a computer science student.
+          I work at <em>Humannova</em>. Before that, Laravel was my main tool.
+        </p>
+        <p class="about-body">
+          The screens are what people see, but what I enjoy is underneath them: deciding how the data is shaped, who is allowed to touch it, and making sure that when something fails, it fails in a way someone can understand and recover from.
+        </p>
+      </div>
+
+      <div class="about-detail">
+        <div class="path">
+          <h3 class="label">Path</h3>
+          <ol>
+            <li class="now"><span class="mono">2026 –</span><span>Computer engineering degree<span class="where">Universitat Oberta de Catalunya, online</span></span></li>
+            <li><span class="mono">2026</span><span>Full-stack and AI developer<span class="where">Humannova, Rubí</span></span></li>
+            <li><span class="mono">2024 – 2026</span><span>Web application development, higher vocational<span class="where">Institut Nicolau Copèrnic, Terrassa</span></span></li>
+            <li><span class="mono">2023 – 2024</span><span>Access control and CCTV<span class="where">Apservice Control and Check-in, Barcelona</span></span></li>
+            <li><span class="mono">2022</span><span>Administrative assistant<span class="where">Ajuntament de Terrassa</span></span></li>
+          </ol>
+        </div>
+
+        <div class="stack-wrap"><h3 class="label">Stack</h3><div class="stack">
+          <div><h3>Backend</h3><ul><li>Laravel</li><li>PHP</li><li>Go</li><li>Node.js</li></ul></div>
+          <div><h3>Frontend</h3><ul><li>Next.js</li><li>React</li><li>Astro</li><li>Tailwind</li><li>TypeScript</li></ul></div>
+          <div><h3>Data</h3><ul><li>PostgreSQL</li><li>Supabase</li><li>MySQL</li></ul></div>
+          <div><h3>Tools</h3><ul><li>Docker</li><li>Git</li><li>SwiftUI</li></ul></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <div class="deep">
+      <section id="contact" class="contact wrap" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="sec-title">Have a system that <em>needs to hold up?</em></h2>
+        <div class="mail-row">
+          <a href="mailto:leandrocanela279@gmail.com" class="mail"><span class="u">leandrocanela279@gmail.com</span> <span class="arrow" aria-hidden="true">↗</span></a>
+          <button type="button" class="copy-email" data-email="leandrocanela279@gmail.com">
+            <svg class="ic-copy" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.75A1.25 1.25 0 0 0 9.25 2.5h-5.5A1.25 1.25 0 0 0 2.5 3.75v5.5A1.25 1.25 0 0 0 3.75 10.5H5.5"/></svg><svg class="ic-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.25 3.25L13 5"/></svg><span class="copy-label">Copy address</span>
+          </button>
+          <span class="sr-only" role="status" aria-live="polite" id="copy-status"></span>
+        </div>
+      </section>
+
+      <footer class="foot wrap">
+        <div class="foot-grid">
+          <div>
+            <p class="logo">Leandro Canela<span class="dot">.</span></p>
+            <p class="about-line">Full-stack developer in Barcelona. I build the part nobody sees, so the part they do keeps working.</p>
+          </div>
+          <nav aria-labelledby="f-work">
+            <h2 id="f-work">Work</h2>
+            <ul>
+              <li><a class="u" href="#humannova">Reskillia and ICEX Next</a></li>
+              <li><a class="u" href="#cpu-city">CPU City</a></li>
+              <li><a class="u" href="#tomate">Tomate</a></li>
+              <li><a class="u" href="#db-doctor">db-doctor</a></li>
+              <li><a class="u" href="#stastarat">Club Stas Tarat</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="f-else">
+            <h2 id="f-else">Elsewhere</h2>
+            <ul>
+              <li><a href="https://github.com/Leocanela279" target="_blank" rel="noopener"><span class="u">GitHub</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a></li>
+              <li><a href="https://gitlab.com/leandrocanela279" target="_blank" rel="noopener"><span class="u">GitLab</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a></li>
+              <li><a href="Leandro-Canela-CV.pdf" target="_blank" rel="noopener"><span class="u">CV (PDF)</span>&nbsp;<span class="arrow" aria-hidden="true">↗</span></a></li>
+              <li><a class="u" href="mailto:leandrocanela279@gmail.com">Email</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2>Colophon</h2>
+            <dl>
+              <div><dt>Type</dt><dd>Geist, Geist Mono, Newsreader</dd></div>
+              <div><dt>Built with</dt><dd>HTML and CSS</dd></div>
+              <div><dt>Cookies</dt><dd>None</dd></div>
+              <div><dt>Barcelona</dt><dd><time id="bcn-time-2" class="mono">--:--</time></dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="foot-base">
+          <span>© <span id="year">2026</span> Leandro Canela</span>
+          <a href="#top" class="u">Back to top ↑</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // Barcelona local time
+    (function () {
+      var fmt;
+      try { fmt = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' }); } catch (e) { return; }
+      var els = [document.getElementById('bcn-time'), document.getElementById('bcn-time-2')];
+      function tick() { var t = fmt.format(new Date()); els.forEach(function (el) { if (el) el.textContent = t; }); }
+      tick();
+      setInterval(tick, 30000);
+    })();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copy the email address; the button confirms for two seconds and a status line tells screen readers.
+    (function () {
+      var btn = document.querySelector('.copy-email'), status = document.getElementById('copy-status');
+      if (!btn) return;
+      var label = btn.querySelector('.copy-label'), timer;
+      btn.addEventListener('click', function () {
+        var done = function () {
+          btn.classList.add('done'); label.textContent = 'Copied'; status.textContent = 'Email address copied';
+          clearTimeout(timer);
+          timer = setTimeout(function () { btn.classList.remove('done'); label.textContent = 'Copy address'; status.textContent = ''; }, 2000);
+        };
+        if (navigator.clipboard) navigator.clipboard.writeText(btn.dataset.email).then(done, function () {});
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+{
+  "url": "http://localhost:8793/index.html",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "pageHeightScreens": 4.3,
+  "type": {
+    "families": [
+      {
+        "value": "Geist",
+        "share": 0.91
+      },
+      {
+        "value": "Newsreader",
+        "share": 0.08
+      },
+      {
+        "value": "Geist Mono",
+        "share": 0.02
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "share": 0.95
+      },
+      {
+        "value": "500",
+        "share": 0.05
+      }
+    ],
+    "sizesPx": [
+      {
+        "value": 16,
+        "share": 0.58
+      },
+      {
+        "value": 14,
+        "share": 0.3
+      },
+      {
+        "value": 35.2,
+        "share": 0.06
+      },
+      {
+        "value": 20,
+        "share": 0.02
+      },
+      {
+        "value": 28,
+        "share": 0.02
+      },
+      {
+        "value": 12,
+        "share": 0.02
+      },
+      {
+        "value": 96,
+        "share": 0.01
+      },
+      {
+        "value": 57.6,
+        "share": 0.01
+      },
+      {
+        "value": 109.4,
+        "share": 0
+      }
+    ],
+    "distinctSizes": 9,
+    "bodySizePx": 16,
+    "largest": {
+      "size": 109.44,
+      "family": "Geist",
+      "weight": "500",
+      "text": "Leandro Canela",
+      "lineHeight": 0.9,
+      "tracking": -0.045,
+      "vw": 7.6
+    },
+    "headlineToBody": 6.8,
+    "measureChars": {
+      "median": 51,
+      "max": 77
+    },
+    "monospaceShareOutsideCode": 0.02
+  },
+  "color": {
+    "inks": [
+      {
+        "value": "rgb(163, 158, 147)",
+        "weight": 2794
+      },
+      {
+        "value": "rgb(236, 232, 223)",
+        "weight": 2258
+      },
+      {
+        "value": "rgba(236, 232, 223, 0.6)",
+        "weight": 207
+      },
+      {
+        "value": "rgb(15, 14, 12)",
+        "weight": 13
+      },
+      {
+        "value": "rgb(236, 112, 68)",
+        "weight": 4
+      },
+      {
+        "value": "rgba(236, 232, 223, 0.8)",
+        "weight": 4
+      }
+    ],
+    "grounds": [
+      {
+        "value": "rgb(26, 25, 21)",
+        "weight": 136
+      },
+      {
+        "value": "rgb(23, 22, 19)",
+        "weight": 33
+      },
+      {
+        "value": "rgb(15, 14, 12)",
+        "weight": 8
+      },
+      {
+        "value": "rgb(236, 232, 223)",
+        "weight": 0
+      }
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "8px",
+        "weight": 6
+      },
+      {
+        "value": "9999px",
+        "weight": 4
+      }
+    ],
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.4) 0px 1px 2px 0px, rgba(0, 0, 0, 0.6) 0px 24px 48px -12px",
+        "weight": 1
+      }
+    ],
+    "elementsWithBorders": 62,
+    "gradients": 0,
+    "backdropBlur": 0
+  },
+  "spacingPx": [
+    {
+      "value": 2,
+      "weight": 13
+    },
+    {
+      "value": 3,
+      "weight": 10
+    },
+    {
+      "value": 4,
+      "weight": 6
+    },
+    {
+      "value": 6,
+      "weight": 28
+    },
+    {
+      "value": 8,
+      "weight": 18
+    },
+    {
+      "value": 10,
+      "weight": 22
+    },
+    {
+      "value": 12,
+      "weight": 32
+    },
+    {
+      "value": 14,
+      "weight": 2
+    },
+    {
+      "value": 16,
+      "weight": 58
+    },
+    {
+      "value": 20,
+      "weight": 10
+    },
+    {
+      "value": 24,
+      "weight": 35
+    },
+    {
+      "value": 32,
+      "weight": 18
+    },
+    {
+      "value": 40,
+      "weight": 6
+    },
+    {
+      "value": 48,
+      "weight": 8
+    },
+    {
+      "value": 80,
+      "weight": 3
+    },
+    {
+      "value": 160,
+      "weight": 3
+    }
+  ],
+  "perf": {
+    "lcp": {
+      "ms": 156,
+      "tag": "h1",
+      "lazy": false,
+      "priority": null,
+      "what": "LeandroCanela."
+    },
+    "cls": 0,
+    "longTasks": {
+      "count": 0,
+      "longest": 0
+    },
+    "longFrames": {
+      "count": 1,
+      "longest": 66
+    },
+    "blockingScripts": [],
+    "runtimeCss": false,
+    "kb": {
+      "script": 0,
+      "css": 16,
+      "font": 312,
+      "image": 0
+    },
+    "unknownSizes": 0,
+    "fontsLoaded": [
+      "Geist 300 700",
+      "Geist Mono 400",
+      "Newsreader 400",
+      "Newsreader 400"
+    ],
+    "animations": {
+      "running": 0,
+      "nonComposited": [],
+      "infinite": 0,
+      "moving": 0
+    },
+    "blurSurfaces": []
+  },
+  "findings": {
+    "overflowX": false,
+    "lowContrast": [],
+    "lowContrastCount": 0,
+    "smallTargets": [],
+    "smallTargetCount": 0,
+    "tinyText": [],
+    "tinyTextCount": 0,
+    "smallCapsLabels": [],
+    "smallCapsCount": 0,
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "LeandroCanela.",
+        "lines": 2
+      },
+      {
+        "tag": "h2",
+        "text": "The data model",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "The permissions",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "When it breaks",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Things I've built,newest first.",
+        "lines": 2
+      },
+      {
+        "tag": "h2",
+        "text": "Have a system that\n          needs to hold up?",
+        "lines": 2
+      }
+    ],
+    "overflowingHeadings": [],
+    "transitionAll": 0,
+    "imagesWithoutAlt": 0,
+    "placeholderText": false,
+    "touchTargets": [
+      {
+        "text": "CV",
+        "w": 49,
+        "h": 36
+      },
+      {
+        "text": "Get in touch ↗",
+        "w": 125,
+        "h": 39
+      },
+      {
+        "text": "See the work ↓",
+        "w": 132,
+        "h": 39
+      },
+      {
+        "text": "Visit Reskillia ↗",
+        "w": 102,
+        "h": 25
+      },
+      {
+        "text": "See the ICEX sign-in ↗",
+        "w": 145,
+        "h": 25
+      },
+      {
+        "text": "Open CPU City ↗",
+        "w": 111,
+        "h": 25
+      },
+      {
+        "text": "Code ↗",
+        "w": 48,
+        "h": 25
+      },
+      {
+        "text": "usetomate.com ↗",
+        "w": 115,
+        "h": 25
+      },
+      {
+        "text": "Code ↗",
+        "w": 48,
+        "h": 25
+      },
+      {
+        "text": "Code ↗",
+        "w": 49,
+        "h": 25
+      }
+    ],
+    "touchTargetCount": 22,
+    "smallInputs": [],
+    "zoomLocked": false,
+    "prose": {
+      "under16": 0.08,
+      "under14": 0
+    },
+    "thinSmall": [],
+    "thinSmallCount": 0,
+    "centredParagraphs": [],
+    "firstScreen": {
+      "words": 112,
+      "visual": false,
+      "bottomBandFilled": true,
+      "h1Top": 0.22
+    },
+    "emoji": 0
+  }
+}

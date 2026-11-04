@@ -1,0 +1,438 @@
+{
+  "url": "http://localhost:8792/index.html",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "pageHeightScreens": 7.9,
+  "type": {
+    "families": [
+      {
+        "value": "Geist",
+        "share": 0.89
+      },
+      {
+        "value": "Newsreader",
+        "share": 0.06
+      },
+      {
+        "value": "Geist Mono",
+        "share": 0.05
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "share": 0.94
+      },
+      {
+        "value": "500",
+        "share": 0.06
+      }
+    ],
+    "sizesPx": [
+      {
+        "value": 17,
+        "share": 0.58
+      },
+      {
+        "value": 15,
+        "share": 0.22
+      },
+      {
+        "value": 13,
+        "share": 0.11
+      },
+      {
+        "value": 32,
+        "share": 0.06
+      },
+      {
+        "value": 64,
+        "share": 0.01
+      },
+      {
+        "value": 40,
+        "share": 0.01
+      },
+      {
+        "value": 120,
+        "share": 0
+      }
+    ],
+    "distinctSizes": 7,
+    "bodySizePx": 17,
+    "largest": {
+      "size": 120,
+      "family": "Geist",
+      "weight": "500",
+      "text": "Leandro Canela",
+      "lineHeight": 0.92,
+      "tracking": -0.045,
+      "vw": 8.3
+    },
+    "headlineToBody": 7.1,
+    "measureChars": {
+      "median": 51,
+      "max": 58
+    },
+    "monospaceShareOutsideCode": 0.05
+  },
+  "color": {
+    "inks": [
+      {
+        "value": "rgb(236, 232, 223)",
+        "weight": 2385
+      },
+      {
+        "value": "rgb(163, 158, 147)",
+        "weight": 1558
+      },
+      {
+        "value": "rgb(207, 202, 191)",
+        "weight": 1514
+      },
+      {
+        "value": "rgb(138, 133, 123)",
+        "weight": 201
+      },
+      {
+        "value": "rgb(15, 14, 12)",
+        "weight": 25
+      },
+      {
+        "value": "rgb(236, 112, 68)",
+        "weight": 4
+      }
+    ],
+    "grounds": [
+      {
+        "value": "rgb(23, 22, 19)",
+        "weight": 140
+      },
+      {
+        "value": "rgb(26, 25, 21)",
+        "weight": 118
+      },
+      {
+        "value": "rgb(15, 14, 12)",
+        "weight": 30
+      },
+      {
+        "value": "rgb(236, 232, 223)",
+        "weight": 1
+      }
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "999px",
+        "weight": 12
+      },
+      {
+        "value": "6px",
+        "weight": 6
+      },
+      {
+        "value": "14px",
+        "weight": 5
+      }
+    ],
+    "shadows": [],
+    "elementsWithBorders": 77,
+    "gradients": 0,
+    "backdropBlur": 0
+  },
+  "spacingPx": [
+    {
+      "value": 2,
+      "weight": 14
+    },
+    {
+      "value": 3,
+      "weight": 17
+    },
+    {
+      "value": 4,
+      "weight": 23
+    },
+    {
+      "value": 8,
+      "weight": 45
+    },
+    {
+      "value": 10,
+      "weight": 14
+    },
+    {
+      "value": 12,
+      "weight": 28
+    },
+    {
+      "value": 16,
+      "weight": 95
+    },
+    {
+      "value": 24,
+      "weight": 70
+    },
+    {
+      "value": 32,
+      "weight": 6
+    },
+    {
+      "value": 40,
+      "weight": 15
+    },
+    {
+      "value": 64,
+      "weight": 12
+    },
+    {
+      "value": 128,
+      "weight": 5
+    }
+  ],
+  "perf": {
+    "lcp": {
+      "ms": 100,
+      "tag": "h1",
+      "lazy": false,
+      "priority": null,
+      "what": "Leandro Canela."
+    },
+    "cls": 0.003,
+    "longTasks": {
+      "count": 0,
+      "longest": 0
+    },
+    "longFrames": {
+      "count": 1,
+      "longest": 61
+    },
+    "blockingScripts": [],
+    "runtimeCss": false,
+    "kb": {
+      "script": 0,
+      "css": 18,
+      "font": 76,
+      "image": 610
+    },
+    "unknownSizes": 0,
+    "fontsLoaded": [
+      "Geist 400 500",
+      "Geist Mono 400",
+      "Newsreader 400",
+      "Newsreader 400"
+    ],
+    "animations": {
+      "running": 0,
+      "nonComposited": [],
+      "infinite": 0,
+      "moving": 0
+    },
+    "blurSurfaces": []
+  },
+  "findings": {
+    "overflowX": false,
+    "lowContrast": [],
+    "lowContrastCount": 0,
+    "smallTargets": [],
+    "smallTargetCount": 0,
+    "tinyText": [],
+    "tinyTextCount": 0,
+    "smallCapsLabels": [],
+    "smallCapsCount": 0,
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Leandro Canela.",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Underneath",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "The data model",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "The permissions",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "When it breaks",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Things I've built, newest first.",
+        "lines": 2
+      },
+      {
+        "tag": "h3",
+        "text": "Reskillia and ICEX Next",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "CPU City",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Tomate",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "db-doctor",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Club Stas Tarat",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Smaller tools",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "About",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Path",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Stack",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Backend",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Frontend",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Data",
+        "lines": 1
+      },
+      {
+        "tag": "h3",
+        "text": "Tools",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Have a system that needs to hold up?",
+        "lines": 2
+      },
+      {
+        "tag": "h2",
+        "text": "Work",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Elsewhere",
+        "lines": 1
+      },
+      {
+        "tag": "h2",
+        "text": "Colophon",
+        "lines": 1
+      }
+    ],
+    "overflowingHeadings": [],
+    "transitionAll": 0,
+    "imagesWithoutAlt": 0,
+    "placeholderText": false,
+    "touchTargets": [
+      {
+        "text": "CV",
+        "w": 55,
+        "h": 36
+      },
+      {
+        "text": "Reskillia and ICEX Next",
+        "w": 159,
+        "h": 32
+      },
+      {
+        "text": "CPU City",
+        "w": 62,
+        "h": 32
+      },
+      {
+        "text": "Tomate",
+        "w": 50,
+        "h": 32
+      },
+      {
+        "text": "db-doctor",
+        "w": 69,
+        "h": 32
+      },
+      {
+        "text": "Club Stas Tarat",
+        "w": 104,
+        "h": 32
+      },
+      {
+        "text": "GitHub ↗",
+        "w": 62,
+        "h": 32
+      },
+      {
+        "text": "GitLab ↗",
+        "w": 61,
+        "h": 32
+      },
+      {
+        "text": "CV (PDF) ↗",
+        "w": 77,
+        "h": 32
+      },
+      {
+        "text": "Email",
+        "w": 44,
+        "h": 32
+      }
+    ],
+    "touchTargetCount": 10,
+    "smallInputs": [],
+    "zoomLocked": false,
+    "prose": {
+      "under16": 0.04,
+      "under14": 0
+    },
+    "thinSmall": [],
+    "thinSmallCount": 0,
+    "centredParagraphs": [],
+    "firstScreen": {
+      "words": 119,
+      "visual": false,
+      "bottomBandFilled": true,
+      "h1Top": 0.17
+    },
+    "emoji": 0
+  }
+}

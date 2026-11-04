@@ -139,5 +139,6 @@ node skills/taste/scripts/lint.mjs src                             # static defe
 - [x] Skill kept as one entry point: a fast path for small edits, phone rules moved to `references/mobile.md`
 - [x] Research round: redesigning existing UIs (`reports/Redesigning existing project UIs.md`), and the `taste-redesign` skill built from it
 - [x] One-command install for any agent (`npx github:…`), plus skills.sh and the Claude Code plugin
-- [ ] Blind test for `taste-redesign`: B4-dark as the before, three arms (no skill, taste, taste-redesign in restyle mode)
+- [x] Blind test B6 for `taste-redesign`: the owner picked its restyle, weakly, over taste and no skill (`experiments/results.md`)
+- [ ] B7: taste-redesign on a page with real problems (an AI-generated landing page) and on an app screen
 - [ ] Experiments B1–B3 and R1, judged blind, plus a B4 re-run with the current skill
