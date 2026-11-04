@@ -130,3 +130,7 @@ GitHub became an icon-only link in the header, beside the theme button: the same
 a 44px target, `aria-label="GitHub"`, in the second ink, turning first ink on hover. Contact is the
 email alone. On phones (< 600px) the Barcelona time moves under the role so the name and role
 never wrap; from 600px it sits in the header row, 28px from the icons, the same gap as between them.
+
+**Owner request (2026-11-04): link previews.** Open Graph and Twitter tags, a canonical URL and
+a 1200×630 `og.png`, rendered from `design/og.html` (Geist, the dark palette, name with the orange
+period, role, the three projects with years, the domain) by `design/og-render.cjs`.
