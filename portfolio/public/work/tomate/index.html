@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tomate — Leandro Canela</title>
+  <meta name="description" content="A macOS timer for 25 to 90 minute study sessions. Why the end is stored as a date, and how the app stays local." />
+  <link rel="canonical" href="https://leo-dev.es/work/tomate/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Leandro Canela" />
+  <meta property="og:url" content="https://leo-dev.es/work/tomate/" />
+  <meta property="og:title" content="Tomate — Leandro Canela" />
+  <meta property="og:description" content="A macOS timer for 25 to 90 minute study sessions. Why the end is stored as a date, and how the app stays local." />
+  <meta property="og:image" content="https://leo-dev.es/og.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Leandro Canela. Full-stack developer, Barcelona. Reskillia, Tomate, Taste and Club Stas Tarat." />
+  <meta property="og:locale" content="en_GB" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tomate — Leandro Canela" />
+  <meta name="twitter:description" content="A macOS timer for 25 to 90 minute study sessions. Why the end is stored as a date, and how the app stays local." />
+  <meta name="twitter:image" content="https://leo-dev.es/og.png" />
+  <meta name="twitter:image:alt" content="Leandro Canela. Full-stack developer, Barcelona. Reskillia, Tomate, Taste and Club Stas Tarat." />
+
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0e0c" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="/site.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <div>
+        <p class="name">Leandro Canela<span class="dot" aria-hidden="true">.</span></p>
+        <p class="role">Full-stack developer</p>
+      </div>
+      <div class="meta">
+        <p class="time" aria-label="Time in Barcelona"><span id="bcn"></span></p>
+        <a class="icon-link" href="https://github.com/Leocanela279" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <button class="theme icon-link" type="button" aria-label="Switch to dark theme">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 0 0 12.5z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <section aria-labelledby="project-label">
+      <h2 id="project-label">Project</h2>
+      <div class="section-body">
+        <p class="back"><a href="/">← All work</a></p>
+        <h1 class="project-title" data-project="tomate">Tomate</h1>
+        <dl class="meta-list">
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Role</dt><dd>App and download site, solo</dd></div>
+          <div><dt>Stack</dt><dd>SwiftUI · macOS 14+ · Astro</dd></div>
+        </dl>
+        <div class="project-body">
+        <p>A Pomodoro timer for long study sessions, from 25 to 90 minutes. Anything over an hour can be split into two blocks with a break in between. It lives in the menu bar.</p>
+        <p>Sessions never overlap; notifications let you start or decline. It turns on macOS Focus while studying, through Shortcuts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="underneath-label">
+      <h2 id="underneath-label">Underneath</h2>
+      <div class="section-body">
+        <ul class="under-list">
+          <li>The end is stored as a date, not a countdown, so it stays exact when the Mac sleeps.</li>
+          <li>Fully local: no accounts, no server.</li>
+          <li>The app is SwiftUI; the download site is Astro.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="links-label">
+      <h2 id="links-label">Links</h2>
+      <div class="section-body links">
+        <p><a class="to-project" href="https://usetomate.com" target="_blank" rel="noopener">usetomate.com <span aria-hidden="true">↗</span></a></p>
+        <p><a class="to-project" href="/work/taste/">Next: Taste <span aria-hidden="true">→</span></a></p>
+        <p>Write to me at <a href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a>.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

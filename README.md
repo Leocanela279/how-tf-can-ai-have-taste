@@ -30,7 +30,7 @@ Full write-up: [`reports/Giving AI UI design taste.md`](<reports/Giving AI UI de
 | `skills/taste-redesign/` | **The redesign skill.** For UIs that already exist: classify, record the before, diagnose, change the cheapest layer, prove it against the before. Shares taste's scripts and library, adds inventory, parity and compare |
 | `references/candidates.md` | Shortlist of sites to measure into the skill's library (needs picks) |
 | `experiments/prompts.md` | Blind A/B/C briefs (B1–B4) and the replication test (R1) |
-| `portfolio/` | The owner's live portfolio (leo-dev.es): the B5 minimal design, deployed as a Cloudflare Worker |
+| `portfolio/` | The owner's live portfolio (leo-dev.es): the note + four project pages, deployed as a Cloudflare Worker. The design record is in `portfolio/design/`. |
 | `.claude-plugin/` | Plugin and marketplace manifests, so the skills install with `/plugin` |
 | `install.mjs`, `package.json` | The one-command installer for any agent (`npx github:Leocanela279/how-tf-can-ai-have-taste`) |
 
@@ -131,6 +131,8 @@ node skills/taste/scripts/lint.mjs src                             # static defe
       `references/components.md` (native first, then one primitive family, then your own component) and
       lint rules for hand-rolled widget roles, positive tabindex, untouched kit themes and stale libraries
 - [ ] Reference library: 8 of the owner's 9 picks measured with notes; x.ai blocks headless browsers
+- [x] Portfolio: the note + project pages — the B5 note with names only, one page per project at
+      `/work/<slug>/`, and cross-document page transitions. Design record in `portfolio/design/`.
 - [x] Portfolio: mobile fixes applied (16px running text on phones, 44px touch targets, build-time
       CSS, self-hosted fonts, no header blur), packaged in `portfolio/` for Cloudflare Pages
 - [x] Installable as a Claude Code plugin

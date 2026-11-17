@@ -1,0 +1,112 @@
+{
+  "target": "https://leo-dev.es",
+  "width": 1440,
+  "counts": {
+    "colors": 3,
+    "colorClusters": 3,
+    "textColors": 3,
+    "fontSizes": 2,
+    "fontWeights": 2,
+    "fontFamilies": 1,
+    "lineHeights": 2,
+    "radii": 0,
+    "shadows": 0,
+    "spacings": 6
+  },
+  "nearDuplicateColors": [],
+  "values": {
+    "spacings": [
+      [
+        "8",
+        18
+      ],
+      [
+        "16",
+        6
+      ],
+      [
+        "1",
+        4
+      ],
+      [
+        "126",
+        4
+      ],
+      [
+        "24",
+        2
+      ],
+      [
+        "96",
+        1
+      ]
+    ],
+    "textColors": [
+      [
+        "#a39e93",
+        12
+      ],
+      [
+        "#ece8df",
+        9
+      ],
+      [
+        "#ec7044",
+        1
+      ]
+    ],
+    "fontSizes": [
+      [
+        "16",
+        17
+      ],
+      [
+        "14",
+        5
+      ]
+    ],
+    "fontWeights": [
+      [
+        "400",
+        17
+      ],
+      [
+        "500",
+        5
+      ]
+    ],
+    "fontFamilies": [
+      [
+        "Geist",
+        22
+      ]
+    ],
+    "lineHeights": [
+      [
+        "1.6",
+        19
+      ],
+      [
+        "1.25",
+        3
+      ]
+    ]
+  },
+  "source": {
+    "hexColors": {
+      "#fafaf8": 3,
+      "#0f0e0c": 4,
+      "#21201c": 1,
+      "#63635e": 1,
+      "#d4572a": 1,
+      "#ece8df": 2,
+      "#a39e93": 2,
+      "#ec7044": 2
+    },
+    "arbitraryTailwind": {},
+    "pxFontSizes": {
+      "14px": 2
+    },
+    "files": 3
+  }
+}

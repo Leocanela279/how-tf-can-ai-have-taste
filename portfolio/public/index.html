@@ -31,6 +31,7 @@
   <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/styles.css" />
   <script>try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="/site.js" defer></script>
 </head>
 <body>
   <main>
@@ -55,12 +56,15 @@
 
     <section aria-labelledby="projects">
       <h2 id="projects">Projects</h2>
-      <ul class="projects">
-        <li><a href="https://reskillia.humannova.com" target="_blank" rel="noopener"><span class="title">Reskillia</span><span class="year">2026</span><span class="desc">Measures a team's digital skills against DigComp 2.2.</span></a></li>
-        <li><a href="https://usetomate.com" target="_blank" rel="noopener"><span class="title">Tomate</span><span class="year">2026</span><span class="desc">A macOS timer for 25 to 90 minute study sessions.</span></a></li>
-        <li><a href="https://github.com/Leocanela279/how-tf-can-ai-have-taste" target="_blank" rel="noopener"><span class="title">Taste</span><span class="year">2026</span><span class="desc">A Claude skill that gives AI-built interfaces taste.</span></a></li>
-        <li><a href="https://stastarat.com" target="_blank" rel="noopener"><span class="title">Club Stas Tarat</span><span class="year">2025</span><span class="desc">Website for a 40-year-old board game club in Terrassa.</span></a></li>
-      </ul>
+      <div class="section-body">
+        <ul class="projects">
+          <li><a href="/work/reskillia/"><span class="title" data-project="reskillia">Reskillia</span></a></li>
+          <li><a href="/work/tomate/"><span class="title" data-project="tomate">Tomate</span></a></li>
+          <li><a href="/work/taste/"><span class="title" data-project="taste">Taste</span></a></li>
+          <li><a href="/work/club-stas-tarat/"><span class="title" data-project="club-stas-tarat">Club Stas Tarat</span></a></li>
+        </ul>
+        <p class="project-note">Each project has a page underneath.</p>
+      </div>
     </section>
 
     <section aria-labelledby="contact">
@@ -69,51 +73,6 @@
     </section>
   </main>
 
-  <script>
-    (function () {
-      var el = document.getElementById('bcn');
-      var fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit' });
-      function tick() { el.textContent = 'Barcelona ' + fmt.format(new Date()); }
-      tick();
-      setInterval(tick, 15000);
-    })();
 
-    (function () {
-      var root = document.documentElement;
-      var button = document.querySelector('.theme');
-      var systemDark = matchMedia('(prefers-color-scheme: dark)');
-      var reduce = matchMedia('(prefers-reduced-motion: reduce)');
-
-      function current() { return root.dataset.theme || (systemDark.matches ? 'dark' : 'light'); }
-      function sync() {
-        var dark = current() === 'dark';
-        button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
-        document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
-          m.content = dark ? '#0f0e0c' : '#fafaf8';
-        });
-      }
-      function apply(theme) {
-        root.dataset.theme = theme;
-        try { localStorage.setItem('theme', theme); } catch (e) {}
-        sync();
-      }
-
-      button.addEventListener('click', function () {
-        var next = current() === 'dark' ? 'light' : 'dark';
-        if (!document.startViewTransition || reduce.matches) { apply(next); return; }
-        var r = button.getBoundingClientRect();
-        var x = r.left + r.width / 2, y = r.top + r.height / 2;
-        var end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
-        document.startViewTransition(function () { apply(next); }).ready.then(function () {
-          root.animate(
-            { clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + end + 'px at ' + x + 'px ' + y + 'px)'] },
-            { duration: 450, easing: 'cubic-bezier(.2, .7, .2, 1)', pseudoElement: '::view-transition-new(root)' }
-          );
-        });
-      });
-      systemDark.addEventListener('change', sync);
-      sync();
-    })();
-  </script>
 </body>
 </html>

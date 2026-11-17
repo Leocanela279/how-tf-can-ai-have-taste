@@ -1,0 +1,75 @@
+{
+  "target": "https://leo-dev.es",
+  "width": 1440,
+  "pages": {
+    "/": {
+      "url": "https://leo-dev.es/",
+      "title": "Leandro Canela — Full-stack developer",
+      "links": [
+        {
+          "href": "https://github.com/Leocanela279",
+          "name": "GitHub",
+          "hidden": false
+        },
+        {
+          "href": "https://reskillia.humannova.com/",
+          "name": "Reskillia 2026 Measures a team's digital skills against DigComp 2.2.",
+          "hidden": false
+        },
+        {
+          "href": "https://usetomate.com/",
+          "name": "Tomate 2026 A macOS timer for 25 to 90 minute study sessions.",
+          "hidden": false
+        },
+        {
+          "href": "https://github.com/Leocanela279/how-tf-can-ai-have-taste",
+          "name": "Taste 2026 A Claude skill that gives AI-built interfaces taste.",
+          "hidden": false
+        },
+        {
+          "href": "https://stastarat.com/",
+          "name": "Club Stas Tarat 2025 Website for a 40-year-old board game club in Terrassa.",
+          "hidden": false
+        },
+        {
+          "href": "mailto:leandrocanela279@gmail.com",
+          "name": "leandrocanela279@gmail.com",
+          "hidden": false
+        }
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Leandro Canela."
+        },
+        {
+          "level": 2,
+          "text": "Today"
+        },
+        {
+          "level": 2,
+          "text": "Projects"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "landmarks": [
+        "main",
+        "header"
+      ],
+      "forms": [],
+      "controls": [
+        {
+          "kind": "button",
+          "name": "Switch to light theme",
+          "hidden": false
+        }
+      ],
+      "testIds": [],
+      "analytics": [],
+      "shortcuts": []
+    }
+  }
+}
