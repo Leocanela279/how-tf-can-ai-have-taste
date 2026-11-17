@@ -32,10 +32,11 @@ Cross-document View Transitions, no router and no JS:
 - The header is a shared element (`view-transition-name: site-header`), so it stays put.
 - The clicked project name and the project page title share a `view-transition-name`, so the
   name morphs into the page title and back via "All work".
-- The rest of the page fades 160/240ms; reduced motion makes it instant; browsers without the
-  API navigate normally.
+- The rest of the page uses the browser's cross-fade; the header stays and the name morphs.
+  Reduced motion makes it instant; browsers without the API navigate normally.
 - The theme toggle is a same-document view transition with a circular reveal. A
-  `theme-transition` class scopes it so it does not collide with the page transition.
+  `theme-transition` class turns off the shared names, holds the old root for 360ms and
+  `theme-reveal`s the new one from the button; it stays until the transition finishes.
 
 ## Stack
 

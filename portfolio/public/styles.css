@@ -104,11 +104,28 @@ main {
   :root:not([data-theme="light"]) .theme svg { transform: rotate(180deg); }
 }
 
+/* Theme reveal. Both root images need a real 360ms animation: animation:none on both
+   makes Chrome finish the transition immediately, remove theme-transition early and fall
+   back to the default cross-fade, which is the glitch. */
 :root.theme-transition .intro,
 :root.theme-transition .projects .title,
 :root.theme-transition .project-title { view-transition-name: none; }
-:root.theme-transition::view-transition-old(root),
-:root.theme-transition::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+:root.theme-transition::view-transition-old(root) {
+  animation: theme-hold 360ms linear both;
+  mix-blend-mode: normal;
+}
+:root.theme-transition::view-transition-new(root) {
+  animation: theme-reveal 360ms cubic-bezier(.2, .7, .2, 1) both;
+  mix-blend-mode: normal;
+}
+@keyframes theme-hold {
+  from { opacity: 1; }
+  to { opacity: 1; }
+}
+@keyframes theme-reveal {
+  from { clip-path: circle(0px at var(--theme-x) var(--theme-y)); }
+  to { clip-path: circle(var(--theme-r) at var(--theme-x) var(--theme-y)); }
+}
 
 section { margin-top: 64px; }
 section h2 { font-weight: 500; margin-bottom: 16px; }
@@ -161,13 +178,7 @@ p a:hover, p a:focus-visible { text-decoration-color: var(--accent); }
 .projects .title[data-project="club-stas-tarat"],
 .project-title[data-project="club-stas-tarat"] { view-transition-name: project-club-stas-tarat; }
 
-/* Page changes: the rest of the sheet fades, the shared name travels. */
-@media (prefers-reduced-motion: no-preference) {
-  ::view-transition-old(root) { animation: page-out 160ms ease-out both; }
-  ::view-transition-new(root) { animation: page-in 240ms cubic-bezier(.2, .7, .2, 1) both; }
-}
-@keyframes page-out { to { opacity: 0; } }
-@keyframes page-in { from { opacity: 0; } }
+/* Page changes use the browser's cross-fade; the shared name travels. */
 
 /* Project pages: one project, the same note. */
 .project-title { font-weight: 500; line-height: 1.25; margin-top: 16px; }

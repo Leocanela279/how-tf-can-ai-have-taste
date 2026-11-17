@@ -34,19 +34,23 @@
   button.addEventListener('click', function () {
     var next = current() === 'dark' ? 'light' : 'dark';
     if (!document.startViewTransition || reduce.matches) { apply(next); return; }
-    root.classList.add('theme-transition');
-    var clean = function () { root.classList.remove('theme-transition'); };
     var r = button.getBoundingClientRect();
     var x = r.left + r.width / 2;
     var y = r.top + r.height / 2;
     var end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    /* The circle is a CSS animation on the new root. The variables are set before the
+       snapshot; the class stays until the full 360ms transition finishes. */
+    root.style.setProperty('--theme-x', x + 'px');
+    root.style.setProperty('--theme-y', y + 'px');
+    root.style.setProperty('--theme-r', end + 'px');
+    root.classList.add('theme-transition');
+    var clean = function () {
+      root.classList.remove('theme-transition');
+      root.style.removeProperty('--theme-x');
+      root.style.removeProperty('--theme-y');
+      root.style.removeProperty('--theme-r');
+    };
     var transition = document.startViewTransition(function () { apply(next); });
-    transition.ready.then(function () {
-      root.animate(
-        { clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + end + 'px at ' + x + 'px ' + y + 'px)'] },
-        { duration: 360, easing: 'cubic-bezier(.2, .7, .2, 1)', pseudoElement: '::view-transition-new(root)' }
-      ).finished.then(clean, clean);
-    });
     transition.finished.then(clean, clean);
   });
 

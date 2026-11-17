@@ -97,19 +97,22 @@ The site is five static pages, so the transition is **cross-document View Transi
   project page `<h1 data-project="reskillia">` share `view-transition-name: project-reskillia`
   (and the other three). Clicking a name **morphs it into the page title**; "All work" morphs it
   back to the list. Next/previous project cross-fades because the names differ.
-- The rest of the page fades: `::view-transition-old(root)` out in 160ms,
-  `::view-transition-new(root)` in at 240ms, ease-out. The named header and title sit outside
-  that fade.
-- **Theme toggle:** the theme reveal is same-document. A `theme-transition` class scopes the
-  old/new root `animation: none`, turns off the shared names, and lets the circular clip-path
-  reveal run as before; the class is removed when the transition and the clip finish.
+- The rest of the page uses the browser's own cross-fade; the named header and title sit
+  outside it. The custom root fade was removed because it collided with the theme reveal.
+- **Theme toggle:** the reveal is same-document. A `theme-transition` class turns off the shared
+  names, gives the old root a 360ms `theme-hold` and the new root a 360ms `theme-reveal` using
+  `--theme-x` / `--theme-y` / `--theme-r` from the button, and stays until the transition
+  finishes. Both root images need a real animation: `animation: none` on both makes Chrome
+  consider the transition finished instantly, remove the class and fall back to the default
+  cross-fade (the glitch this replaced).
 - **Reduced motion:** the theme switch is instant (`reduce.matches`); all view-transition
   animations are reduced to 0.01ms. Nothing moves.
 - **Fallback:** browsers without cross-document View Transitions navigate normally; the site
   remains complete. No JS is needed for navigation.
 
 Cost: the browser captures snapshots (compositor), the name morph is a transform/opacity
-animation on one element, the root fade is opacity. No layout, no scroll listeners, no router.
+animation on one element, the page navigation uses the browser cross-fade, and the theme reveal
+is a 360ms `clip-path` on the new snapshot. No layout, no scroll listeners, no router.
 The pages are static and cached; the only script is `site.js` for the clock and the theme.
 
 ## 6. Before | After | Why
@@ -119,7 +122,7 @@ The pages are static and cached; the only script is `site.js` for the clock and 
 | The section cut: 128px name, 5 drawings, 4.5 screens | The note: 16px, no pictures, 1.1 screens | The owner asked for the other approach; the main page is the note |
 | Four project descriptions inside the index | Four names on the index, one page per project | The index stays simple; the detail gets a URL |
 | Five type sizes (128/72/40/28/17/16/14) | One size, two weights | Uniform text, the reference's calibration |
-| No page transitions | Cross-document header + title morph + fade | The owner asked for better transitions |
+| No page transitions | Cross-document header + title morph + browser cross-fade | The owner asked for better transitions |
 | Project links went straight to external sites | Names go to `/work/<slug>/`; external links on the page | The requested content model; sign-off on the parity change |
 
 ## 7. Gates and sign-off

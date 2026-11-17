@@ -108,8 +108,8 @@ stance.
 
 **Page transitions.** Cross-document View Transitions: `@view-transition { navigation: auto; }`
 on every page; the header is `site-header`; the clicked project name and the project page title
-share a `view-transition-name` and morph; the rest of the page fades 160/240ms. Reduced motion
-makes it instant; browsers without the API navigate normally; no router or JS.
+share a `view-transition-name` and morph; the rest of the page uses the browser cross-fade.
+Reduced motion makes it instant; browsers without the API navigate normally; no router or JS.
 
 **Gates.** Index and project page: `probe --check` 0 errors at 1440 / 390 / 360; the single
 expected WARN is the uniform 16px type. Light audit 0 contrast / 0 targets under 24px / 0 text
@@ -118,6 +118,14 @@ rule is correct, and Firefox navigates normally). `compare` against the B5: no r
 1.1 screens, CLS 0, LCP 656ms, fonts 29KB. `parity`: 4 ERRORs because the four external project
 links are no longer on the index; they now sit on the project pages. That is the requested
 content model; the owner must sign it off.
+
+**Theme reveal fix (2026-11-17, after deploy).** The first live version glitched: the
+`theme-transition` class set `animation: none` on both root images, so Chrome considered the
+transition finished immediately, removed the class and fell back to the default cross-fade. The
+reveal is now real CSS: old root `theme-hold` 360ms, new root `theme-reveal` 360ms from the
+button using `--theme-x/y/r`, class held until `transition.finished`, and the custom page fade
+removed from the root. Verified with a page-side timing trace (360ms, class present at 300ms)
+and a 3s slowed capture of the circle.
 
 **Parity sign-off.** The external Reskillia, Tomate, Taste and Club Stas Tarat links moved from
 the index to their project pages. The index names link to `/work/<slug>/`. The old descriptions
