@@ -167,4 +167,20 @@ await copyFile(
 await writeFile(join(out, "styles.css"), await readFile(join(root, "styles.css")));
 await write("index.html", home());
 for (const [i, p] of projects.entries()) await write(`work/${p.slug}/index.html`, project(p, i));
+await write(
+  "404.html",
+  page({
+    title: `Not found — ${site.name}`,
+    description: "This page doesn't exist.",
+    body: `${header({ nameTag: "p" })}
+<section class="sec" aria-labelledby="nf-label">
+  <h2 id="nf-label">404</h2>
+  <div>
+    <h1 class="title" style="margin-top:0">Nothing here.</h1>
+    <p class="muted" style="margin-top:16px">This page doesn't exist or has moved.</p>
+    <p><a class="hit back" href="/"><span class="u">← All work</span></a></p>
+  </div>
+</section>`,
+  }),
+);
 console.log(`Built ${1 + projects.length} pages into dist/`);
